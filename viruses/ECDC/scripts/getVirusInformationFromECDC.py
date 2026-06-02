@@ -10,9 +10,9 @@ SOURCE_URL = "https://www.genome.jp/ftp/db/virushostdb/virushostdb.tsv"
 DOWNLOAD_CHUNK_SIZE = 1024 * 1024
 CSV_SEPARATOR = ","
 
-script_dir = Path(__file__).resolve().parent
-tsv_file = script_dir / "virushostdb.tsv"
-csv_file = script_dir / "virushostdb.csv"
+data_dir = Path(__file__).resolve().parent.parent
+tsv_file = data_dir / "virushostdb.tsv"
+csv_file = data_dir / "virushostdb.csv"
 
 
 def download_tsv(url, destination):

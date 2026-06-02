@@ -1,15 +1,6 @@
 # Datenquelle: https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Genome&VirusLineage_ss=Viruses,%20taxid:10239&HostLineage_ss=humans,%20taxid:9605
 # Quelle für die API-Code-Erstellung: https://github.com/misialq/ncbi-datasets-pyclient/blob/main/docs/VirusApi.md#virus_genome_table
 
-
-# Zunächst per Bash:
-# pip install ncbi-datasets-pyclient
-
-import ncbi.datasets.openapi
-from ncbi.datasets.openapi.models.v2_viral_sequence_type import V2ViralSequenceType
-from ncbi.datasets.openapi.models.v2_virus_dataset_report_type import V2VirusDatasetReportType
-from ncbi.datasets.openapi.rest import ApiException
-from pprint import pprint
 import pandas as pd
 import requests
 from pathlib import Path
@@ -31,8 +22,8 @@ TABLE_FIELDS = [
     # "nuc_completeness", # beschreibt bei Viren-Genomen meist, wie vollständig die rekonstruierte Nukleinsäure-Sequenz (DNA oder RNA) im Vergleich zu einem erwarteten Referenzgenom ist.
     # "geo_location", # enthält Informationen über den geografischen Standort, an dem die Virusprobe gesammelt wurde.
     # "us_state", # enthält den Namen des US-Bundesstaates, aus dem die Virusprobe stammt, falls die Probe aus den USA stammt.
-    # "host_name", # enthält den Namen des Landes, aus dem die Virusprobe stammt.
-    # "host_tax_id", # enthält die Taxonomie-ID des Landes, von dem die Virusprobe stammt.
+    "host_name", # enthält den Namen des Landes, aus dem die Virusprobe stammt.
+    "host_tax_id"#, # enthält die Taxonomie-ID des Landes, von dem die Virusprobe stammt.
     # "collection_date", # enthält das Datum, an dem die Virusprobe gesammelt wurde. Dieses Datum kann in verschiedenen Formaten vorliegen, z.B. als Jahr, Monat und Tag (YYYY-MM-DD) oder als Jahr und Monat (YYYY-MM).
     # "bioproject", # enthält die eindeutige Kennnummer für ein biologisches Projekt in einer biologischen Datenbank, die verwendet wird, um Informationen über das Projekt zu identifizieren und abzurufen.
     # "biosample", # enthält die eindeutige Kennnummer für eine biologische Probe in einer biologischen Datenbank, die verwendet wird, um Informationen über die Probe zu identifizieren und abzurufen.
