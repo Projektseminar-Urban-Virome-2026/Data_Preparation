@@ -31,6 +31,19 @@ CREATE TABLE Virus (
     Boltimore_type VARCHAR(255) NOT NULL 
 );
 
+CREATE TABLE Virus_Hosts (
+    virus_id INTEGER NOT NULL,
+    host_tax_id INTEGER NOT NULL,
+    PRIMARY KEY (virus_id, host_tax_id),
+    FOREIGN KEY (virus_id) REFERENCES Virus(id),
+    FOREIGN KEY (host_tax_id) REFERENCES Host(Host_tax_id)
+);
+
+CREATE TABLE Host (
+    Host_tax_id INTEGER PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE Virus_in_Runs (
     run_accession VARCHAR(255) NOT NULL,
     virus_id INTEGER NOT NULL,
