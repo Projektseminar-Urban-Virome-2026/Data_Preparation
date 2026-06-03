@@ -55,7 +55,7 @@ conda activate snakemake
 ```
 
 ```bash
-conda install -c conda-forge -c bioconda kraken2 bracken pandas
+conda install -c conda-forge -c bioconda kraken2 bracken pandas requests
 ```
 
 
@@ -66,12 +66,12 @@ conda install -c conda-forge -c bioconda kraken2 bracken pandas
 >    |──── Yaounde/     
 >    |──────── reads/    
 >    |── database/    
->    |── smk/         
->    |── scripts/        
+>    |── smk/
+>    |──── scripts/
 
 **.../\{project path\}/database** contains the (pre-built) Kraken 2 & Bracken databases.   
 **.../\{project path\}/cities/.../reads** contains the paired readings of the samples (..._1.fastq.gz & ..._2.fastq.gz)   
-**.../\{project path\}/scripts** contains merge_csv-py & to_csv.py   
+**.../\{project path\}/smk/scripts** contains the workflow helper scripts.
 
 
 ## Data preparation
@@ -89,6 +89,12 @@ Both paired reads of a sample (..._1.fastq.gz & ..._2.fastq.gz) must be stored i
 set Classification Level:
 
 `classification_level: G`
+
+Select read type for automatic ENA downloads:
+
+`read_type: non-capture`
+
+Allowed values are `non-capture` and `capture`. The default is `non-capture`.
 
 ## Run
 
@@ -112,7 +118,9 @@ To run the pipeline for all cities run:
 snakemake --cores 8 report.txt
 ```
 
-(all read-files present in the designated city directories are automatically added to the pipeline)
+The pipeline runs `smk/scripts/city_logic.py`, reads `filtered_capture_samples.tsv` or
+`filtered_non_capture_samples.tsv` depending on `config.yaml`, and downloads the
+matching paired reads from ENA into `cities/{city}/reads/`.
 
 ## Example CSVs
 
