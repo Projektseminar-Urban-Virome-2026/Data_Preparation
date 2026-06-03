@@ -1,5 +1,6 @@
 /cities/*/reads/*.gz
 /cities/*/smk_output/*
+/database/k2_viral_20260226/
 .DS_Store
 .idea/
 .venv/
