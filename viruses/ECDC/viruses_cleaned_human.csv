@@ -1,0 +1,253 @@
+host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Dependoparvovirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Duplornaviricota,Resentoviricetes,unclassified Resentoviricetes,Reovirales,Sedoreoviridae,Rotavirus,dsRNA
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Ortervirales,Retroviridae,Spumaretrovirinae,Simiispumavirus,ssRNA-RT
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Kodimesavirinae,Kobuvirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Phenuiviridae,Phlebovirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus kyasanurense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Rhabdoviridae,Alpharhabdovirinae,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Zurhausenvirales,unclassified Zurhausenvirales,Papillomaviridae,Firstpapillomavirinae,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Paramyxoviridae,Rubulavirinae,-ssRNA
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Ortervirales,Retroviridae,Orthoretrovirinae,Gammaretrovirus,ssRNA-RT
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Paramyxoviridae,Feraresvirinae,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Stelpaviricetes,Stellavirales,Astroviridae,Mamastrovirus,Mamastrovirus melbournense,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Stelpaviricetes,Stellavirales,Astroviridae,unclassified Astroviridae,,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Stelpaviricetes,Stellavirales,Astroviridae,Mamastrovirus,Mamastrovirus virginiaense,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Duplornaviricota,Resentoviricetes,unclassified Resentoviricetes,Reovirales,Spinareoviridae,Orthoreovirus,dsRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Paramyxoviridae,Avulavirinae,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Elliovirales,Peribunyaviridae,Orthobunyavirus,-ssRNA
+9606.0,Homo sapiens,unclassified bacterial viruses,,,,,,,,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,unclassified Flaviviridae,,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Duplornaviricota,Resentoviricetes,unclassified Resentoviricetes,Reovirales,Sedoreoviridae,Seadornavirus,dsRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus barmah,+ssRNA
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Preplasmiviricota,Polisuviricotina,Pharingeaviricetes,Rowavirales,Adenoviridae,Mastadenovirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Nidovirales,Cornidovirineae,Coronaviridae,Orthocoronavirinae,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Nairoviridae,Norwavirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Paramyxoviridae,Orthoparamyxovirinae,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Betapolyomavirus,,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Bocaparvovirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,unclassified Parvovirinae,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,unclassified Mononegavirales,Filoviridae,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus cacipacoreense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Caliciviridae,Norovirus,Norovirus norwalkense,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Caphthovirinae,Cardiovirus,
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Betaherpesvirinae,Cytomegalovirus,dsDNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus chikungunya,+ssRNA
+9606.0,Homo sapiens,unclassified viruses,unclassified DNA viruses,unclassified ssDNA viruses,Circo-like virus-Brazil,,,,,
+9606.0,Homo sapiens,unclassified viruses,unclassified DNA viruses,unclassified ssDNA viruses,,,,,,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Duplornaviricota,Resentoviricetes,unclassified Resentoviricetes,Reovirales,Spinareoviridae,Coltivirus,dsRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Caphthovirinae,Cosavirus,
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Pokkesviricetes,Chitovirales,Poxviridae,Chordopoxvirinae,Oryzopoxvirus,
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Pokkesviricetes,Chitovirales,Poxviridae,Chordopoxvirinae,Orthopoxvirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Ensavirinae,unclassified Ensavirinae,
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Intestiviridae,Crudevirinae,Carjivirus,dsDNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Protoparvovirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus mmadu,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus mutum,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus insaan,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus homa,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus manukha,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus maanav,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,unclassified Cyclovirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus manitan,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus bashri,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus nhanloai,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Phenuiviridae,Tanzavirus,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Deltapolyomavirus,,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus eastern,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Caliciviridae,Sapovirus,Sapovirus sapporoense,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Nidovirales,Arnidovirineae,Arteriviridae,Equarterivirinae,
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Ortervirales,Retroviridae,Spumaretrovirinae,Equispumavirus,ssRNA-RT
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Oslovirus,Oslovirus ov191,,dsDNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus gadgetsense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Pegivirus,Pegivirus hominis,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemykibivirus,Gemykibivirus humas3,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemycircularvirus,unclassified Gemycircularvirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemykibivirus,Gemykibivirus humas5,
+9606.0,Homo sapiens,Monodnaviria,Sangervirae,Phixviricota,Malgrandaviricetes,Petitvirales,Microviridae,Gokushovirinae,unclassified Gokushovirinae,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Duplornaviricota,Resentoviricetes,unclassified Resentoviricetes,Reovirales,Sedoreoviridae,Orbivirus,dsRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Phenuiviridae,Bandavirus,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gyrovirus,Gyrovirus homsa3,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gyrovirus,Gyrovirus homsa1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gyrovirus,Gyrovirus homsa4,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gyrovirus,Gyrovirus homsa2,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Elliovirales,Hantaviridae,Mammantavirinae,-ssRNA
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Blubervirales,Hepadnaviridae,Orthohepadnavirus,Orthohepadnavirus hominoidei,dsDNA-RT
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Hepacivirus,,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Hepacivirus,Hepacivirus hominis,+ssRNA
+9606.0,Homo sapiens,Ribozyviria,Ribozyviria incertae sedis,Kolmioviridae,Deltavirus,Deltavirus italiense,,,,
+9606.0,Homo sapiens,Ribozyviria,Ribozyviria incertae sedis,Kolmioviridae,Deltavirus,Deltavirus japanense,,,,
+9606.0,Homo sapiens,Ribozyviria,Ribozyviria incertae sedis,Kolmioviridae,Deltavirus,Deltavirus taiwanense,,,,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Hepelivirales,Hepeviridae,unclassified Hepeviridae,,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Hepelivirales,Hepeviridae,Orthohepevirinae,Paslahepevirus,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Heptrevirinae,Hepatovirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Stelpaviricetes,Stellavirales,Astroviridae,Mamastrovirus,unclassified Mamastrovirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Caliciviridae,Vesivirus,unclassified Vesivirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Endolinaviridae,Hudisavirus,,
+9606.0,Homo sapiens,unclassified viruses,,,,,,,,
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Alphaherpesvirinae,Simplexvirus,dsDNA
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Alphaherpesvirinae,Varicellovirus,dsDNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus humana,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemyvongvirus,Gemyvongvirus humas1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Huchismacovirus,Huchismacovirus humas1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Huchismacovirus,Huchismacovirus humas2,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Huchismacovirus,Huchismacovirus humas3,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Inpeasmacovirus,Inpeasmacovirus humas1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Porprismacovirus,Porprismacovirus humas4,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Stelpaviricetes,Stellavirales,Astroviridae,Mamastrovirus,Mamastrovirus hominis,
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Betaherpesvirinae,Roseolovirus,dsDNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Circovirus,Circovirus human,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Ringavirales,Pecoviridae,Amaruvirus,Amaruvirus aka,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Densovirinae,Iteradensovirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus munthu,
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Ortervirales,Retroviridae,unclassified Retroviridae,Human endogenous retroviruses,ssRNA-RT
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Erythroparvovirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,unclassified Circoviridae,,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Porprismacovirus,Porprismacovirus humas1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Porprismacovirus,Porprismacovirus humas3,
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Ortervirales,Retroviridae,Spumaretrovirinae,unclassified Spumaretrovirinae,ssRNA-RT
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Gammaherpesvirinae,Lymphocryptovirus,dsDNA
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Gammaherpesvirinae,Rhadinovirus,dsDNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemykibivirus,Gemykibivirus humas4,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemygorvirus,Gemygorvirus sewopo1,
+9606.0,Homo sapiens,Monodnaviria,Sangervirae,Phixviricota,Malgrandaviricetes,Petitvirales,Microviridae,unclassified Microviridae,,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gyrovirus,Gyrovirus galga1,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Pegivirus,Pegivirus columbiaense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Ortervirales,Retroviridae,Orthoretrovirinae,unclassified Orthoretrovirinae,ssRNA-RT
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Recrevirales,Redondoviridae,Torbevirus,Torbevirus viento,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Pneumoviridae,Metapneumovirus,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Zurhausenvirales,unclassified Zurhausenvirales,Papillomaviridae,unclassified Papillomaviridae,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Paavivirinae,Parechovirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Tetraparvovirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Duplopiviricetes,Durnavirales,Picobirnaviridae,Orthopicobirnavirus,Orthopicobirnavirus hominis,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Alphapolyomavirus,Alphapolyomavirus saraneus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Deltapolyomavirus,Deltapolyomavirus sextihominis,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Deltapolyomavirus,Deltapolyomavirus septihominis,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Alphapolyomavirus,Alphapolyomavirus nonihominis,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Pneumoviridae,Orthopneumovirus,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Huchismacovirus,unclassified Huchismacovirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Circovirus,Circovirus eniyan,
+9606.0,Homo sapiens,Riboviria,Pararnavirae,Artverviricota,Revtraviricetes,Ortervirales,Retroviridae,Orthoretrovirinae,Deltaretrovirus,ssRNA-RT
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,unclassified Picornavirales,Husavirus,unclassified Husavirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus ilheusense,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus manusyan,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Insthoviricetes,Articulavirales,Orthomyxoviridae,Alphainfluenzavirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Insthoviricetes,Articulavirales,Orthomyxoviridae,Betainfluenzavirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Insthoviricetes,Articulavirales,Orthomyxoviridae,Gammainfluenzavirus,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Loebvirae,Hofneiviricota,Faserviricetes,Tubulavirales,Inoviridae,Inovirus,unclassified Inovirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus japonicum,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Betapolyomavirus,Betapolyomavirus secuhominis,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Phenuiviridae,Uukuvirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus kadamense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Nairoviridae,Orthonairovirus,-ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Betapolyomavirus,Betapolyomavirus tertihominis,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus kokoberaorum,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus langatense,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Alphapolyomavirus,Alphapolyomavirus quardecihominis,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus loupingi,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Arenaviridae,Mammarenavirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus mayaro,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus meabanense,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Alphapolyomavirus,Alphapolyomavirus quintihominis,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,unclassified Anelloviridae,,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus modocense,+ssRNA
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Pokkesviricetes,Chitovirales,Poxviridae,Chordopoxvirinae,Molluscipoxvirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus mossopedras,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemykibivirus,Gemykibivirus humas1,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus murrayense,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Deltapolyomavirus,Deltapolyomavirus decihominis,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,unclassified Polyomaviridae,,
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Gammaherpesvirinae,unclassified Gammaherpesvirinae,dsDNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Alphapolyomavirus,Alphapolyomavirus terdecihominis,
+9606.0,Homo sapiens,Riboviria,unclassified Riboviria,unclassified ssRNA viruses,unclassified ssRNA positive-strand viruses,Negevirus,unclassified Negevirus,,,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus ntayaense,+ssRNA
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Pokkesviricetes,Chitovirales,Poxviridae,Chordopoxvirinae,Centapoxvirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus sindbis,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus omskense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus onyong,+ssRNA
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Pokkesviricetes,Chitovirales,Poxviridae,Chordopoxvirinae,Parapoxvirus,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Lineavirales,Oomyviridae,Nicoomyvirus,Nicoomyvirus moldensis,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Paavivirinae,Pasivirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus powassanense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Insthoviricetes,Articulavirales,Orthomyxoviridae,Quaranjavirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus bravoense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Kodimesavirinae,Rosavirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus rossriver,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus royalense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Hepelivirales,Matonaviridae,Rubivirus,Rubivirus rubellae,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus getah,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Kodimesavirinae,Salivirus,
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Konodaiviridae,Satomivirus,,dsDNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus saumarezense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus semliki,+ssRNA
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Pimascovirales,Pimascovirales incertae sedis,Marseilleviridae,Marseillevirus,
+9606.0,Homo sapiens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,unclassified Caudoviricetes,,,,dsDNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,unclassified Anelloviridae,Small anellovirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus louisense,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Deltapolyomavirus,Deltapolyomavirus undecihominis,
+9606.0,Homo sapiens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Pokkesviricetes,Chitovirales,Poxviridae,Chordopoxvirinae,Yatapoxvirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus tembusu,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Insthoviricetes,Articulavirales,Orthomyxoviridae,Thogotovirus,-ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus encephalitidis,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus tonate,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi10,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi11,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi12,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi13,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi14,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi2,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi3,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi4,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi5,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi6,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi7,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi8,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Gammatorquevirus,Gammatorquevirus homidi9,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini10,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini11,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini12,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini32,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini2,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini3,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini5,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini6,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini7,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini8,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini9,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini27,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini16,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,Betatorquevirus homini26,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin1,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin10,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin9,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin13,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin15,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin17,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin18,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin19,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin20,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin21,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin24,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus cerco7,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin29,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin3,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin5,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin6,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Alphatorquevirus,Alphatorquevirus homin7,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Alphapolyomavirus,Alphapolyomavirus octihominis,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,unclassified Anelloviridae,TT virus sle,
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Betatorquevirus,unclassified Betatorquevirus,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Caliciviridae,Recovirus,Recovirus tulani,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus una,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus usutuense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus venezuelan,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus wesselsbronense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus nilense,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Togaviridae,Alphavirus,Alphavirus western,+ssRNA
+9606.0,Homo sapiens,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Betapolyomavirus,Betapolyomavirus quartihominis,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,+ssRNA
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Nidovirales,Mesnidovirineae,Mesoniviridae,Hexponivirinae,
+9606.0,Homo sapiens,Riboviria,Orthornavirae,Kitrinoviricota,Flasuviricetes,Amarillovirales,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,+ssRNA
