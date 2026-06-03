@@ -3,5 +3,9 @@
 /cities/*/smk_output/*
 .DS_Store
 .idea/
+.venv/
 .snakemake/
 report.txt
+/viruses/NCBI/virus_data.csv
+/viruses/NCBI/virus_data.tsv
+/viruses/NCBI/virus_data.tsv.part

@@ -14,7 +14,8 @@ RUN conda install -c conda-forge -c bioconda \
     snakemake \
     kraken2 \
     bracken \
-    pandas 
+    pandas \
+    requests
 
 COPY config.yaml .
 
