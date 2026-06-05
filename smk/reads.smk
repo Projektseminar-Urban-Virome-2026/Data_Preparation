@@ -45,14 +45,15 @@ checkpoint city_logic:
 	input:
 		script="smk/scripts/city_logic.py"
 	output:
-		raw="PRJEB87273_runs_samples.tsv",
-		capture="filtered_capture_samples.tsv",
-		non_capture="filtered_non_capture_samples.tsv"
+		raw="cities/PRJEB87273_runs_samples.tsv",
+		capture="cities/filtered_capture_samples.tsv",
+		non_capture="cities/filtered_non_capture_samples.tsv"
 	threads: 1
 	shell:
 		"python {input.script}"
 
 rule download_read_pair:
+	priority: 10
 	input:
 		samples=lambda wildcards: selected_samples()
 	output:
@@ -60,7 +61,7 @@ rule download_read_pair:
 		read2="cities/{city}/reads/{sample}_2.fastq.gz"
 	threads: 1
 	script:
-		"smk/scripts/download_read_pair.py"
+		"scripts/download_read_pair.py"
 
 rule download_reads:
 	input:

@@ -11,12 +11,34 @@ services:
       - type: bind
         source: ./cities
         target: /snakemake/cities
-  data-analysis:
-    image: data-analysis
+
+  init-db:
+    image: init-db
     build:
-      dockerfile: analysis.Dockerfile
+      dockerfile: ./database/initdb.Dockerfile
+    command: ["./init_and_fill_db.sh"]
     volumes:
-      - type: bind
-        read_only: true
-        source: ./cities
-        target: /snakemake/cities
+      - db-data:/app/data/db
+
+  sqlite:
+    image: sqlite
+    build:
+      dockerfile: ./database/sqlite.Dockerfile
+    #command: ["tail", "-f", "/dev/null"]
+    ports:
+      - "5000:5000"
+    volumes:
+      - db-data:/db
+    restart: unless-stopped
+#  data-analysis:
+#    image: data-analysis
+#    build:
+#      dockerfile: analysis.Dockerfile
+#    volumes:
+#      - type: bind
+#        read_only: true
+#        source: ./cities
+#        target: /snakemake/cities
+
+volumes:
+  db-data:

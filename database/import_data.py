@@ -72,7 +72,7 @@ def city_table(df, db_connection):
 # Verwendung:
 if __name__ == "__main__":
     # Verbindung zur SQLite DB
-    conn = sqlite3.connect('data/database.db')
+    conn = sqlite3.connect('data/db/database.db')
     
     data = pd.read_csv('data/filtered_non_capture_samples.tsv', sep='\t')
     # Zuerst Cities einfügen (wegen Foreign Key!)
@@ -80,5 +80,5 @@ if __name__ == "__main__":
     
     # Dann Runs einfügen
     runs_table(data, conn)
-    
+
     conn.close()

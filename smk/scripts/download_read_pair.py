@@ -1,5 +1,6 @@
 import csv
 from pathlib import Path
+import os
 import subprocess
 
 def read_urls(samples_file, city, run):
@@ -30,7 +31,7 @@ Path(snakemake.output.read1).parent.mkdir(parents=True, exist_ok=True)
 
 def download_if_missing(output, url):
     output = Path(output)
-    if output.exists():
+    if os.path.exists(str(output)):
         print(f"{output} already exists, skipping download")
         return
 

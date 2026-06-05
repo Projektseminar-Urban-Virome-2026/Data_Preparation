@@ -16,7 +16,7 @@ def fetch_ena_data()-> pd.DataFrame:
     response = requests.get(url, params=params)
     response.raise_for_status()
     df = pd.read_csv(StringIO(response.text), sep="\t")
-    df.to_csv("PRJEB87273_runs_samples.tsv", sep="\t", index=False)
+    df.to_csv("cities/PRJEB87273_runs_samples.tsv", sep="\t", index=False)
 
     return df
 
@@ -85,8 +85,8 @@ def main() -> None:
     filtered_capture_df = add_cities(df_capture)
     filtered_non_capture_df = add_cities(df_non_capture)
 
-    filtered_capture_df.to_csv("filtered_capture_samples.tsv", sep="\t", index=False)
-    filtered_non_capture_df.to_csv("filtered_non_capture_samples.tsv", sep="\t", index=False)
+    filtered_capture_df.to_csv("cities/filtered_capture_samples.tsv", sep="\t", index=False)
+    filtered_non_capture_df.to_csv("cities/filtered_non_capture_samples.tsv", sep="\t", index=False)
 
 
 if __name__ == "__main__":
