@@ -6,6 +6,8 @@ RUN apk add --no-cache python3
 
 RUN apk add --no-cache py3-flask
 
+RUN apk add --no-cache py3-flask-cors
+
 WORKDIR /app
 
 COPY /database/db-api.py /app/
