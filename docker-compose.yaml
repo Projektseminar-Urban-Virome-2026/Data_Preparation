@@ -2,7 +2,7 @@ services:
   data-preparation:
     image: data-preparation:latest
     build: .
-    command: snakemake --cores 10 report.txt
+    command: snakemake --cores 10 cities/report.txt
     volumes:
       - type: bind
         read_only: true

@@ -15,7 +15,7 @@ include: "smk/reads.smk"
 
 rule all:
 	input:
-		"report.txt"
+		"cities/report.txt"
 
 rule kraken_classification:
 	input:
@@ -106,7 +106,9 @@ rule create_all:
 	threads: 1
 	shell:
 		"""
-		echo "cities/global_merge.csv" > {output}
+		echo "Matrix of all Runs: cities/global_merge.csv" > {output}
+		echo "Generated matrices for each city:" >> {output}
 		echo {input.list} >> {output}
+		echo "Generated weather data for each city:" >> {output}
 		echo {input.weather} >> {output}
 		"""

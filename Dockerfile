@@ -23,4 +23,4 @@ COPY snakefile .
 
 COPY /smk smk/
 
-CMD snakemake --cores 10 report.txt
+CMD snakemake --cores 10 cities/report.txt
