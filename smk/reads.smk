@@ -57,12 +57,9 @@ rule download_read_pair:
 	input:
 		samples=lambda wildcards: selected_samples()
 	output:
-		read1="cities/{city}/reads/{sample}_1.fastq.gz",
-		read2="cities/{city}/reads/{sample}_2.fastq.gz"
+		report=temp("cities/download_report.txt")
 	threads: 1
 	script:
 		"scripts/download_read_pair.py"
 
-rule download_reads:
-	input:
-		read_fastqs
+
