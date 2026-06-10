@@ -21,6 +21,10 @@ services:
     command: ["./init_and_fill_db.sh"]
     volumes:
       - db-data:/app/data/db
+      - type: bind
+        read_only: true
+        source: ./cities
+        target: /app/cities
 
   sqlite:
     image: sqlite
@@ -32,6 +36,7 @@ services:
     volumes:
       - db-data:/db
     restart: unless-stopped
+
 #  data-analysis:
 #    image: data-analysis
 #    build:
