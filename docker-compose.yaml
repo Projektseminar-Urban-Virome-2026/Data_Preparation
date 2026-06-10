@@ -2,7 +2,9 @@ services:
   data-preparation:
     image: data-preparation:latest
     build: .
-    command: snakemake --cores 10 cities/report.txt
+    command: snakemake --cores 10 report.txt
+    #command: snakemake -R city_logic --cores 10 cities/report.txt    ### force a re-run of ENA table download ###
+    #command: ["tail", "-f", "/dev/null"]                             ### keep container alive, snakemake has to be run via terminal-input ###
     volumes:
       - type: bind
         read_only: true

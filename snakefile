@@ -15,7 +15,7 @@ include: "smk/reads.smk"
 
 rule all:
 	input:
-		"cities/report.txt"
+		"report.txt"
 
 rule kraken_classification:
 	input:
@@ -92,6 +92,7 @@ rule global_merge:
 
 rule create_all:
 	input:
+		"cities/download_report.txt",
 		"cities/global_merge.csv",
 		list=lambda wildcards: expand(
                 			"cities/{city}/smk_output/{city}_merged_reads.csv",
@@ -102,7 +103,7 @@ rule create_all:
 			city=read_cities(wildcards)
 		)
 	output:
-		"cities/report.txt"
+		"report.txt"
 	threads: 1
 	shell:
 		"""
