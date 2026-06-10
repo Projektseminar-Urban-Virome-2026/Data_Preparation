@@ -9,9 +9,6 @@ def runs_table(df, db_connection):
     # Nur relevante Spalten auswählen
     runs_df = df[['run_accession', 'sample_alias', 'collection_date']].copy()
     
-    # Hier brauchst du noch die city_id
-    # Das werden wir später hinzufügen, wenn die Cities-Tabelle gefüllt ist
-    # Für jetzt: nur die Spalten ohne city_id einfügen (oder placeholder)
     
     cursor = db_connection.cursor()
     for _, row in runs_df.iterrows():
@@ -55,25 +52,43 @@ def city_table(df, db_connection):
     )
     if cities_df['latitude'].eq(0.0).any() or cities_df['longitude'].eq(0.0).any():
         print("Warnung: Folgende Staedte haben keine Koordinaten." + str(cities_df[cities_df['latitude'].eq(0.0) | cities_df['longitude'].eq(0.0)]) + " und werden mit 0.0 eingefügt.")
-        
+       
     
     # In DB einfügen
     cursor = db_connection.cursor()
+    id_counter = 1
     for _, row in cities_df.iterrows():
         cursor.execute("""
-            INSERT INTO Cities (name, country, latitude, longitude)
-            VALUES (?, ?, ?, ?)
-        """, (row['name'], row['country'], row['latitude'], row['longitude']))
+                       INSERT INTO Cities (id, name, country, latitude, longitude)
+            VALUES (?, ?, ?, ?, ?)
+        """, (id_counter, row['name'], row['country'], row['latitude'], row['longitude']))
+        id_counter += 1
     
     db_connection.commit()
-    
+    print(f"✓ {len(cities_df)} Einträge in Cities-Tabelle eingefügt")
 
+    #!!!!!!!! virus_table Funktion ist nicht funktional!!!!!!!!
+def virus_table(df, db_connection):
+    """
+    Liest Virusnamen aus TSV ein, entfernt Duplikate und fügt sie in Virus-Tabelle ein.
+    """
+    virus_df = df[['virus tax id', 'host tax id', 'host name', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species', 'baltimore_class']].drop_duplicates().copy()
+    
+    cursor = db_connection.cursor()
+    for _, row in virus_df.iterrows():
+        #virus tax id,host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
+        cursor.execute("""
+            insert into Virus (Virus_tax_id, host_tax_id, host_name, realm, kingdom, phylum, class, order_name, family, genus, species, baltimore_class)
+            values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (row['virus tax id'], row['host tax id'], row['host name'], row['realm'], row['kingdom'], row['phylum'], row['class'], row['order'], row['family'], row['genus'], row['species'], row['baltimore_class']))
+    
+    db_connection.commit()
 
 # Verwendung:
 if __name__ == "__main__":
     # Verbindung zur SQLite DB
     conn = sqlite3.connect('data/db/database.db')
-
+    
     data = pd.read_csv('cities/filtered_non_capture_samples.tsv', sep='\t')
     # Zuerst Cities einfügen (wegen Foreign Key!)
     city_table(data, conn)
