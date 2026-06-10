@@ -5,7 +5,7 @@ WORKDIR /app
 COPY /database/init.sql /app/
 COPY /database/init_db.py /app/
 COPY /database/import_data.py /app/
-COPY /database/data/filtered_non_capture_samples.tsv /app/data/
+# COPY /database/data/filtered_non_capture_samples.tsv /app/data/
 COPY /database/init_and_fill_db.sh /app/
 
 RUN chmod +x ./init_and_fill_db.sh

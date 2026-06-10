@@ -73,8 +73,8 @@ def city_table(df, db_connection):
 if __name__ == "__main__":
     # Verbindung zur SQLite DB
     conn = sqlite3.connect('data/db/database.db')
-    
-    data = pd.read_csv('data/filtered_non_capture_samples.tsv', sep='\t')
+
+    data = pd.read_csv('cities/filtered_non_capture_samples.tsv', sep='\t')
     # Zuerst Cities einfügen (wegen Foreign Key!)
     city_table(data, conn)
     
