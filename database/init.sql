@@ -24,11 +24,11 @@ CREATE TABLE IF NOT EXISTS Weather (
 );
 
 CREATE TABLE IF NOT EXISTS Virus (
-    tax_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tax_id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    family VARCHAR(255) NOT NULL,
-    species VARCHAR(255) NOT NULL,
-    Boltimore_type VARCHAR(255) NOT NULL 
+    family VARCHAR(255),
+    species VARCHAR(255),
+    Boltimore_type VARCHAR(255) 
 );
 
 CREATE TABLE IF NOT EXISTS Virus_Hosts (

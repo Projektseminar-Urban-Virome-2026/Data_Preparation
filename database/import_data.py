@@ -72,17 +72,18 @@ def virus_table(df, db_connection):
     """
     Liest Virusnamen aus TSV ein, entfernt Duplikate und fügt sie in Virus-Tabelle ein.
     """
-    virus_df = df[['virus tax id', 'host tax id', 'host name', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species', 'baltimore_class']].drop_duplicates().copy()
+    virus_df = df[['name', 'taxid']].drop_duplicates().copy()
     
     cursor = db_connection.cursor()
     for _, row in virus_df.iterrows():
         #virus tax id,host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
         cursor.execute("""
-            insert into Virus (Virus_tax_id, host_tax_id, host_name, realm, kingdom, phylum, class, order_name, family, genus, species, baltimore_class)
-            values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (row['virus tax id'], row['host tax id'], row['host name'], row['realm'], row['kingdom'], row['phylum'], row['class'], row['order'], row['family'], row['genus'], row['species'], row['baltimore_class']))
+            insert into Virus (name, tax_id)
+            values (?, ?)
+        """, (row['name'], row['taxid']))
     
     db_connection.commit()
+    print(f"✓ {len(virus_df)} Einträge in Virus-Tabelle eingefügt")
 
 # Verwendung:
 if __name__ == "__main__":
@@ -90,6 +91,11 @@ if __name__ == "__main__":
     conn = sqlite3.connect('data/db/database.db')
     
     data = pd.read_csv('cities/filtered_non_capture_samples.tsv', sep='\t')
+
+    global_merge = pd.read_csv('cities/global_merge.csv', sep=',')
+
+    virus_table(global_merge, conn)
+
     # Zuerst Cities einfügen (wegen Foreign Key!)
     city_table(data, conn)
     
