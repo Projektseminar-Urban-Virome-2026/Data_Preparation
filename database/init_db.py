@@ -2,10 +2,10 @@ import sqlite3
 import os
 
 # Erstelle das data-Verzeichnis, falls es nicht existiert
-os.makedirs('data', exist_ok=True)
+#os.makedirs('data', exist_ok=True)
 
 # Verbinde mit SQLite-Datenbank (oder erstelle sie)
-conn = sqlite3.connect('data/database.db')
+conn = sqlite3.connect('data/db/database.db')
 cursor = conn.cursor()
 
 # Lese die init.sql Datei
@@ -19,4 +19,4 @@ cursor.executescript(sql_script)
 conn.commit()
 conn.close()
 
-print("✓ Datenbank erfolgreich erstellt: data/database.db")
+print("✓ Datenbank erfolgreich erstellt: data/db/database.db")

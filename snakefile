@@ -78,21 +78,38 @@ rule merge_csv:
 	script:
 		"smk/scripts/merge_csv.py"
 
+rule global_merge:
+	input:
+		list=lambda wildcards: expand(
+                        			"cities/{city}/smk_output/{city}_merged_reads.csv",
+                        			city=read_cities(wildcards)
+        )
+	output:
+		"cities/global_merge.csv"
+	threads: 1
+	script:
+		"smk/scripts/global_merge.py"
+
 rule create_all:
 	input:
+		"cities/download_report.txt",
+		"cities/global_merge.csv",
+		list=lambda wildcards: expand(
+                			"cities/{city}/smk_output/{city}_merged_reads.csv",
+                			city=read_cities(wildcards)
+        ),
 		weather=lambda wildcards: expand(
 			"cities/{city}/smk_output/{city}_weather.csv",
-			city=read_cities(wildcards),
-		),
-		list=lambda wildcards: expand(
-			"cities/{city}/smk_output/{city}_merged_reads.csv",
-			city=read_cities(wildcards),
+			city=read_cities(wildcards)
 		)
 	output:
 		"report.txt"
 	threads: 1
 	shell:
 		"""
-		echo {input.weather} > {output}
+		echo "Matrix of all Runs: cities/global_merge.csv" > {output}
+		echo "Generated matrices for each city:" >> {output}
 		echo {input.list} >> {output}
+		echo "Generated weather data for each city:" >> {output}
+		echo {input.weather} >> {output}
 		"""

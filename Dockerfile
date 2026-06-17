@@ -21,6 +21,6 @@ COPY config.yaml .
 
 COPY snakefile .
 
-COPY /smk ./smk
+COPY /smk smk/
 
 CMD snakemake --cores 10 report.txt
