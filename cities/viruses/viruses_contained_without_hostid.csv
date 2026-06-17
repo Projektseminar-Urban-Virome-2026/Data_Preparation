@@ -1,0 +1,635 @@
+virus tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class,taxid,matched_name
+1297741,Papio anubis,Varidnaviria,Bamfordvirae,Preplasmiviricota,Polisuviricotina,Pharingeaviricetes,Rowavirales,Adenoviridae,Mastadenovirus,,10509,                  Mastadenovirus
+680112,Daucus carota,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Secoviridae,Sequivirus,Sequivirus carotae,,12057,                Sequivirus
+1133751,Artemisia annua,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Sobelivirales,Solemoviridae,Sobemovirus,Sobemovirus ARTVA,,12137,                Sobemovirus
+312275,Lens culinaris,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Tymovirales,Tymoviridae,Tymovirus,Tymovirus anagyris,+ssRNA,12148,                Tymovirus
+445435,Asparagus officinalis,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Tymovirales,Alphaflexiviridae,Potexvirus,Potexvirus triasparagi,+ssRNA,12176,                Potexvirus
+368735,Capsicum,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Virgaviridae,Tobamovirus,Tobamovirus maculacapsici,+ssRNA,12234,                Tobamovirus
+12259,Solanum tuberosum,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Secoviridae,Comovirinae,Comovirus,,12258,                  Comovirus
+12301,Cicer arietinum,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Bromoviridae,Bromovirus,Bromovirus BBMV,+ssRNA,12300,                Bromovirus
+3101607,Aeromonas hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Teseptimavirus,dsDNA,110456,                  Teseptimavirus
+169684,Halobacterium salinarum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vertoviridae,Myohalovirus,Myohalovirus spontanei,dsDNA,169682,                Myohalovirus
+104388,Anatidae,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Alphaherpesvirinae,Mardivirus,dsDNA,180252,                  Mardivirus
+3403659,Lactococcus cremoris,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Ceduovirus,unclassified Ceduovirus,,dsDNA,186532,              Ceduovirus
+28369,Mycobacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Fromanvirus,,,dsDNA,186764,              Fromanvirus
+1313215,Chlorocebus aethiops,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Kodimesavirinae,Kobuvirus,,194960,                  Kobuvirus
+2094260,Andrena haemorrhoa,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Tymovirales,Tymoviridae,Maculavirus,unclassified Maculavirus,+ssRNA,249185,                Maculavirus
+568715,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Stelpaviricetes,Stellavirales,Astroviridae,Mamastrovirus,Mamastrovirus melbournense,,249588,                Mamastrovirus
+554168,Acanthamoeba castellanii,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Imitervirales,Mimiviridae,Megamimivirinae,Mimivirus,,315393,                  Mimivirus
+3028482,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Krylovirinae,Phikmvvirus,dsDNA,477967,                  Phikmvvirus
+263375,Bordetella bronchiseptica,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Rauchvirus,Rauchvirus BPP1,,dsDNA,542959,              Rauchvirus
+2805859,Enterobacter cloacae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Uetakevirus,unclassified Uetakevirus,,dsDNA,542960,              Uetakevirus
+484895,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bruynoghevirus,,,dsDNA,545932,              Bruynoghevirus
+261939,Magallana gigas,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Malacoherpesviridae,Ostreavirus,Ostreavirus ostreidmalaco1,dsDNA,548686,                Ostreavirus
+3117707,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mktvariviridae,Gordonclarkvirinae,Kuravirus,dsDNA,680277,                Kuravirus
+1329649,Aselliscus stoliczkanus,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Bocaparvovirus,,1507401,                  Bocaparvovirus
+2219111,Alces alces,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemycircularvirus,Gemycircularvirus lepam1,,1542744,                Gemycircularvirus
+2829394,Mycobacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Cheoctovirus,unclassified Cheoctovirus,,dsDNA,1623281,              Cheoctovirus
+2656560,Mycobacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Corndogvirus,unclassified Corndogvirus,,dsDNA,1623285,              Corndogvirus
+2932880,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Detrevirus,Detrevirus D3,,dsDNA,1623287,              Detrevirus
+3024148,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Dhillonvirus,unclassified Dhillonvirus,,dsDNA,1623289,              Dhillonvirus
+2268613,Streptococcus thermophilus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Aliceevansviridae,Moineauvirus,unclassified Moineauvirus,dsDNA,1623304,                Moineauvirus
+270182,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Skunavirus,unclassified Skunavirus,,dsDNA,1623305,              Skunavirus
+2883944,Burkholderia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lessievirus,Lessievirus bcep22,,dsDNA,1720323,              Lessievirus
+3423286,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hollowayvirus,unclassified Hollowayvirus,,dsDNA,1720324,              Hollowayvirus
+1527469,Bacillus pumilus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Bastillevirinae,Agatevirus,dsDNA,1910931,                  Agatevirus
+338101,Escherichia,Monodnaviria,Sangervirae,Phixviricota,Malgrandaviricetes,Petitvirales,Microviridae,Bullavirinae,Alphatrevirus,,1910951,                  Alphatrevirus
+1340813,Escherichia coli,Monodnaviria,Sangervirae,Phixviricota,Malgrandaviricetes,Petitvirales,Microviridae,Bullavirinae,Gequatrovirus,,1910952,                  Gequatrovirus
+338122,Salmonella enterica subsp. enterica serovar Typhimurium str. LT2,Monodnaviria,Sangervirae,Phixviricota,Malgrandaviricetes,Petitvirales,Microviridae,Bullavirinae,Sinsheimervirus,,1910954,                  Sinsheimervirus
+2873413,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sarkviridae,Guernseyvirinae,Kagunavirus,dsDNA,1910992,                  Kagunavirus
+1173749,Salmonella enterica subsp. enterica serovar Cerro,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sarkviridae,Guernseyvirinae,Cornellvirus,dsDNA,1910993,                  Cornellvirus
+1651196,Escherichia coli O26:H11,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Mosigvirus,dsDNA,1913652,                  Mosigvirus
+2047880,Campylobacter jejuni,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vequintavirus,Vequintavirus PDX,Vequintavirus FFH2,dsDNA,1914852,              Vequintavirus
+3075073,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Obolenskvirus,unclassified Obolenskvirus,,dsDNA,1915205,              Obolenskvirus
+3119066,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Jilinvirus,unclassified Jilinvirus,,dsDNA,1918725,              Jilinvirus
+3003230,Escherichia sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Enquatrovirinae,Gamaleyavirus,dsDNA,1920753,                  Gamaleyavirus
+2713464,Pseudomonas aeruginosa PAO1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Migulavirinae,Litunavirus,dsDNA,1920762,                  Litunavirus
+2966626,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Slopekvirinae,Drulisvirus,dsDNA,1920774,                  Drulisvirus
+2886900,Klebsiella aerogenes,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Drexlerviridae,Webervirus,Webervirus F20,dsDNA,1920860,                Webervirus
+347325,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Septimatrevirus,Septimatrevirus C1,Septimatrevirus sv73,dsDNA,1921544,              Septimatrevirus
+1634484,Meles meles,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemykibivirus,Gemykibivirus badas1,,1941236,                Gemykibivirus
+2024274,[Arthrobacter] sp. ATCC 21022,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mudcatvirus,Mudcatvirus arcadia,,dsDNA,1982088,              Mudcatvirus
+2250409,Arthrobacter sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Gordonvirus,Gordonvirus breylor17,,dsDNA,1982152,              Gordonvirus
+691965,Rhodococcus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pepyhexavirus,Pepyhexavirus pepy6,,dsDNA,1982367,              Pepyhexavirus
+2835985,Rhodobacter capsulatus YW1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Titanvirus,Titanvirus rcspartan,,dsDNA,1982573,              Titanvirus
+1354507,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Coopervirus,Coopervirus adawi,,dsDNA,1982898,              Coopervirus
+2563838,Apis mellifera,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemykrogvirus,Gemykrogvirus apime1,,1985367,                Gemykrogvirus
+3142671,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Beijerinckvirinae,Friunavirus,dsDNA,1985711,                  Friunavirus
+2777382,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Przondovirus,dsDNA,1985720,                  Przondovirus
+2662140,Xanthomonas euvesicatoria,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Gujervirinae,Pradovirus,dsDNA,1985733,                  Pradovirus
+2935061,Enterobacter cloacae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Ackermannviridae,Cvivirinae,Kuttervirus,dsDNA,2169536,                  Kuttervirus
+2891958,Leuconostoc,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Limdunavirus,unclassified Limdunavirus,,dsDNA,2169621,              Limdunavirus
+745088,Leuconostoc mesenteroides,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Unaquatrovirus,Unaquatrovirus uv1A4,,dsDNA,2169622,              Unaquatrovirus
+1173761,Salmonella enterica subsp. enterica serovar Dublin,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Humphriesvirinae,Ithacavirus,dsDNA,2169643,                  Ithacavirus
+2018501,Lasius neglectus,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Polycipiviridae,Sopolycivirus,Sopolycivirus lasii,,2169646,                Sopolycivirus
+1930509,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,unclassified Picornavirales,Husavirus,unclassified Husavirus,,2219049,                Husavirus
+2079427,Streptomyces lividans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bingvirus,Bingvirus bing,,dsDNA,2560103,              Bingvirus
+2079288,Pseudomonas sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bjornvirus,Bjornvirus bjorn,,dsDNA,2560104,              Bjornvirus
+2894929,Brassica rapa subsp. chinensis,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Phenuiviridae,Coguvirus,-ssRNA,2560118,                  Coguvirus
+2768773,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Eneladusvirus,Eneladusvirus BF,,dsDNA,2560128,              Eneladusvirus
+2801869,Flavobacterium psychrophilum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Fipvunavirus,unclassified Fipvunavirus,,dsDNA,2560132,              Fipvunavirus
+2047872,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Gustavvirus,Gustavvirus gustav,,dsDNA,2560144,              Gustavvirus
+1114179,Pseudomonas putida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Krylovvirus,Krylovvirus tf,,dsDNA,2560162,              Krylovvirus
+439016,root,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Marnaviridae,Locarnavirus,Locarnavirus jerichoensis,,2560169,                Locarnavirus
+2489617,Pectobacterium atrosepticum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Corkvirinae,Phimunavirus,dsDNA,2560202,                  Phimunavirus
+1815582,Pseudomonas putida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Plaisancevirus,Plaisancevirus PMW,,dsDNA,2560204,              Plaisancevirus
+2900148,Pseudomonas syringae pv. tomato str. DC3000,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Pollyceevirus,Pollyceevirus Eisa9,dsDNA,2560206,                Pollyceevirus
+2024264,Agrobacterium tumefaciens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Polybotosvirus,Polybotosvirus Atuph07,,dsDNA,2560207,              Polybotosvirus
+1932901,Aeromonas salmonicida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Popoffvirus,Popoffvirus pv56,,dsDNA,2560208,              Popoffvirus
+2601687,Streptomyces griseus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Rimavirus,Rimavirus rima,,dsDNA,2560214,              Rimavirus
+2859663,Stenotrophomonas maltophilia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Sanovirus,unclassified Sanovirus,dsDNA,2560222,                Sanovirus
+2653643,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Demerecviridae,Sugarlandvirus,Sugarlandvirus AmPhEK80,dsDNA,2560233,                Sugarlandvirus
+2911441,Aeromonas salmonicida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tulanevirus,Tulanevirus bteighttwo,dsDNA,2560244,                Tulanevirus
+2079543,Pseudomonas tolaasii NCPPB 2192,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vicosavirus,Vicosavirus NV1,,dsDNA,2560248,              Vicosavirus
+3075072,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vieuvirus,unclassified Vieuvirus,,dsDNA,2560250,              Vieuvirus
+1917452,Acinetobacter johnsonii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Beijerinckvirinae,Daemvirus,dsDNA,2731672,                  Daemvirus
+3074122,Cronobacter sakazakii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Stentvirinae,Bonnellvirus,dsDNA,2731932,                  Bonnellvirus
+1498172,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autographivirales incertae sedis,Gajwadongvirus,Gajwadongvirus ECBP5,dsDNA,2731941,                Gajwadongvirus
+1958907,Staphylococcus epidermidis RP62A,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Rountreeviridae,Rakietenvirinae,Andhravirus,dsDNA,2732589,                  Andhravirus
+3421740,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Kayfunavirus,dsDNA,2732686,                  Kayfunavirus
+1450169,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Tunggulvirus,Tunggulvirus f2,dsDNA,2732909,                Tunggulvirus
+2686293,Pectobacterium carotovorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Corkvirinae,Kotilavirus,dsDNA,2732921,                  Kotilavirus
+1698708,Dickeya fangzhongdai,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Corkvirinae,Stompvirus,dsDNA,2732922,                  Stompvirus
+2079544,Pseudomonas agarici,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Krylovirinae,Kirikabuvirus,dsDNA,2732923,                  Kirikabuvirus
+386793,Pseudomonas aeruginosa PAO1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Stubburvirus,Stubburvirus LKA1,dsDNA,2732924,                Stubburvirus
+2912288,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autosignataviridae,Molineuxvirinae,Vectrevirus,dsDNA,2732928,                  Vectrevirus
+1147139,Enterobacter cloacae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Slopekvirinae,Koutsourovirus,dsDNA,2732938,                  Koutsourovirus
+2696397,Escherichia coli str. K-12 substr. MG1655,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chaseviridae,Cleopatravirinae,Carltongylesvirus,dsDNA,2732960,                  Carltongylesvirus
+2993912,Acinetobacter sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Phapecoctavirus,unclassified Phapecoctavirus,,dsDNA,2733124,              Phapecoctavirus
+2070187,Faecalibacterium prausnitzii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Toutatisvirus,Toutatisvirus toutatis,,dsDNA,2733138,              Toutatisvirus
+2268587,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Shizishanvirus,Shizishanvirus phCDa,dsDNA,2733148,                Shizishanvirus
+2972476,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Xuquatrovirus,unclassified Xuquatrovirus,,dsDNA,2733151,              Xuquatrovirus
+2767554,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Krampusvirus,unclassified Krampusvirus,,dsDNA,2733184,              Krampusvirus
+2530172,Pseudomonas sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lanavirus,Lanavirus lana,,dsDNA,2733185,              Lanavirus
+2059856,Pseudomonas grimontii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Maxrubnervirus,Maxrubnervirus PMBT3,,dsDNA,2733193,              Maxrubnervirus
+2656546,Microbacterium paraoxydans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hodgkinviridae,Metamorphoovirus,Metamorphoovirus ariadne,dsDNA,2733195,                Metamorphoovirus
+3070156,Miniopterus schreibersii,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Densovirinae,Blattambidensovirus,,2733224,                  Blattambidensovirus
+2786014,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Alehxovirus,Alehxovirus humivicinum,+ssRNA,2842364,                Alehxovirus
+2565510,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Akonivirus,Akonivirus akoni,,dsDNA,2842540,              Akonivirus
+3389964,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Cbunavirus,unclassified Cbunavirus,dsDNA,2842586,                Cbunavirus
+2759193,Aeromonas hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Emmerichvirinae,Ceceduovirus,dsDNA,2842588,                  Ceceduovirus
+2786517,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Cehakivirus,Cehakivirus limihabitans,+ssRNA,2842589,                Cehakivirus
+1563661,Delftia tsuruhatensis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Dendoorenvirus,Dendoorenvirus RG2014,dsDNA,2842641,                Dendoorenvirus
+329852,Escherichia coli HS,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Emesvirus,,+ssRNA,2842664,                Emesvirus
+2786221,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Gihfavirus,Gihfavirus chorovivens,+ssRNA,2842702,                Gihfavirus
+2786386,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Gmuhndevirus,Gmuhndevirus pelovivens,+ssRNA,2842706,                Gmuhndevirus
+2786011,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Hohrdovirus,Hohrdovirus edaphohabitans,+ssRNA,2842736,                Hohrdovirus
+2786722,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Ishugivirus,Ishugivirus pelohabitans,+ssRNA,2842767,                Ishugivirus
+2785988,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Blumeviridae,Ivolevirus,Ivolevirus faecicola,+ssRNA,2842770,                Ivolevirus
+2099850,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Enquatrovirinae,Kaypoctavirus,dsDNA,2842786,                  Kaypoctavirus
+2786519,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Kemicevirus,Kemicevirus caenicola,+ssRNA,2842792,                Kemicevirus
+2836092,Gordonia rubripertincta,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kenoshavirus,unclassified Kenoshavirus,,dsDNA,2842796,              Kenoshavirus
+2786389,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Kinglevirus,Kinglevirus lutadaptatum,+ssRNA,2842802,                Kinglevirus
+2786433,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Kowinovirus,Kowinovirus pelenecus,+ssRNA,2842810,                Kowinovirus
+2786416,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Mahraivirus,Mahraivirus limivicinum,+ssRNA,2842846,                Mahraivirus
+2786518,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Mekintivirus,Mekintivirus lutihabitans,+ssRNA,2842861,                Mekintivirus
+2892342,Lactobacillus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Mooreparkvirus,Mooreparkvirus Lb3381,dsDNA,2842881,                Mooreparkvirus
+3077269,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mydovirus,unclassified Mydovirus,,dsDNA,2842888,              Mydovirus
+2041348,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zobellviridae,Paundecimvirus,unclassified Paundecimvirus,dsDNA,2842942,                Paundecimvirus
+2786475,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Paysduvirus,Paysduvirus asiocola,+ssRNA,2842943,                Paysduvirus
+2859653,Stenotrophomonas maltophilia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Pokkenvirus,Pokkenvirus paxi,dsDNA,2842972,                Pokkenvirus
+1540097,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Humphriesvirinae,Pollockvirus,dsDNA,2842973,                  Pollockvirus
+2725616,Gordonia rubripertincta,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Secretariatvirus,Secretariatvirus secretariat,,dsDNA,2843027,              Secretariatvirus
+2786397,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Sholavirus,unclassified Sholavirus,+ssRNA,2843039,                Sholavirus
+1197951,Celeribacter marinus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zobellviridae,Cobavirinae,Siovirus,dsDNA,2843048,                  Siovirus
+3075087,Gordonia rubripertincta,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Tanisvirus,unclassified Tanisvirus,,dsDNA,2843069,              Tanisvirus
+2590877,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Tinytimothyvirus,Tinytimothyvirus alex44,,dsDNA,2843096,              Tinytimothyvirus
+2604899,Pseudomonas putida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Zurivirus,Zurivirus zuri,dsDNA,2843162,                Zurivirus
+3029265,Acinetobacter,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Astrithrvirus,unclassified Astrithrvirus,,dsDNA,2843350,              Astrithrvirus
+881953,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Audreyjarvisvirus,Audreyjarvisvirus av949,,dsDNA,2843351,              Audreyjarvisvirus
+2590948,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Burrovirus,Burrovirus araxxi,,dsDNA,2843362,              Burrovirus
+475178,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Fremauxvirus,Fremauxvirus fv1706,,dsDNA,2843383,              Fremauxvirus
+2517929,Arthrobacter sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Klausavirus,Klausavirus princesstrina,,dsDNA,2843401,              Klausavirus
+2686247,Flavobacterium sp. LMO6,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lillamyvirus,Lillamyvirus hemulen,,dsDNA,2843418,              Lillamyvirus
+3020854,Cronobacter dublinensis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Muldoonvirus,unclassified Muldoonvirus,,dsDNA,2843425,              Muldoonvirus
+2686245,Flavobacterium sp. LMO9,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Muminvirus,Muminvirus filifjonk,,dsDNA,2843426,              Muminvirus
+1476886,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Nevevirus,Nevevirus P078,,dsDNA,2843430,              Nevevirus
+2557554,Serratia marcescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Parlovirus,Parlovirus parlo,,dsDNA,2843433,              Parlovirus
+2588097,Aeromonas hydrophila subsp. hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Plateaulakevirus,Plateaulakevirus pv2L372D,,dsDNA,2843436,              Plateaulakevirus
+543153,Mycobacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Predatorvirus,Predatorvirus predator,,dsDNA,2843439,              Predatorvirus
+1327990,Cellulophaga baltica,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Steigviridae,Asinivirinae,Akihdevirus,dsDNA,2942978,                  Akihdevirus
+2301731,Bacteroides intestinalis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Steigviridae,Asinivirinae,Kehishuvirus,dsDNA,2942980,                  Kehishuvirus
+1450749,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Steigviridae,Asinivirinae,Paundivirus,dsDNA,2942981,                  Paundivirus
+2986409,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Suoliviridae,Bearivirinae,Afonbuvirus,dsDNA,2942989,                  Afonbuvirus
+2772066,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Suoliviridae,Boorivirinae,Canhaevirus,dsDNA,2942990,                  Canhaevirus
+2986412,Bacteroides thetaiotaomicron,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Suoliviridae,Boorivirinae,Culoivirus,dsDNA,2942992,                  Culoivirus
+2986415,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Suoliviridae,Loutivirinae,Buchavirus,dsDNA,2942994,                  Buchavirus
+3076821,Clavibacter michiganensis subsp. michiganensis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Salvovirus,unclassified Salvovirus,dsDNA,2943016,                Salvovirus
+2906561,Aeromonas hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Sharonstreetvirus,unclassified Sharonstreetvirus,dsDNA,2943019,                Sharonstreetvirus
+2772088,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Suoliviridae,Uncouvirinae,Aurodevirus,dsDNA,2946811,                  Aurodevirus
+3423436,,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Suoliviridae,Oafivirinae,Bohxovirus,dsDNA,2946832,                  Bohxovirus
+2772090,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Suoliviridae,Oafivirinae,Burzaovirus,dsDNA,2948645,                  Burzaovirus
+2955582,bacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Intestiviridae,Crudevirinae,Carjivirus,dsDNA,2948652,                  Carjivirus
+3101605,Aeromonas hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Chrysonvirus,unclassified Chrysonvirus,dsDNA,2948662,                Chrysonvirus
+2986401,Bacteroides thetaiotaomicron,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Intestiviridae,Crudevirinae,Delmidovirus,dsDNA,2948688,                  Delmidovirus
+3141526,Erwinia sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Efbeekayvirus,unclassified Efbeekayvirus,dsDNA,2948690,                Efbeekayvirus
+2655002,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Exceevirus,Exceevirus Xc38,dsDNA,2948704,                Exceevirus
+1079999,Synechococcus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Kyanoviridae,Galenevirus,Galenevirus mbcm1,dsDNA,2948714,                Galenevirus
+2749430,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Harrisonburgvirus,Harrisonburgvirus persinger,,dsDNA,2948755,              Harrisonburgvirus
+2709317,Bacteroides xylanisolvens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Intestiviridae,Churivirinae,Jahgtovirus,dsDNA,2948767,                  Jahgtovirus
+2986395,Bacteroides thetaiotaomicron,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Crevaviridae,Coarsevirinae,Junduvirus,dsDNA,2948774,                  Junduvirus
+2772077,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Crevaviridae,Doltivirinae,Kahucivirus,dsDNA,2948778,                  Kahucivirus
+2986396,Bacteroides thetaiotaomicron,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Crevaviridae,Doltivirinae,Kingevirus,dsDNA,2948785,                  Kingevirus
+2986406,Bacteroides thetaiotaomicron,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Steigviridae,Asinivirinae,Kolpuevirus,dsDNA,2948787,                  Kolpuevirus
+2588098,Aeromonas rivipollensis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kunmingvirus,Kunmingvirus kv2D05,,dsDNA,2948791,              Kunmingvirus
+2041205,Streptomyces xanthochromogenes,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Omarvirus,Omarvirus amethyst,,dsDNA,2948847,              Omarvirus
+1881231,Vibrio breoganii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Pariacacavirus,Pariacacavirus 1238A,dsDNA,2948856,                Pariacacavirus
+2599343,Aphis citricidus,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Phenuiviridae,Citricivirus,-ssRNA,3044688,                  Citricivirus
+1279082,Pseudomonas plecoglossicida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hiroshimavirus,Hiroshimavirus PPpW3,,dsDNA,3044731,              Hiroshimavirus
+1474867,Aureococcus anophagefferens,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Imitervirales,Schizomimiviridae,Kratosvirus,Kratosvirus quantuckense,,3044747,                Kratosvirus
+979525,Vibrio cholerae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mohonavirus,Mohonavirus ICP1,,dsDNA,3044767,              Mohonavirus
+2006668,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Phabiovirus,Phabiovirus phabio,dsDNA,3044790,                Phabiovirus
+2927622,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Purivirus,Purivirus UFJFPfDIW6,,dsDNA,3044798,              Purivirus
+2419948,Arthrobacter globiformis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Richievirus,Richievirus auxilium,,dsDNA,3044803,              Richievirus
+2859658,Stenotrophomonas maltophilia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Siaravirus,Siaravirus siara,,dsDNA,3044826,              Siaravirus
+1690818,Streptomyces flavovirens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Siftrevirus,Siftrevirus SF3,,dsDNA,3044829,              Siftrevirus
+2859072,Vibrio alginolyticus NBRC 15630 = ATCC 17749,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Varunavirus,Varunavirus BUCT194,dsDNA,3044852,                Varunavirus
+2836086,Sinorhizobium americanum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Xoxocotlavirus,Xoxocotlavirus X228B,dsDNA,3044858,                Xoxocotlavirus
+2834256,Pseudomonas syringae pv. tomato,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Medeavirus,Medeavirus medea1,,dsDNA,3152510,              Medeavirus
+2711179,Pseudomonas,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Readingvirus,Readingvirus MR15,,dsDNA,3152626,              Readingvirus
+2041350,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vandenendeviridae,Gorskivirinae,Shenlongvirus,dsDNA,3152898,                  Shenlongvirus
+1805958,Pseudomonas sp. ANT_H14,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Miecznikowavirus,Miecznikowavirus AH14a,,dsDNA,3152971,              Miecznikowavirus
+2911664,Aeromonas veronii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chaseviridae,Nefertitivirinae,Longwangvirus,dsDNA,3153014,                  Longwangvirus
+2805839,Microbacterium paraoxydans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Shockervirus,Shockervirus shocker,,dsDNA,3153082,              Shockervirus
+2785998,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,unclassified Steitzviridae,Hodnevirus,+ssRNA,3153200,                Hodnevirus
+2163633,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Risoevirus,dsDNA,3424972,                  Risoevirus
+2591217,Microbacterium paraoxydans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hodgkinviridae,Margaeryvirus,Margaeryvirus margaery,dsDNA,3425048,                  Margaeryvirus
+1352534,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Lineavirales,Oomyviridae,Nicoomyvirus,Nicoomyvirus moldensis,,3425078,                Nicoomyvirus
+35243,Ateles sp.,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Alphaherpesvirinae,Simplexvirus,dsDNA,10294,                  Simplexvirus
+2716727,Citrobacter rodentium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Tequatrovirus,dsDNA,10663,                  Tequatrovirus
+105154,Chlamydia psittaci,Monodnaviria,Sangervirae,Phixviricota,Malgrandaviricetes,Petitvirales,Microviridae,Gokushovirinae,Chlamydiamicrovirus,,40274,                  Chlamydiamicrovirus
+94433,Homo sapiens,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Caliciviridae,Norovirus,Norovirus norwalkense,,142786,                Norovirus
+12285,Heteronychus arator,Riboviria,Orthornavirae,Kitrinoviricota,Magsaviricetes,Nodamuvirales,Nodaviridae,Alphanodavirus,Alphanodavirus heteronychi,+ssRNA,143920,                Alphanodavirus
+411359,Chlorella heliozoae,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Algavirales,Phycodnaviridae,Chlorovirus,Chlorovirus heliozoae,,181083,                Chlorovirus
+10682,Escherichia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Punavirus,Punavirus P1,,dsDNA,186789,              Punavirus
+539221,Escherichia coli RS218,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lederbergvirus,unclassified Lederbergvirus,,dsDNA,186794,              Lederbergvirus
+1330996,Pan troglodytes,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Kodimesavirinae,Salivirus,,688449,                  Salivirus
+2293273,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Cyclovirus,Cyclovirus mchwa,,742914,                Cyclovirus
+1651203,Escherichia coli O145:NM,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Andersonviridae,Ounavirinae,Felixounavirus,dsDNA,1198140,                  Felixounavirus
+2593343,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pegunavirus,Pegunavirus suffolk,,dsDNA,1623295,              Pegunavirus
+2696387,Escherichia coli str. K-12 substr. MG1655,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sarkviridae,Guernseyvirinae,Jerseyvirus,dsDNA,1910991,                  Jerseyvirus
+1162295,Cronobacter sakazakii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Certrevirus,Certrevirus CR3,,dsDNA,1914850,              Certrevirus
+3384636,Cronobacter sakazakii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Seunavirus,unclassified Seunavirus,,dsDNA,1914851,              Seunavirus
+754050,Aeromonas sp. IS4,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Roufvirus,Roufvirus pIS4A,,dsDNA,1982370,              Roufvirus
+1429767,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Erskinevirinae,Johnsonvirus,dsDNA,1982576,                  Johnsonvirus
+2582945,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemygorvirus,Gemygorvirus hydro1,,1985366,                Gemygorvirus
+1647463,Salmonella enterica subsp. diarizonae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Brunovirus,Brunovirus SEN34,,dsDNA,2560108,              Brunovirus
+2047868,Corynebacterium vitaeruminis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zierdtviridae,Toshachvirinae,Ceetrepovirus,dsDNA,2560111,                  Ceetrepovirus
+1075775,Enterobacteriaceae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Teetrevirus,dsDNA,2732693,                  Teetrevirus
+3411838,Aeromonas dhakensis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chaseviridae,Nefertitivirinae,Pahsextavirus,dsDNA,2732963,                  Pahsextavirus
+1195085,Cronobacter sakazakii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Derbicusvirus,unclassified Derbicusvirus,dsDNA,2733102,                Derbicusvirus
+2832595,Caulobacter vibrioides CB15,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Jeanschmidtviridae,Bertelyvirus,unclassified Bertelyvirus,dsDNA,2733152,                Bertelyvirus
+2767029,Ortmanniana pectorosa,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Densovirinae,Pefuambidensovirus,,2733227,                  Pefuambidensovirus
+2050976,root,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Densovirinae,Protoambidensovirus,,2733228,                  Protoambidensovirus
+797418,Penaeus chinensis,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Hamaparvovirinae,Hepanhamaparvovirus,,2733232,                  Hepanhamaparvovirus
+2686437,Vibrio cholerae O1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Ackermannviridae,Kujavirus,Kujavirus kuja,dsDNA,2841277,                Kujavirus
+2786473,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Ashucavirus,Ashucavirus caenicola,+ssRNA,2842389,                Ashucavirus
+2218611,Ruegeria pomeroyi DSS-3,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Rhodovirinae,Aorunvirus,dsDNA,2842545,                  Aorunvirus
+2786651,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Blumeviridae,Chimpavirus,Chimpavirus luticola,+ssRNA,2842596,                Chimpavirus
+2720215,Escherichia coli K-12,Monodnaviria,Sangervirae,Phixviricota,Malgrandaviricetes,Petitvirales,Microviridae,Gokushovirinae,Enterogokushovirus,,2842667,                  Enterogokushovirus
+2678601,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Henunavirus,Henunavirus hena1,,dsDNA,2842727,              Henunavirus
+2777323,Enterobacter cloacae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Drexlerviridae,Tempevirinae,Henuseptimavirus,dsDNA,2842728,                  Henuseptimavirus
+2786573,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Hihdivirus,Hihdivirus caenenecus,+ssRNA,2842731,                Hihdivirus
+2786749,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Icumivirus,Icumivirus limivivens,+ssRNA,2842754,                Icumivirus
+2048976,Pseudomonas syringae pv. avii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Rothmandenesvirinae,Inbricusvirus,dsDNA,2842758,                  Inbricusvirus
+2786730,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Ineyimevirus,Ineyimevirus lutihabitans,+ssRNA,2842759,                Ineyimevirus
+2786620,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Duinviridae,Kohmavirus,Kohmavirus luticola,+ssRNA,2842807,                Kohmavirus
+2163965,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Littlefixvirus,Littlefixvirus 98Pflur60pp,dsDNA,2842828,                Littlefixvirus
+2786404,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Blumeviridae,Nehpavirus,Nehpavirus caenenecus,+ssRNA,2842897,                Nehpavirus
+12024,Pseudomonas,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Perrunavirus,Perrunavirus olsenii,+ssRNA,2842953,                Perrunavirus
+2596966,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Humphriesvirinae,Pylasvirus,dsDNA,2842993,                  Pylasvirus
+2786621,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Teciucevirus,Teciucevirus pelohabitans,+ssRNA,2843073,                Teciucevirus
+2723758,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lastavirus,Lastavirus lasta,,dsDNA,2843414,              Lastavirus
+2831179,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Questintvirus,unclassified Questintvirus,,dsDNA,2843441,              Questintvirus
+1815509,Bacillus subtilis subsp. subtilis str. 168,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Takahashivirus,Takahashivirus PBS1,,dsDNA,2843463,              Takahashivirus
+2024238,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Yonseivirus,Yonseivirus N137,dsDNA,2843478,                Yonseivirus
+2710495,Bacteroides thetaiotaomicron VPI-5482,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Steigviridae,Asinivirinae,Wulfhauvirus,dsDNA,2942982,                  Wulfhauvirus
+2769808,Escherichia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Swiduovirus,Swiduovirus swi2,,dsDNA,2944849,              Swiduovirus
+2340716,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Deseoctovirus,Deseoctovirus C1,,dsDNA,2948678,              Deseoctovirus
+2911431,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Fredfastierviridae,Jamesmcgillvirus,Jamesmcgillvirus jv119X,dsDNA,2948768,                Jamesmcgillvirus
+2047877,Campylobacter jejuni,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Justusliebigvirus,unclassified Justusliebigvirus,,dsDNA,2948775,              Justusliebigvirus
+3071280,Salmonella enterica subsp. enterica serovar Typhimurium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Segzyvirus,Segzyvirus LPSTLL,,dsDNA,2948900,              Segzyvirus
+1873985,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Shuimuvirus,Shuimuvirus IME207,,dsDNA,2948906,              Shuimuvirus
+3377958,Salmonella enterica subsp. enterica serovar Typhimurium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Skatevirus,unclassified Skatevirus,,dsDNA,2948910,              Skatevirus
+2812854,Salmonella enterica subsp. enterica serovar Albany,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Triduovirus,Triduovirus Tr2,dsDNA,2948933,                Triduovirus
+2956630,,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Rohanvirales,Nenyaviridae,Valinorvirus,,,2948943,                Valinorvirus
+2740427,Stenotrophomonas maltophilia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Axeltriavirus,Axeltriavirus AXL3,,dsDNA,3044667,              Axeltriavirus
+2894794,Enterobacter cloacae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Cobrasixvirus,Cobrasixvirus cobrasix,,dsDNA,3044690,              Cobrasixvirus
+2886042,Shigella flexneri,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Enquatrovirinae,Moovirus,dsDNA,3044769,                  Moovirus
+2603260,Arthrobacter globiformis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Quivirus,Quivirus qui,,dsDNA,3044799,              Quivirus
+2047786,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bimevirus,Bimevirus bv1611EK21,,dsDNA,3152907,              Bimevirus
+2861002,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Geezettvirus,Geezettvirus geezett,,dsDNA,3152909,              Geezettvirus
+1769780,Anopheles gambiae,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Dicistroviridae,Cripavirus,unclassified Cripavirus,,144051,                Cripavirus
+37665,Ectocarpus siliculosus,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Algavirales,Phycodnaviridae,Phaeovirus,Phaeovirus unasiliculosus,,181085,                Phaeovirus
+10788,Felis catus,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Protoparvovirus,,1506574,                  Protoparvovirus
+1541887,Salmonella enterica,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Chivirus,,dsDNA,1623283,                Chivirus
+3016942,Lacticaseibacillus casei,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Coetzeevirus,unclassified Coetzeevirus,,dsDNA,1623300,              Coetzeevirus
+1970799,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Nipunavirus,Nipunavirus quinobequin,Nipunavirus NP1,dsDNA,1982239,              Nipunavirus
+2739880,Artemisia carvifolia,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemyduguivirus,Gemyduguivirus arteca1,,1985365,                Gemyduguivirus
+2283026,Erwinia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Feofaniavirus,Feofaniavirus Eho49,,dsDNA,2733174,              Feofaniavirus
+3060017,Vermamoeba vermiformis,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Imitervirales,Mimiviridae,Klosneuvirinae,Fadolivirus,,2763561,                  Fadolivirus
+2786600,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Adahmuvirus,Adahmuvirus asiocola,+ssRNA,2842361,                Adahmuvirus
+979533,Vibrio cholerae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zobellviridae,Icepovirus,Icepovirus bengalense,dsDNA,2842751,                Icepovirus
+2786438,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Limaivirus,Limaivirus borborocola,+ssRNA,2842826,                Limaivirus
+2178928,Erwinia pyrifoliae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Erskinevirinae,Yonginvirus,dsDNA,2843155,                  Yonginvirus
+2686250,Flavobacterium sp. LMO6,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Duneviridae,Labanvirus,Labanvirus laban,dsDNA,2843408,                Labanvirus
+2593268,Erwinia pyrifoliae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Gwanakrovirus,Gwanakrovirus SNUABM08,dsDNA,2943008,                Gwanakrovirus
+1964565,Synechococcus sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Sessunavirus,Sessunavirus SESS1,dsDNA,2943018,                Sessunavirus
+2992576,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Bracchivirus,Bracchivirus U2F1,dsDNA,2946835,                Bracchivirus
+1873696,Mycolicibacterium smegmatis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vilmaviridae,Lclasvirinae,Faithunavirus,dsDNA,2948705,                  Faithunavirus
+3241060,Mycolicibacterium smegmatis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Veracruzvirus,unclassified Veracruzvirus,,dsDNA,2948946,              Veracruzvirus
+2900314,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Carvajevirus,Carvajevirus carvaje,,dsDNA,3044683,              Carvajevirus
+279303,Actinoplanes sp. SN223/29,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Aspduovirus,Aspduovirus Asp2,,dsDNA,3153070,              Aspduovirus
+2913092,Klebsiella,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Drexlerviridae,Tempevirinae,Peekayseptimavirus,dsDNA,3153273,                  Peekayseptimavirus
+28873,Camelus,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Pokkesviricetes,Chitovirales,Poxviridae,Chordopoxvirinae,Orthopoxvirus,,10242,                  Orthopoxvirus
+85618,Ateles,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Gammaherpesvirinae,Rhadinovirus,dsDNA,10379,                  Rhadinovirus
+1520006,Cairina moschata,Varidnaviria,Bamfordvirae,Preplasmiviricota,Polisuviricotina,Pharingeaviricetes,Rowavirales,Adenoviridae,Aviadenovirus,,10552,                  Aviadenovirus
+335103,Homo sapiens,Riboviria,Orthornavirae,Duplornaviricota,Resentoviricetes,unclassified Resentoviricetes,Reovirales,Sedoreoviridae,Rotavirus,dsRNA,10912,                Rotavirus
+2764701,Aconitum carmichaelii,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Tymovirales,Betaflexiviridae,Quinvirinae,Carlavirus,+ssRNA,12163,                  Carlavirus
+2753665,Achyranthes bidentata,Riboviria,Orthornavirae,Pisuviricota,Stelpaviricetes,Patatavirales,Potyviridae,Potyvirus,Potyvirus achyranthis,,12195,                Potyvirus
+1168547,Acartia tonsa,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Circoviridae,Circovirus,unclassified Circovirus,,39725,                Circovirus
+2905681,Escherichia coli K-12,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Peduovirus,Peduovirus P2,dsDNA,140410,                Peduovirus
+880159,Bathycoccus prasinos RCC1105,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Algavirales,Phycodnaviridae,Prasinovirus,unclassified Prasinovirus,,181084,                Prasinovirus
+3098270,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Demerecviridae,Markadamsvirinae,Tequintavirus,dsDNA,187218,                  Tequintavirus
+2852040,Escherichia coli K-12,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Enquatrovirinae,Enquatrovirus,dsDNA,371730,                  Enquatrovirus
+1968861,Sus scrofa,Monodnaviria,Shotokuvirae,Commensaviricota,Cardeaviricetes,Sanitavirales,Anelloviridae,Kappatorquevirus,Kappatorquevirus suidak2a,,1218487,                Kappatorquevirus
+2902792,Mycobacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kostyavirus,Kostyavirus kv244,,dsDNA,1623284,              Kostyavirus
+2681626,Streptococcus thermophilus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Aliceevansviridae,Brussowvirus,Brussowvirus bvO1205,dsDNA,1623303,                Brussowvirus
+1857890,Staphylococcus aureus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Twortvirinae,Silviavirus,dsDNA,1857889,                  Silviavirus
+1399914,Loxodonta africana,Monodnaviria,Shotokuvirae,Cossaviricota,Papovaviricetes,Sepolyvirales,Polyomaviridae,Betapolyomavirus,Betapolyomavirus elephanti,,1891714,                Betapolyomavirus
+1755680,Priestia megaterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Bastillevirinae,Caeruleovirus,dsDNA,1911929,                  Caeruleovirus
+3003615,Citrobacter sp. TSA-1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Drexlerviridae,Tempevirinae,Tlsvirus,dsDNA,1920865,                  Tlsvirus
+1468411,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Nonagvirus,Nonagvirus nv9g,,dsDNA,1921117,              Nonagvirus
+2873450,Escherichia coli O78,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Nonanavirus,unclassified Nonanavirus,,dsDNA,1921122,              Nonanavirus
+2883572,Limnohabitans sp. DCL3,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vandenendeviridae,Skurskavirinae,Pakpunavirus,dsDNA,1921407,                  Pakpunavirus
+1220604,Rhizobium etli GR56,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kleczkowskavirus,Kleczkowskavirus RHEph4,,dsDNA,1921525,              Kleczkowskavirus
+1558463,Vibrio cholerae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Enhodamvirus,unclassified Enhodamvirus,,dsDNA,1922329,              Enhodamvirus
+2873380,Pseudomonas luteola,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mesyanzhinovviridae,Bradleyvirinae,Abidjanvirus,dsDNA,1982095,                  Abidjanvirus
+945083,Edwardsiella ictaluri,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Eiauvirus,Eiauvirus eiAU,,dsDNA,1982111,              Eiauvirus
+1775248,Pseudomonas aeruginosa PA14,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mesyanzhinovviridae,Bradleyvirinae,Pamexvirus,dsDNA,1982355,                  Pamexvirus
+1462608,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kochitakasuvirus,Kochitakasuvirus KPP25,,dsDNA,1982590,              Kochitakasuvirus
+1690426,Streptomyces griseus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Likavirus,Likavirus aaronocolus,,dsDNA,1982880,              Likavirus
+2340711,Cronobacter sakazakii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Andersonviridae,Ounavirinae,Kolesnikvirus,dsDNA,1985293,                  Kolesnikvirus
+3003613,Citrobacter freundii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Andersonviridae,Ounavirinae,Mooglevirus,dsDNA,1985303,                  Mooglevirus
+3373934,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Jiaodavirus,dsDNA,1985325,                  Jiaodavirus
+1682394,Klebsiella aerogenes,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Slopekvirus,Slopekvirus eap3,dsDNA,1985328,                Slopekvirus
+2126984,Acanthamoeba sp.,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Imitervirales,Mimiviridae,Megamimivirinae,Tupanvirus,,2094720,                  Tupanvirus
+2137745,Enterobacter asburiae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Ackermannviridae,Aglimvirinae,Agtrevirus,dsDNA,2169532,                  Agtrevirus
+1883375,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Machinavirus,Machinavirus machina,dsDNA,2169624,                Machinavirus
+2785079,Bacillus sp. 6k512,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Svunavirus,Svunavirus sv1,,dsDNA,2169625,              Svunavirus
+1416009,Achromobacter xylosoxidans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Rothmandenesvirinae,Jwalphavirus,dsDNA,2169642,                  Jwalphavirus
+1897532,Propionibacterium freudenreichii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Doucettevirus,Doucettevirus B22,,dsDNA,2169653,              Doucettevirus
+2588127,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Stackebrandtviridae,Frickvirinae,Wizardvirus,dsDNA,2169658,                  Wizardvirus
+1439894,Klebsiella,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Alcyoneusvirus,Alcyoneusvirus K641,,dsDNA,2560086,              Alcyoneusvirus
+1555202,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Asteriusvirus,Asteriusvirus av121Q,,dsDNA,2560094,              Asteriusvirus
+1873949,Pseudomonas syringae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Bifseptvirus,Bifseptvirus andromeda,dsDNA,2560102,                Bifseptvirus
+1777065,Pseudomonas coronafaciens pv. porri,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vandenendeviridae,Gorskivirinae,Flaumdravirus,dsDNA,2560133,                  Flaumdravirus
+2419942,Edwardsiella anguillarum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Gofduovirus,Gofduovirus edno5,,dsDNA,2560141,              Gofduovirus
+1401669,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Iapetusvirus,Iapetusvirus EaH1,dsDNA,2560148,                Iapetusvirus
+3248842,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Ilzatvirus,unclassified Ilzatvirus,,dsDNA,2560150,              Ilzatvirus
+2572530,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kojivirus,unclassified Kojivirus,,dsDNA,2560161,              Kojivirus
+1837876,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Metrivirus,Metrivirus ME3,,dsDNA,2560175,              Metrivirus
+1141136,Cronobacter sakazakii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mimasvirus,Mimasvirus GAP32,,dsDNA,2560176,              Mimasvirus
+1852562,Pseudomonas,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Napahaivirus,Napahaivirus VSW3,dsDNA,2560184,                Napahaivirus
+2912595,Pseudomonas syringae pv. actinidiae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Nickievirus,unclassified Nickievirus,,dsDNA,2560188,              Nickievirus
+2686298,Dickeya dianthicola,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vandenendeviridae,Gorskivirinae,Otagovirus,dsDNA,2560197,                  Otagovirus
+2053078,Pectobacterium atrosepticum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peatvirus,Peatvirus peat2,,dsDNA,2560201,              Peatvirus
+2099442,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pikminvirus,Pikminvirus pikmin,,dsDNA,2560203,              Pikminvirus
+1814279,Flavobacterium psychrophilum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Duneviridae,Unahavirus,Unahavirus uv23T,dsDNA,2560245,                Unahavirus
+2041493,Ralstonia solanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autographivirales incertae sedis,Gyeongsanvirus,Gyeongsanvirus DURPI,dsDNA,2731942,                Gyeongsanvirus
+913183,Ralstonia solanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Kelmasvirus,Kelmasvirus RSB2,dsDNA,2731950,                Kelmasvirus
+1220601,Rhizobium etli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autographivirales incertae sedis,Paadamvirus,Paadamvirus RHEph01,dsDNA,2731961,                Paadamvirus
+1647385,Delftia sp. 670,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Piedvirus,Piedvirus IMEDE1,dsDNA,2731968,                Piedvirus
+2282912,Sphingomonas paucimobilis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Scottvirus,Scottvirus scott,dsDNA,2731973,                Scottvirus
+2024324,Escherichia coli K-12,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Demerecviridae,Markadamsvirinae,Epseptimavirus,dsDNA,2732017,                  Epseptimavirus
+3404141,Aeromonas hydrophila subsp. hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Demerecviridae,Shenzhenvirus,unclassified Shenzhenvirus,dsDNA,2732038,                Shenzhenvirus
+3117391,Escherichia sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Drexlerviridae,Nouzillyvirus,unclassified Nouzillyvirus,dsDNA,2732049,                Nouzillyvirus
+2163630,Dickeya solani,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Aarhusvirus,dsDNA,2732675,                  Aarhusvirus
+3136606,Citrobacter freundii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Berlinvirus,dsDNA,2732677,                  Berlinvirus
+3075081,Vibrio cholerae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Chatterjeevirus,dsDNA,2732679,                  Chatterjeevirus
+3137290,Pseudomonas syringae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Ghunavirus,dsDNA,2732683,                  Ghunavirus
+2052933,Yersinia enterocolitica (type O:3),Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Helsettvirus,dsDNA,2732684,                  Helsettvirus
+2163634,Pectobacterium carotovorum subsp. carotovorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Jarilovirus,dsDNA,2732685,                  Jarilovirus
+526118,Morganella morganii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Minipunavirus,dsDNA,2732687,                  Minipunavirus
+2951194,Dickeya chrysanthemi,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Ningirsuvirus,dsDNA,2732688,                  Ningirsuvirus
+1747286,Aeromonas hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Melnykvirinae,Ahphunavirus,dsDNA,2732912,                  Ahphunavirus
+1777063,Pseudomonas putida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Corkvirinae,Kantovirus,dsDNA,2732920,                  Kantovirus
+2601683,Burkholderia pseudomallei,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Ampunavirus,Ampunavirus BpAMP1,dsDNA,2732929,                Ampunavirus
+1481785,Ralstonia solanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Risjevirus,Risjevirus RSJ2,dsDNA,2732932,                Risjevirus
+2530183,Shigella flexneri,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Slopekvirinae,Bucovirus,dsDNA,2732937,                  Bucovirus
+3056490,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chaseviridae,Cleopatravirinae,Loessnervirus,dsDNA,2732962,                  Loessnervirus
+2835638,Enterococcus faecium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Brockvirinae,Schiekvirus,dsDNA,2732968,                  Schiekvirus
+2079429,Lactiplantibacillus plantarum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Harbinvirus,Harbinvirus bacchae,dsDNA,2732970,                Harbinvirus
+2985286,Aeromonas sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Bielevirus,Bielevirus A051,dsDNA,2732974,                Bielevirus
+2283029,Dickeya solani MK10,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Alexandravirus,Alexandravirus AD1,,dsDNA,2733088,              Alexandravirus
+754037,Synechococcus sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Kyanoviridae,Anaposvirus,Anaposvirus socalone,dsDNA,2733090,                Anaposvirus
+1335230,Pseudomonas aeruginosa PAO1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Baikalvirus,Baikalvirus PaBG,,dsDNA,2733094,              Baikalvirus
+2849598,Rheinheimera sp. BAL341,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Barbavirus,Barbavirus barba21A,,dsDNA,2733095,              Barbavirus
+3108904,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Loughboroughvirus,unclassified Loughboroughvirus,,dsDNA,2733112,              Loughboroughvirus
+2562142,Edwardsiella tarda,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Petsuvirus,Petsuvirus pEtSU,dsDNA,2733122,                Petsuvirus
+3077272,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Rosemountvirus,unclassified Rosemountvirus,,dsDNA,2733127,              Rosemountvirus
+1092848,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Saclayvirus,unclassified Saclayvirus,,dsDNA,2733128,              Saclayvirus
+2883949,Burkholderia cepacia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Ryyoungvirus,Ryyoungvirus bcepC6B,,dsDNA,2733147,              Ryyoungvirus
+3436050,Caulobacter vibrioides CB15,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Jeanschmidtviridae,Poindextervirus,Poindextervirus rogue,dsDNA,2733154,                Poindextervirus
+2053682,Lactobacillus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lenusvirus,Lenusvirus lenus,,dsDNA,2733160,              Lenusvirus
+1552735,Lactobacillus delbrueckii subsp. lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lidleunavirus,Lidleunavirus Ldl1,,dsDNA,2733161,              Lidleunavirus
+2419971,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Armstrongvirus,Armstrongvirus armstrong,,dsDNA,2733167,              Armstrongvirus
+2419949,Arthrobacter globiformis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bridgettevirus,Bridgettevirus bridgette,,dsDNA,2733170,              Bridgettevirus
+2743916,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Goodmanvirus,unclassified Goodmanvirus,,dsDNA,2733179,              Goodmanvirus
+1132026,Burkholderia cenocepacia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kilunavirus,Kilunavirus KL1,,dsDNA,2733183,              Kilunavirus
+2283015,Eggerthella lenta,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lentavirus,Lentavirus PMBT5,,dsDNA,2733186,              Lentavirus
+2591215,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mementomorivirus,Mementomorivirus cinna,,dsDNA,2733194,                  Mementomorivirus
+2713265,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Neferthenavirus,unclassified Neferthenavirus,,dsDNA,2733198,              Neferthenavirus
+2070188,Faecalibacterium prausnitzii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Oengusvirus,Oengusvirus oengus,,dsDNA,2733199,              Oengusvirus
+2653719,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hodgkinviridae,Quhwahvirus,Quhwahvirus paschalis,dsDNA,2733202,                Quhwahvirus
+2283281,Salmonella enterica subsp. enterica serovar Kentucky,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sashavirus,unclassified Sashavirus,,dsDNA,2733210,              Sashavirus
+2500787,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schubertvirus,Schubertvirus schubert,,dsDNA,2733212,              Schubertvirus
+1675601,Caulobacter vibrioides CB15,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Seussvirus,Seussvirus seuss,,dsDNA,2733213,              Seussvirus
+3070825,Tytonidae,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Hamaparvovirinae,Chaphamaparvovirus,,2733231,                  Chaphamaparvovirus
+2759719,Ralstonia pseudosolanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Anchaingvirus,Anchaingvirus anchaing,dsDNA,2842373,                Anchaingvirus
+154784,Acinetobacter higginsii,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Duinviridae,Apeevirus,Apeevirus quebecense,+ssRNA,2842379,                Apeevirus
+1622234,Citrobacter sp. TM1552,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zobellviridae,Citrovirus,Citrovirus coptotermitis,dsDNA,2842608,                Citrovirus
+2861974,Bacillus thuringiensis serovar kurstaki,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Salasmaviridae,Northropvirinae,Claudivirus,dsDNA,2842609,                  Claudivirus
+942016,Enterobacter cloacae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Eceepunavirus,Eceepunavirus EcP1,dsDNA,2842661,                Eceepunavirus
+1206300,Enterobacteriaceae,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Hagavirus,Hagavirus psychrophilum,+ssRNA,2842717,                Hagavirus
+1567484,Limosilactobacillus fermentum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Hopescreekvirus,Hopescreekvirus LfeInf,dsDNA,2842737,                Hopescreekvirus
+2599764,Sinorhizobium meliloti,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Huelvavirus,Huelvavirus ort11,dsDNA,2842739,                Huelvavirus
+760732,Acinetobacter johnsonii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Twarogvirinae,Lasallevirus,dsDNA,2842819,                  Lasallevirus
+2786059,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Luthavirus,Luthavirus edaphovicinum,+ssRNA,2842838,                Luthavirus
+2708562,Streptomyces lividans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Manuelvirus,Manuelvirus JXY1,,dsDNA,2842852,              Manuelvirus
+754052,Pseudoalteromonas sp. YD6,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Fuhrmanvirinae,Matsuvirus,dsDNA,2842857,                  Matsuvirus
+3405103,,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zobellviridae,Melvirus,unclassified Melvirus,dsDNA,2842862,                Melvirus
+2786428,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Mintuvirus,Mintuvirus pelovivens,+ssRNA,2842872,                Mintuvirus
+1147150,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Nochtlivirus,Nochtlivirus mEp235,,dsDNA,2842908,              Nochtlivirus
+2966628,Vibrio cholerae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Pacinivirus,unclassified Pacinivirus,dsDNA,2842934,                Pacinivirus
+1406780,Acinetobacter baumannii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Presleyvirus,Presleyvirus presley,dsDNA,2842977,                Presleyvirus
+2729539,Buttiauxella sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Pseudotevenvirus,unclassified Pseudotevenvirus,dsDNA,2842979,                Pseudotevenvirus
+3137914,Escherichia coli str. K-12 substr. MG1655,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Qubevirus,unclassified Qubevirus,+ssRNA,2842995,                Qubevirus
+754046,Sulfitobacter sp. CB2047,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Rhodovirinae,Raunefjordenvirus,dsDNA,2843000,                  Raunefjordenvirus
+2108116,Xanthomonas fragariae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Riverridervirus,Riverridervirus riverrider,dsDNA,2843008,                Riverridervirus
+1161935,Salinivibrio costicola,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zobellviridae,Salinovirus,Salinovirus utanense,dsDNA,2843017,                Salinovirus
+2786653,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Stehlmavirus,Stehlmavirus lutihabitans,+ssRNA,2843058,                Stehlmavirus
+3072195,Vibrio parahaemolyticus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Fuhrmanvirinae,Stoningtonvirus,dsDNA,2843060,                  Stoningtonvirus
+2786728,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Ticahravirus,Ticahravirus asiovicinum,+ssRNA,2843092,                Ticahravirus
+3056489,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Waedenswilvirus,unclassified Waedenswilvirus,dsDNA,2843122,                Waedenswilvirus
+2786645,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Blumeviridae,Wahdswovirus,Wahdswovirus lutenecus,+ssRNA,2843124,                Wahdswovirus
+1147143,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Yautsimvirus,Yautsimvirus HK140,,dsDNA,2843147,              Yautsimvirus
+1622115,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Zicotriavirus,Zicotriavirus ZC03,dsDNA,2843161,                Zicotriavirus
+1147149,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Aguilavirus,Aguilavirus mEp043,,dsDNA,2843343,              Aguilavirus
+2886897,Burkholderia ambifaria,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lindbergviridae,Bcepfunavirus,Bcepfunavirus bcepF1,dsDNA,2843356,                Bcepfunavirus
+2913972,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chopinvirus,Chopinvirus KSY1,,dsDNA,2843365,              Chopinvirus
+2759720,Ralstonia pseudosolanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Cimandefvirus,Cimandefvirus cimandef,,dsDNA,2843366,              Cimandefvirus
+2686246,Flavobacterium sp. LMO9,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hattifnattvirus,Hattifnattvirus hattifnatt,,dsDNA,2843390,              Hattifnattvirus
+947980,Lactobacillus sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lafunavirus,Lafunavirus LF1,,dsDNA,2843410,              Lafunavirus
+2588517,Aeromonas hydrophila subsp. hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Grimontviridae,Lahexavirus,Lahexavirus lv44572,dsDNA,2843411,                Lahexavirus
+2591403,Achromobacter animicus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Moturavirus,Moturavirus motura,,dsDNA,2843423,              Moturavirus
+2699738,Cronobacter sakazakii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Grimontviridae,Privateervirus,Privateervirus pv009,dsDNA,2843440,                Privateervirus
+201847,Lactococcus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sandinevirus,unclassified Sandinevirus,,dsDNA,2843449,              Sandinevirus
+1654919,Pseudoalteromonas marina,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Shandongvirus,Shandongvirus H101,,dsDNA,2843454,              Shandongvirus
+1965474,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Teubervirus,Teubervirus AM6,,dsDNA,2843466,              Teubervirus
+1868848,Lactococcus lactis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vedamuthuvirus,Vedamuthuvirus vv50902,,dsDNA,2843470,              Vedamuthuvirus
+2315217,Prodigiosinella confusarubida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Dunedinvirus,Dunedinvirus JS26,dsDNA,2943004,                Dunedinvirus
+2796514,Achromobacter spanius,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Gediminasvirus,Gediminasvirus AchV4,dsDNA,2943007,                Gediminasvirus
+2662138,Pseudomonas syringae pv. syringae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Phobosvirus,Phobosvirus phobos,dsDNA,2943014,                Phobosvirus
+2026102,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Seodaemunguvirus,Seodaemunguvirus YMC16-01N133,dsDNA,2943017,                Seodaemunguvirus
+2126944,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Anayavirus,unclassified Anayavirus,,dsDNA,2946797,              Anayavirus
+2880362,Aeromonas hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Cinqassovirus,Cinqassovirus aeh1,dsDNA,2948665,                Cinqassovirus
+2881401,Burkholderia pseudomallei,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Duodecimduovirus,Duodecimduovirus phiE122,dsDNA,2948687,                Duodecimduovirus
+1983556,Pseudomonas sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Jiangsuvirus,Jiangsuvirus pspyzu05,dsDNA,2948770,                Jiangsuvirus
+2015840,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kratiovirus,Kratiovirus larva,,dsDNA,2948788,              Kratiovirus
+2652422,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lilmcdreamyvirus,Lilmcdreamyvirus lilmcdreamy,,dsDNA,2948802,              Lilmcdreamyvirus
+1493509,Synechococcus sp. WH 7803,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Kyanoviridae,Lowelvirus,Lowelvirus tuscon4d,dsDNA,2948806,                Lowelvirus
+2530140,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pharaohvirus,Pharaohvirus pharaoh,,dsDNA,2948861,              Pharaohvirus
+2989853,root,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Crassvirales,Intestiviridae,Obtuvirinae,Wotdevirus,dsDNA,2948953,                  Wotdevirus
+1647386,Polaribacter,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Incheonvirus,Incheonvirus P12002L,,dsDNA,2976977,              Incheonvirus
+2836132,Rhizobium etli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Demetervirinae,Acanvirus,dsDNA,3044653,                  Acanvirus
+2743910,Gordonia rubripertincta,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Clawzvirus,Clawzvirus clawz,,dsDNA,3044689,              Clawzvirus
+3141444,Aeromonas caviae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Ferozepurvirus,unclassified Ferozepurvirus,dsDNA,3044715,                Ferozepurvirus
+2805750,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Ittyvirus,Ittyvirus itty13,,dsDNA,3044742,              Ittyvirus
+2593327,Aeromonas hydrophila,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Ludhianavirus,Ludhianavirus D3,dsDNA,3044751,                Ludhianavirus
+2767581,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Miamivirus,Miamivirus miami,dsDNA,3044763,                Miamivirus
+998086,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Miltoncavirus,Miltoncavirus PhiPA3,dsDNA,3044765,                Miltoncavirus
+1054968,Salmonella enterica subsp. enterica serovar Newport,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Grimontviridae,Moazamivirus,Moazamivirus 711,dsDNA,3044766,                Moazamivirus
+2267655,Erwinia amylovora,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pavtokvirus,Pavtokvirus pavtok,,dsDNA,3044786,              Pavtokvirus
+3234043,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Pawinskivirus,unclassified Pawinskivirus,dsDNA,3044787,                Pawinskivirus
+1814957,Streptococcus thermophilus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Piorkowskivirus,Piorkowskivirus pv9871,,dsDNA,3044792,              Piorkowskivirus
+2894367,Aeromonas salmonicida subsp. salmonicida A449,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Piscesmortuivirus,Piscesmortuivirus LPM4,dsDNA,3044793,                Piscesmortuivirus
+2914481,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Baphyvirales,Bacilladnaviridae,Puahadnavirus,Puahadnavirus inbhir,,3044797,                Puahadnavirus
+198110,Pseudomonas chlororaphis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Serwervirus,Serwervirus 201phi21,dsDNA,3044821,                Serwervirus
+2006671,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Skulduggeryvirus,Skulduggeryvirus skulduggery,,dsDNA,3044832,              Skulduggeryvirus
+2530023,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Tepukevirus,Tepukevirus Psa21,dsDNA,3044840,                Tepukevirus
+2917160,Bacillus subtilis BEST7003,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zhangjivirus,Zhangjivirus fado,,dsDNA,3044867,              Zhangjivirus
+1755689,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bugaksanvirus,Bugaksanvirus R656,,dsDNA,3152615,              Bugaksanvirus
+2885983,Microbacterium paraoxydans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pumpernickelvirus,Pumpernickelvirus pumpernickel,,dsDNA,3152625,              Pumpernickelvirus
+2873460,Pseudomonas syringae pv. tomato,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vandenendeviridae,Gorskivirinae,Kremarvirus,dsDNA,3152897,                  Kremarvirus
+2849971,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chaoyangvirus,Chaoyangvirus BUCT49532,,dsDNA,3152908,              Chaoyangvirus
+2874879,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mascletvirus,Mascletvirus VLCpiM12a,,dsDNA,3152910,              Mascletvirus
+2776813,Klebsiella pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sircambvirus,Sircambvirus MEW1,,dsDNA,3152913,              Sircambvirus
+2935866,Escherichia sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zewailvirus,Zewailvirus ZCEC13,,dsDNA,3152914,              Zewailvirus
+2719181,Hafnia paralvei,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hafyongvirus,Hafyongvirus yong1,,dsDNA,3152967,              Hafyongvirus
+2914450,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Haihevirus,Haihevirus PP9W2,,dsDNA,3152968,              Haihevirus
+2787014,Serratia marcescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sarkviridae,Otakuvirus,Otakuvirus Tsm2,dsDNA,3152972,                Otakuvirus
+1282995,Serratia marcescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sarkviridae,Seretavirus,Seretavirus eta,dsDNA,3152998,                Seretavirus
+3003729,Pseudomonas putida S12,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Micathvirus,Micathvirus micath,,dsDNA,3153077,              Micathvirus
+2894587,Stenotrophomonas maltophilia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Shangdongvirus,Shangdongvirus ply2008005c,,dsDNA,3153078,              Shangdongvirus
+2686378,Sphingomonas turrisvirgatae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Torvergatavirus,Torvergatavirus MMDA13,,dsDNA,3153079,              Torvergatavirus
+1916180,Streptococcus pneumoniae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Adrianbuildvirus,Adrianbuildvirus IPP41,,dsDNA,3424927,              Adrianbuildvirus
+2099356,Escherichia coli C,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Ebriosvirus,dsDNA,3424957,                  Ebriosvirus
+2163970,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Pfluvirus,dsDNA,3424962,                  Pfluvirus
+272636,Cairina moschata,Monodnaviria,Shotokuvirae,Cossaviricota,Quintoviricetes,Piccovirales,Parvoviridae,Parvovirinae,Dependoparvovirus,,10803,                  Dependoparvovirus
+2170538,Medicago sativa,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Tymovirales,Tymoviridae,Marafivirus,Marafivirus medicagonis,+ssRNA,12051,                Marafivirus
+2219115,Alces alces,Monodnaviria,Shotokuvirae,Cressdnaviricota,Repensiviricetes,Geplafuvirales,Genomoviridae,Gemykolovirus,Gemykolovirus lepam1,,1941238,                Gemykolovirus
+248058,Argas hermanni,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Nairoviridae,Orthonairovirus,-ssRNA,1980517,                  Orthonairovirus
+2219142,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Porprismacovirus,Porprismacovirus alecas1,,2169663,                Porprismacovirus
+2851101,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Dismasvirus,unclassified Dismasvirus,,dsDNA,2560122,              Dismasvirus
+1458670,Microbacterium oxydans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Farahnazvirus,Farahnazvirus ISF9,,dsDNA,2560130,              Farahnazvirus
+2006684,Pseudomonas fluorescens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Noxifervirus,Noxifervirus noxifer,dsDNA,2560190,                Noxifervirus
+2926078,Streptomyces scabiei,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Scapunavirus,unclassified Scapunavirus,,dsDNA,2560225,              Scapunavirus
+2910956,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Squashvirus,unclassified Squashvirus,,dsDNA,2733215,              Squashvirus
+2015807,Escherichia coli str. K-12 substr. MG1655,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Wongtaivirus,Wongtaivirus ECP1,,dsDNA,2843141,              Wongtaivirus
+2163589,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Turbidovirus,Turbidovirus turbido,,dsDNA,2948936,              Turbidovirus
+1852622,Xanthomonas oryzae pv. oryzae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mesyanzhinovviridae,Bradleyvirinae,Xooduovirus,dsDNA,2948956,                  Xooduovirus
+2663326,Erwinia persicina,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Midgardsormrvirus,Midgardsormrvirus midgardsormr38,,dsDNA,3044764,              Midgardsormrvirus
+2848881,Microbacterium sp. R1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Syrbvirus,Syrbvirus R1,,dsDNA,3044838,              Syrbvirus
+2961988,Pseudomonas aeruginosa PA14,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hulijingvirus,Hulijingvirus LC313,,dsDNA,3152622,              Hulijingvirus
+1379722,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Saturnivirales,Kanorauviridae,Ninurtavirus,Ninurtavirus oceanis,,3152926,                Ninurtavirus
+1962503,Nicotiana benthamiana,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Secoviridae,Comovirinae,Nepovirus,,12270,                  Nepovirus
+1959930,root,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Caliciviridae,Sapovirus,unclassified Sapovirus,,95341,                Sapovirus
+2924865,Pseudomonas aeruginosa PAO1,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mesyanzhinovviridae,Rabinowitzvirinae,Yuavirus,dsDNA,1299429,                  Yuavirus
+1813599,Acanthamoeba castellanii,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Pimascovirales,Pimascovirales incertae sedis,Marseilleviridae,Marseillevirus,,1513458,                  Marseillevirus
+2301547,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Charlievirus,Charlievirus Aggie,,dsDNA,1623280,              Charlievirus
+348137,Burkholderia cepacia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Stanholtvirus,unclassified Stanholtvirus,,dsDNA,1623297,              Stanholtvirus
+1755588,Aves,Riboviria,Orthornavirae,Pisuviricota,Pisoniviricetes,Picornavirales,Picornaviridae,Kodimesavirinae,Sicinivirus,,1755587,                  Sicinivirus
+1305710,Mycobacterium avium subsp. paratuberculosis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mapvirus,Mapvirus Ff47,,dsDNA,1920750,              Mapvirus
+2589662,Bacillus thuringiensis serovar kurstaki,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Bastillevirinae,Wphvirus,dsDNA,1922327,                  Wphvirus
+1264700,Edwardsiella tarda,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Yokohamavirus,Yokohamavirus MSW3,,dsDNA,1980938,              Yokohamavirus
+2862995,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Rosebushvirus,Rosebushvirus rosebush,,dsDNA,1982900,              Rosebushvirus
+2169932,Gallus gallus,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cremevirales,Smacoviridae,Huchismacovirus,Huchismacovirus chicas1,,2169662,                Huchismacovirus
+1133022,Burkholderia cenocepacia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Ahduovirus,Ahduovirus AH2,dsDNA,2560084,                Ahduovirus
+1983784,Curvibacter sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Kalppathivirus,Kalppathivirus P26059B,dsDNA,2731949,                Kalppathivirus
+2993856,Ralstonia solanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Aresaunavirus,Aresaunavirus RSA1,dsDNA,2732972,                Aresaunavirus
+35343,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Citexvirus,,dsDNA,2732977,                Citexvirus
+2906468,Burkholderia glumae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Kisquattuordecimvirus,Kisquattuordecimvirus FLC10,dsDNA,2732982,                Kisquattuordecimvirus
+2951185,Burkholderia cenocepacia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Kisquinquevirus,Kisquinquevirus Carl1,dsDNA,2732983,                Kisquinquevirus
+1168563,Stenotrophomonas maltophilia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Simpcentumvirus,Simpcentumvirus Smp131,dsDNA,2733081,                Simpcentumvirus
+2029657,Bordetella bronchiseptica,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Phabquatrovirus,Phabquatrovirus PHB04,,dsDNA,2733123,              Phabquatrovirus
+2530116,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Oneupvirus,Oneupvirus brutongaster,,dsDNA,2733200,              Oneupvirus
+2786406,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Bicehmovirus,Bicehmovirus caenivivens,+ssRNA,2842550,                Bicehmovirus
+2785996,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Kehmevirus,Kehmevirus defluviicola,+ssRNA,2842790,                Kehmevirus
+2786568,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Kihryuvirus,Kihryuvirus limihabitans,+ssRNA,2842799,                Kihryuvirus
+2786604,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Kuhshuvirus,Kuhshuvirus pelovicinum,+ssRNA,2842813,                Kuhshuvirus
+2786230,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Molucevirus,Molucevirus chthonohabitans,+ssRNA,2842877,                Molucevirus
+2786472,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Shebanavirus,Shebanavirus borborovicinum,+ssRNA,2843035,                Shebanavirus
+3003716,Listeria monocytogenes,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Slepowronvirus,unclassified Slepowronvirus,,dsDNA,2843051,              Slepowronvirus
+2559283,Paracoccaceae bacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zobellviridae,Cobavirinae,Veravirus,dsDNA,2843112,                  Veravirus
+3425131,Pseudomonas asplenii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Warsawvirus,dsDNA,2843128,                  Warsawvirus
+2484217,Arthrobacter globiformis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Anjalivirus,Anjalivirus anjali,,dsDNA,2843346,              Anjalivirus
+2759725,Ralstonia pseudosolanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Firingavirus,Firingavirus firinga,,dsDNA,2843381,              Firingavirus
+45764,Mycobacterium tuberculosis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hnatkovirus,Hnatkovirus DS6A,,dsDNA,2843391,              Hnatkovirus
+2591131,Rhodococcus erythropolis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sleepyheadvirus,Sleepyheadvirus sleepyhead,,dsDNA,2843457,              Sleepyheadvirus
+1636201,Burkholderia cenocepacia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Aptresvirus,Aptresvirus AP3,dsDNA,2946806,                Aptresvirus
+1530085,Ralstonia solanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Peduoviridae,Arsyunavirus,Arsyunavirus RSY1,dsDNA,2946810,                Arsyunavirus
+546805,Mycobacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Myrnavirus,Myrnavirus myrna,,dsDNA,2948833,              Myrnavirus
+2723769,Agrobacterium tumefaciens complex,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Oliverunavirus,Oliverunavirus OLIVR1,dsDNA,2948846,                Oliverunavirus
+1647309,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pinnievirus,Pinnievirus moorethemaryer,,dsDNA,2948866,              Pinnievirus
+2801532,Vibrio harveyi,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Demerecviridae,Ermolyevavirinae,Thalassavirus,dsDNA,2948922,                  Thalassavirus
+2914029,Stenotrophomonas maltophilia,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Cavevirus,Cavevirus C121,dsDNA,3044684,                Cavevirus
+2592193,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Iggyvirus,Iggyvirus iggy,,dsDNA,3044738,              Iggyvirus
+2686311,Sphingomonas sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Eidolonvirus,Eidolonvirus eidolon,,dsDNA,3152915,              Eidolonvirus
+2686312,Sphingomonas sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Kharnvirus,Kharnvirus kharn,,dsDNA,3152916,              Kharnvirus
+1887657,Rhodococcus erythropolis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chewyvirus,Chewyvirus chewyVIII,,dsDNA,3152994,              Chewyvirus
+2776752,Xanthomonas euvesicatoria pv. allii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Gujervirinae,Pazvirus,dsDNA,3424920,                  Pazvirus
+2502471,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bixzunavirus,unclassified Bixzunavirus,,dsDNA,680114,              Bixzunavirus
+3090677,Pseudomonas aeruginosa,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Phikzvirus,Phikzvirus phiKZ,dsDNA,680115,                Phikzvirus
+2652327,Somateria mollissima,Riboviria,Orthornavirae,Negarnaviricota,Haploviricotina,Monjiviricetes,Mononegavirales,Nyamiviridae,Nyavirus,-ssRNA,1513295,                  Nyavirus
+649688,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Liefievirus,Liefievirus halo,Mycobacterium virus Halo,dsDNA,1623288,              Liefievirus
+3046431,Mycobacterium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vilmaviridae,Wildcatvirus,unclassified Wildcatvirus,dsDNA,1993858,                Wildcatvirus
+1815630,Pseudomonas putida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chakrabartyvirus,Chakrabartyvirus pf16,,dsDNA,2560113,              Chakrabartyvirus
+2608319,Pectobacterium atrosepticum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Pektosvirus,dsDNA,2732689,                  Pektosvirus
+1279083,Pseudomonas plecoglossicida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Phutvirus,dsDNA,2732690,                  Phutvirus
+2936830,Pseudomonas putida NBRC 14164,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autotranscriptaviridae,Studiervirinae,Pifdecavirus,dsDNA,2732691,                  Pifdecavirus
+2250319,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Apricotvirus,Apricotvirus apricot,,dsDNA,2733166,              Apricotvirus
+2686090,Microbacterium paraoxydans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Rogerhendrixvirus,unclassified Rogerhendrixvirus,,dsDNA,2733204,              Rogerhendrixvirus
+2786658,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Solspiviridae,Andihavirus,Andihavirus borborohabitans,+ssRNA,2842377,                Andihavirus
+1815984,Roseobacter denitrificans OCh 114,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Rhodovirinae,Aoqinvirus,dsDNA,2842544,                  Aoqinvirus
+1881420,Vibrio splendidus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schitoviridae,Pontosvirinae,Nahantvirus,dsDNA,2842892,                  Nahantvirus
+2786293,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Timlovirales,Steitzviridae,Suhnsivirus,Suhnsivirus arvicola,+ssRNA,2843062,                Suhnsivirus
+2902841,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Avanivirus,Avanivirus avani,,dsDNA,2843352,              Avanivirus
+2591132,Rhodococcus erythropolis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Whackvirus,Whackvirus whack,,dsDNA,2843473,              Whackvirus
+2968436,Xanthomonas euvesicatoria,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Beograduvirus,unclassified Beograduvirus,,dsDNA,2946820,              Beograduvirus
+1206566,Vaccinium corymbosum,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Martellivirales,Closteroviridae,Bluvavirus,Bluvavirus vaccinii,+ssRNA,2946831,                Bluvavirus
+2094144,Rhodococcus erythropolis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Finchvirus,Finchvirus finch,,dsDNA,2948706,              Finchvirus
+1109710,Gordonia rubripertincta,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zierdtviridae,Emilbogenvirinae,Gruunavirus,dsDNA,2948731,                  Gruunavirus
+2234093,Enterobacteriaceae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Hungariovirus,Hungariovirus C1302,,dsDNA,2948761,              Hungariovirus
+1813769,Salmonella enterica,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Saltrevirus,Saltrevirus sv64795sal3,,dsDNA,2948889,              Saltrevirus
+1675029,Bacillus cereus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Haetaevirus,Haetaevirus PBC2,,dsDNA,3044726,              Haetaevirus
+1838068,Gordonia neofelifaecis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mcgonagallvirus,unclassified Mcgonagallvirus,,dsDNA,3044757,              Mcgonagallvirus
+2024608,Bodo saltans,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Imitervirales,Mimiviridae,Klosneuvirinae,Theiavirus,,3044842,                  Theiavirus
+2588512,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lilspottyvirus,Lilspottyvirus lilspotty,,dsDNA,3152623,              Lilspottyvirus
+2786452,root,Riboviria,Orthornavirae,Lenarviricota,Leviviricetes,Norzivirales,Fiersviridae,Ulinhavirus,Ulinhavirus borborohabitans,+ssRNA,3152864,                Ulinhavirus
+2836048,Microbacterium paraoxydans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Footloosevirus,Footloosevirus footloose,,dsDNA,3152965,              Footloosevirus
+2586185,Austrosimulium,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Saturnivirales,Mahapunaviridae,Acamarivirus,Acamarivirus perigeeis,,3152979,                Acamarivirus
+3426391,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Saturnivirales,Mahapunaviridae,Anthevirus,,,3152981,                Anthevirus
+1434720,Delphinapterus leucas,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Alphaherpesvirinae,Varicellovirus,dsDNA,10319,                  Varicellovirus
+50290,Aotus trivirgatus,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Betaherpesvirinae,Cytomegalovirus,dsDNA,10358,                  Cytomegalovirus
+2303487,Culex,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Elliovirales,Peribunyaviridae,Orthobunyavirus,-ssRNA,11572,                  Orthobunyavirus
+1985968,Medicago sativa,Riboviria,Orthornavirae,Kitrinoviricota,Alsuviricetes,Tymovirales,Alphaflexiviridae,Allexivirus,,+ssRNA,140568,                Allexivirus
+2163885,Escherichia coli BL21(DE3),Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Drexlerviridae,Tunavirinae,Tunavirus,dsDNA,187217,                  Tunavirus
+12657,Equus caballus,Duplodnaviria,Heunggongvirae,Peploviricota,Herviviricetes,Herpesvirales,Orthoherpesviridae,Gammaherpesvirinae,Percavirus,dsDNA,548688,                  Percavirus
+1074309,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bignuzvirus,Bignuzvirus bignuz,,dsDNA,1623277,              Bignuzvirus
+2499030,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Vilmaviridae,Lclasvirinae,Bronvirus,dsDNA,1623278,                  Bronvirus
+2847047,root,Riboviria,Orthornavirae,Negarnaviricota,Polyploviricotina,Bunyaviricetes,Hareavirales,Arenaviridae,Mammarenavirus,-ssRNA,1653394,                  Mammarenavirus
+307898,Staphylococcus,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Twortvirinae,Kayvirus,dsDNA,1857843,                  Kayvirus
+3390820,Proteus mirabilis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Gelderlandvirus,dsDNA,1913653,                  Gelderlandvirus
+3108099,Escherichia coli BL21,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Dhakavirus,dsDNA,1914165,                  Dhakavirus
+3038194,Staphylococcus epidermidis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Twortvirinae,Sepunavirus,dsDNA,1980928,                  Sepunavirus
+2985309,Arthrobacter sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Korravirus,unclassified Korravirus,,dsDNA,1982076,              Korravirus
+1622190,Gordonia malaquae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Gordtnkvirus,Gordtnkvirus gordtnk2,,dsDNA,1982218,              Gordtnkvirus
+3053652,Cutibacterium acnes,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Pahexavirus,unclassified Pahexavirus,,dsDNA,1982251,              Pahexavirus
+2041518,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Fishburnevirus,Fishburnevirus arib1,,dsDNA,1983734,              Fishburnevirus
+2267236,Citrobacter freundii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Moonvirus,dsDNA,1985329,                  Moonvirus
+1887641,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Bantamvirus,Bantamvirus bantam,,dsDNA,2560096,              Bantamvirus
+3061951,Enterococcus faecalis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Efquatrovirus,unclassified Efquatrovirus,,dsDNA,2560124,              Efquatrovirus
+2283287,Microbacterium foliorum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Elerivirus,Elerivirus eleri,,dsDNA,2560126,              Elerivirus
+2743998,Rhodococcus erythropolis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Trinavirus,unclassified Trinavirus,,dsDNA,2560242,              Trinavirus
+2483664,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Stackebrandtviridae,Schenleyvirinae,Vividuovirus,dsDNA,2560251,                  Vividuovirus
+2508194,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Ackermannviridae,Taipeivirus,Taipeivirus KWBSE436,dsDNA,2731621,                Taipeivirus
+1402875,Ralstonia solanacearum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autoscriptoviridae,Jiaoyazivirus,Jiaoyazivirus RSB3,dsDNA,2731945,                Jiaoyazivirus
+1712539,Cronobacter turicensis,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Melnykvirinae,Cronosvirus,dsDNA,2732913,                  Cronosvirus
+1206556,Yersinia enterocolitica (type O:3),Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Autographivirales,Autonotataviridae,Melnykvirinae,Pienvirus,dsDNA,2732915,                  Pienvirus
+1445859,Shewanella putrefaciens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chaseviridae,Nefertitivirinae,Yushanvirus,dsDNA,2732965,                  Yushanvirus
+1137745,Parasynechococcus marenigrum WH 8102,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Aurunvirus,Aurunvirus STIM5,,dsDNA,2733093,              Aurunvirus
+2070182,Faecalibacterium prausnitzii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Eponavirus,Eponavirus epona,,dsDNA,2733103,              Eponavirus
+1161931,Agrobacterium tumefaciens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Schmittlotzvirus,Schmittlotzvirus sv771,,dsDNA,2733132,              Schmittlotzvirus
+2070186,Faecalibacterium prausnitzii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Taranisvirus,Taranisvirus taranis,,dsDNA,2733134,              Taranisvirus
+3077273,Escherichia coli,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lindbergviridae,Wifcevirus,Wifcevirus AV128,dsDNA,2733141,                Wifcevirus
+2696445,Escherichia coli str. K-12 substr. MG1655,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sortsnevirus,Sortsnevirus IME279,,dsDNA,2733150,              Sortsnevirus
+2070184,Faecalibacterium prausnitzii,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Lughvirus,Lughvirus lugh,,dsDNA,2733190,              Lughvirus
+2593638,Priestia megaterium DSM 319,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Bastillevirinae,Goettingenvirus,dsDNA,2842707,                  Goettingenvirus
+1608310,Edwardsiella ictaluri,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Straboviridae,Tevenvirinae,Kanagawavirus,dsDNA,2843399,                  Kanagawavirus
+2851081,Lactococcus garvieae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Uwajimavirus,unclassified Uwajimavirus,,dsDNA,2843469,              Uwajimavirus
+2742114,Salmonella sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Casjensviridae,Zhonglingvirus,Zhonglingvirus SAP012,dsDNA,2943020,                Zhonglingvirus
+2562461,Salmonella enterica subsp. enterica,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Akiravirus,Akiravirus akira,,dsDNA,2946787,              Akiravirus
+2766564,Entamoeba,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Rohanvirales,Nenyaviridae,Angainorvirus,Angainorvirus turin,,2946799,                Angainorvirus
+2652418,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Backyardiganvirus,unclassified Backyardiganvirus,,dsDNA,2946815,              Backyardiganvirus
+3077142,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Zierdtviridae,Emilbogenvirinae,Foxborovirus,dsDNA,2948710,                  Foxborovirus
+2766565,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Vilyaviridae,Herugrimvirus,Herugrimvirus gladden,,2948758,                Herugrimvirus
+2762396,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Jujuvirus,unclassified Jujuvirus,,dsDNA,2948772,              Jujuvirus
+857312,Brochothrix thermosphacta,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Herelleviridae,Klumppvirus,Klumppvirus A9,dsDNA,2948786,                Klumppvirus
+682650,Synechococcus sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Kyanoviridae,Lipsvirus,unclassified Lipsvirus,dsDNA,2948803,                Lipsvirus
+2108127,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Moomoovirus,Moomoovirus moomoo,,dsDNA,2948827,              Moomoovirus
+1589274,Mycolicibacterium smegmatis MC2 155,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Sheenvirus,Sheenvirus Sheen,,dsDNA,2948905,              Sheenvirus
+2766566,root,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Cirlivirales,Vilyaviridae,Vingilotevirus,Vingilotevirus gamgee,,2948948,                Vingilotevirus
+3076793,Aeromonas salmonicida,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Chimalliviridae,Chaoshanvirus,unclassified Chaoshanvirus,dsDNA,3044686,                Chaoshanvirus
+2978491,Gordonia terrae,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Forzavirus,unclassified Forzavirus,,dsDNA,3044718,              Forzavirus
+2070199,Escherichia sp.,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mktvariviridae,Gordonclarkvirinae,Nieuwekanaalvirus,dsDNA,3044774,                Nieuwekanaalvirus
+2783673,Synechococcus sp. MW02,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Pantevenvirales,Kyanoviridae,Yellowseavirus,Yellowseavirus thirtyeight,dsDNA,3044861,                Yellowseavirus
+2948610,Janthinobacterium lividum,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Mesyanzhinovviridae,Bradleyvirinae,Donnerlittchenvirus,dsDNA,3152600,                  Donnerlittchenvirus
+2985324,Microbacterium radiodurans,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Oscarsovirus,Oscarsovirus oscarso,,dsDNA,3152624,              Oscarsovirus
+1718158,Enterococcus faecium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Efemquintavirus,Efemquintavirus Efm5,,dsDNA,3152996,              Efemquintavirus
+2023057,Vermamoeba vermiformis,Varidnaviria,Bamfordvirae,Nucleocytoviricota,Megaviricetes,Pimascovirales,Ocovirineae,Orpheoviridae,Alphaorpheovirus,,3153020,                  Alphaorpheovirus
+1525173,Homo sapiens,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Ringavirales,Pecoviridae,Amaruvirus,Amaruvirus aka,,3153056,                Amaruvirus
+3429969,Macaca mulatta,Monodnaviria,Shotokuvirae,Cressdnaviricota,Arfiviricetes,Ringavirales,Pecoviridae,Intivirus,,,3153059,                Intivirus
+2939128,Xanthomonas translucens,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Shirevirus,Shirevirus langgrundblatt1,,dsDNA,3153128,              Shirevirus
+1445858,Enterococcus faecium,Duplodnaviria,Heunggongvirae,Uroviricota,Caudoviricetes,Caudoviricetes incertae sedis,Efemunavirus,Efemunavirus Efm1,,dsDNA,3153270,              Efemunavirus
+1881450,Vibrio tasmaniensis,Varidnaviria,Abadenavirae,Produgelaviricota,Belvinaviricetes,Vinavirales,Autolykiviridae,Oliviavirus,Oliviavirus viph1020o,,3424985,                Oliviavirus
