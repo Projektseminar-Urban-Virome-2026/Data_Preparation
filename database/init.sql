@@ -23,12 +23,19 @@ CREATE TABLE IF NOT EXISTS Weather (
     FOREIGN KEY (run_accession) REFERENCES runs(run_accession)
 );
 
+
 CREATE TABLE IF NOT EXISTS Virus (
     tax_id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
+    realm VARCHAR(255),
+    kingdom VARCHAR(255),
+    phylum VARCHAR(255),
+    class VARCHAR(255),
+    taxonomic_order VARCHAR(255),
     family VARCHAR(255),
+    genus VARCHAR(255),
     species VARCHAR(255),
-    Boltimore_type VARCHAR(255) 
+    baltimore_class VARCHAR(255) 
 );
 
 CREATE TABLE IF NOT EXISTS Virus_Hosts (
@@ -47,7 +54,7 @@ CREATE TABLE IF NOT EXISTS Host (
 CREATE TABLE IF NOT EXISTS Virus_in_Runs (
     run_accession VARCHAR(255) NOT NULL,
     virus_tax_id INTEGER NOT NULL,
-    amount_in_sample_as_percent FLOAT,
+    amount_in_sample_as_percentage FLOAT,
     PRIMARY KEY (run_accession, virus_tax_id),
     FOREIGN KEY (run_accession) REFERENCES runs(run_accession),
     FOREIGN KEY (virus_tax_id) REFERENCES Virus(tax_id)
