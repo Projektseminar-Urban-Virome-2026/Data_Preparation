@@ -37,6 +37,21 @@ services:
       - db-data:/db
     restart: unless-stopped
 
+  webapp:
+    image: python:3.12-alpine
+    working_dir: /app
+    command: ["python", "-m", "http.server", "8000", "--bind", "0.0.0.0"]
+    ports:
+      - "8081:8000"
+    volumes:
+      - type: bind
+        read_only: true
+        source: ./webapp
+        target: /app
+    depends_on:
+      - sqlite
+    restart: unless-stopped
+
 #  data-analysis:
 #    image: data-analysis
 #    build:
