@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS Weather (
     run_accession VARCHAR(255) PRIMARY KEY,
     temperature FLOAT,
     humidity FLOAT,
+    rainfall FLOAT,
     wind_speed FLOAT,
     FOREIGN KEY (run_accession) REFERENCES runs(run_accession)
 );

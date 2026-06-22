@@ -120,11 +120,10 @@ def virus_in_runs_table(df, db_connection):
         for col_name, value in row.items():
             # Check if value is not empty/null
             if pd.notna(value) and value != '':
-                # Add to result dataframe, multiply by 100 for percentage
                 new_row = pd.DataFrame({
                     'run_accession': [col_name],
                     'taxid': [taxid_value],
-                    'value': [value * 100]
+                    'value': [value]
                 })
                 result_df = pd.concat([result_df, new_row], ignore_index=True)
     
@@ -136,6 +135,32 @@ def virus_in_runs_table(df, db_connection):
         """, (row['run_accession'], row['taxid'], row['value']))
     db_connection.commit()
     print(f"✓ {len(result_df)} Einträge in Virus_in_Runs-Tabelle eingefügt")
+
+def weather_table(db_connection):
+    cursor = db_connection.cursor()
+    runs = db_connection.execute("""
+        SELECT r.run_accession, r.collection_date, c.name AS city
+        FROM runs r
+        JOIN Cities c ON c.id = r.city_id
+    """).fetchall()
+
+    for run_accession, collection_date, city in runs:
+        city_name = city.replace(" ", "")
+        weather = pd.read_csv(f"cities/{city_name}/smk_output/{city_name}_weather.csv")
+        row = weather[weather["time"] == collection_date].iloc[0]
+        cursor.execute("""
+            INSERT INTO Weather (run_accession, temperature, humidity, rainfall, wind_speed)
+            VALUES (?, ?, ?, ?, ?)
+        """, (
+            run_accession,
+            row["temperature_2m_mean (°C)"],
+            row["relative_humidity_2m_mean (%)"],
+            row["rain_sum (mm)"],
+            None,
+        ))
+
+    db_connection.commit()
+    print(f"✓ {len(runs)} Einträge in Weather-Tabelle eingefügt")
 
 
 
@@ -159,6 +184,7 @@ if __name__ == "__main__":
     # Dann Runs einfügen
     runs_table(data, conn)
 
+    weather_table(conn)
     
     virus_in_runs_table(global_merge, conn)
 
