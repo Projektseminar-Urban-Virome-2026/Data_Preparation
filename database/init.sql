@@ -44,11 +44,11 @@ CREATE TABLE IF NOT EXISTS Virus_Hosts (
     host_tax_id INTEGER NOT NULL,
     PRIMARY KEY (virus_tax_id, host_tax_id),
     FOREIGN KEY (virus_tax_id) REFERENCES Virus(tax_id),
-    FOREIGN KEY (host_tax_id) REFERENCES Host(Host_tax_id)
+    FOREIGN KEY (host_tax_id) REFERENCES Host(host_tax_id)
 );
 
 CREATE TABLE IF NOT EXISTS Host (
-    Host_tax_id INTEGER PRIMARY KEY,
+    host_tax_id INTEGER PRIMARY KEY,
     name VARCHAR(255) NOT NULL
 );
 

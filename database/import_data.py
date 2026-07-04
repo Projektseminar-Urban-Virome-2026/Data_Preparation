@@ -78,18 +78,34 @@ def virus_table(df, df_antributes, db_connection):
     # Remove leading/trailing whitespace from 'name' before deduplication
     virus_df['name'] = virus_df['name'].astype(str).str.strip()
     virus_df = virus_df.drop_duplicates()
-    Attribute_df = df_antributes[['taxid', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species', 'baltimore_class']].drop_duplicates().copy()
+    Attribute_df = (
+        df_antributes[
+            ['taxid', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'species', 'baltimore_class', 'host tax id', 'host name']
+        ]
+        .loc[
+            df_antributes['host tax id'].isna() | df_antributes['host name'].isna()
+        ]
+        .drop_duplicates()
+        .copy()
+    )
+    '''Attribute_df = df_antributes[['taxid', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'species', 'baltimore_class']].drop_duplicates().copy()
 
     virus_df = virus_df.merge(Attribute_df, on='taxid', how='left')
     
     cursor = db_connection.cursor()
-    for _, row in virus_df.iterrows():
+     for _, row in virus_df.iterrows():
         #virus tax id,host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
         cursor.execute("""
-            insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, genus, species, baltimore_class)
-            values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (row['name'], row['taxid'], row['realm'], row['kingdom'], row['phylum'], row['class'], row['order'], row['family'], row['genus'], row['species'], row['baltimore_class']))
-
+            insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, species, baltimore_class)
+            values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (row['name'], row['taxid'], row['realm'], row['kingdom'], row['phylum'], row['class'], row['order'], row['family'], row['species'], row['baltimore_class']))
+    '''
+    cursor = db_connection.cursor()
+    for _, row in virus_df.iterrows():
+        cursor.execute("""
+            insert into Virus (name, tax_id)
+            values (?, ?)
+        """, (row['name'], row['taxid']))    
     db_connection.commit()
     print(f"✓ {len(virus_df)} Einträge in Virus-Tabelle eingefügt")
 
@@ -136,6 +152,66 @@ def virus_in_runs_table(df, db_connection):
     db_connection.commit()
     print(f"✓ {len(result_df)} Einträge in Virus_in_Runs-Tabelle eingefügt")
 
+def host_table(df, db_connection):
+    
+    host_df = df[['host name', 'host tax id']].copy()
+    host_df = host_df.drop_duplicates().dropna(subset=['host name', 'host tax id'])
+    host_df['host tax id'] = pd.to_numeric(host_df['host tax id'], errors='coerce')
+    host_df = host_df.dropna(subset=['host tax id'])
+    host_df['host tax id'] = host_df['host tax id'].astype(int)
+    
+    cursor = db_connection.cursor()
+    for _, row in host_df.iterrows():
+        cursor.execute("""
+            INSERT INTO Host (name, host_tax_id)
+            VALUES (?, ?)
+        """, (row['host name'], int(row['host tax id'])))
+    
+    db_connection.commit()
+    print(f"✓ {len(host_df)} Einträge in Host-Tabelle eingefügt")
+
+def virus_host_table(df, db_connection):
+    """
+    Kombiniert die Virus-Tax-IDs aus dem DataFrame mit den Host-Tax-IDs und
+    schreibt die Paare in die Verknüpfungstabelle.
+    """
+    if {'taxid', 'host tax id'}.issubset(df.columns):
+        virus_host_df = (
+            df[['taxid', 'host tax id']]
+            .rename(columns={'taxid': 'virus_tax_id', 'host tax id': 'host_tax_id'})
+            .copy()
+        )
+    else:
+        raise ValueError("Das DataFrame muss die Spalten 'taxid' und 'host tax id' enthalten")
+
+    virus_host_df = virus_host_df.dropna().drop_duplicates()
+    virus_host_df['virus_tax_id'] = pd.to_numeric(virus_host_df['virus_tax_id'], errors='coerce')
+    virus_host_df['host_tax_id'] = pd.to_numeric(virus_host_df['host_tax_id'], errors='coerce')
+    virus_host_df = virus_host_df.dropna(subset=['virus_tax_id', 'host_tax_id'])
+    virus_host_df['virus_tax_id'] = virus_host_df['virus_tax_id'].astype(int)
+    virus_host_df['host_tax_id'] = virus_host_df['host_tax_id'].astype(int)
+
+    cursor = db_connection.cursor()
+
+    existing_viruses = {row[0] for row in cursor.execute("SELECT tax_id FROM Virus").fetchall()}
+    existing_hosts = {row[0] for row in cursor.execute("SELECT host_tax_id FROM Host").fetchall()}
+
+    inserted = 0
+    for _, row in virus_host_df.iterrows():
+        virus_tax_id = int(row['virus_tax_id'])
+        host_tax_id = int(row['host_tax_id'])
+
+        if virus_tax_id in existing_viruses and host_tax_id in existing_hosts:
+            cursor.execute(
+                "INSERT OR IGNORE INTO Virus_Hosts (virus_tax_id, host_tax_id) VALUES (?, ?)",
+                (virus_tax_id, host_tax_id)
+            )
+            if cursor.rowcount > 0:
+                inserted += 1
+
+    db_connection.commit()
+    print(f"✓ {inserted} Einträge in Virus_Hosts-Tabelle eingefügt")
+
 def weather_table(db_connection):
     cursor = db_connection.cursor()
     runs = db_connection.execute("""
@@ -176,7 +252,8 @@ if __name__ == "__main__":
 
     attributes = pd.read_csv('cities/viruses/viruses_contained_with_hostid.csv', sep=',')
 
-    virus_table(global_merge, attributes, conn)
+    # Virus- und Host-Einträge werden nicht neu aus dem DataFrame eingefügt.
+    # Stattdessen werden nur die Verknüpfungen in Virus_Hosts erzeugt.
 
     # Zuerst Cities einfügen (wegen Foreign Key!)
     city_table(data, conn)
@@ -187,5 +264,11 @@ if __name__ == "__main__":
     weather_table(conn)
     
     virus_in_runs_table(global_merge, conn)
+
+    virus_table(global_merge, attributes, conn)
+
+    host_table(attributes, conn)
+
+    virus_host_table(attributes, conn)
 
     conn.close()
