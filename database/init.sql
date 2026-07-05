@@ -35,7 +35,6 @@ CREATE TABLE IF NOT EXISTS Virus (
     taxonomic_order VARCHAR(255),
     family VARCHAR(255),
     genus VARCHAR(255),
-    species VARCHAR(255),
     baltimore_class VARCHAR(255) 
 );
 

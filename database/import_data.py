@@ -78,35 +78,23 @@ def virus_table(df, df_antributes, db_connection):
     # Remove leading/trailing whitespace from 'name' before deduplication
     virus_df['name'] = virus_df['name'].astype(str).str.strip()
     virus_df = virus_df.drop_duplicates()
-    Attribute_df = (
-        df_antributes[
-            ['taxid', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'species', 'baltimore_class', 'host tax id', 'host name']
-        ]
-        .loc[
-            df_antributes['host tax id'].isna() | df_antributes['host name'].isna()
-        ]
-        .drop_duplicates()
-        .copy()
-    )
-    '''Attribute_df = df_antributes[['taxid', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'species', 'baltimore_class']].drop_duplicates().copy()
+    
+
+    Attribute_df = df_antributes[['taxid', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'baltimore_class']].drop_duplicates().copy()
 
     virus_df = virus_df.merge(Attribute_df, on='taxid', how='left')
     
     cursor = db_connection.cursor()
-     for _, row in virus_df.iterrows():
+    for _, row in virus_df.iterrows():
         #virus tax id,host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
         cursor.execute("""
-            insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, species, baltimore_class)
-            values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (row['name'], row['taxid'], row['realm'], row['kingdom'], row['phylum'], row['class'], row['order'], row['family'], row['species'], row['baltimore_class']))
-    '''
-    cursor = db_connection.cursor()
-    for _, row in virus_df.iterrows():
-        cursor.execute("""
-            insert into Virus (name, tax_id)
-            values (?, ?)
-        """, (row['name'], row['taxid']))    
+            insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, baltimore_class)
+            values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (row['name'], row['taxid'], row['realm'], row['kingdom'], row['phylum'], row['class'], row['order'], row['family'], row['baltimore_class']))
+    
     db_connection.commit()
+    
+  
     print(f"✓ {len(virus_df)} Einträge in Virus-Tabelle eingefügt")
 
 def virus_in_runs_table(df, db_connection):
