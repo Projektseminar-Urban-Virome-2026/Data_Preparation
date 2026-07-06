@@ -40,6 +40,8 @@ def get_stats():
             (SELECT COUNT(*) FROM Virus) AS virus_count,
             (SELECT COUNT(*) FROM runs) AS run_count,
             (SELECT COUNT(*) FROM Cities) AS city_count,
+            (SELECT MIN(collection_date) FROM runs) as min_date,
+            (SELECT MAX(collection_date) FROM runs) as max_date,
             (SELECT MIN(temperature) FROM Weather) AS min_temperature,
             (SELECT MAX(temperature) FROM Weather) AS max_temperature
     """).fetchone()
@@ -61,7 +63,6 @@ def get_city_viruses(city_id):
             v.taxonomic_order AS taxonomic_order,
             v.family AS family,
             v.genus AS genus,
-            v.species AS species,
             v.baltimore_class AS baltimore_class,
             COUNT(DISTINCT vir.run_accession) AS run_count,
             COUNT(*) AS hit_count
@@ -108,6 +109,43 @@ def get_virus_cities(virus_id):
     """, (virus_id,)).fetchall()
     conn.close()
     return jsonify([dict(row) for row in rows])
+
+@app.route("/cities/<int:city_id>/aggregate_realms", methods=["GET"])
+def get_aggregated_realms_for_city(city_id):
+    conn = get_db()
+    city = conn.execute("SELECT * FROM Cities WHERE id = ?", (city_id,)).fetchone()
+
+    if city is None:
+        conn.close()
+        return jsonify({"error": "City not found"}), 404
+
+    rows = conn.execute("""
+        SELECT 
+            r.run_accession,
+            r.collection_date,
+            vi.realm,
+            SUM(vir.amount_in_sample_as_percentage) AS total_percentage
+        FROM 
+            runs r
+        JOIN 
+            Virus_in_Runs vir ON r.run_accession = vir.run_accession
+        JOIN 
+            Virus vi ON vir.virus_tax_id = vi.tax_id
+        WHERE 
+            r.city_id = ?
+        GROUP BY 
+            r.run_accession, vi.realm
+    """, (city_id,)).fetchall()
+
+    conn.close()
+
+    virus_data = [dict(row) for row in rows]
+
+    return jsonify({
+        "city": dict(city),
+        "aggregated_virus_data": virus_data
+    })
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

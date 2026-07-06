@@ -24,6 +24,7 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""
     ></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <div class="app-shell">
@@ -47,46 +48,47 @@
         <main class="container-xxl pb-4">
             <section id="home" class="page active" aria-labelledby="dashboard-title">
                 <div class="row g-4 mb-4">
-                    <div class="col-lg-8">
-                        <div class="hero-panel h-100">
-                            <p class="eyebrow">Urban Virom Project</p>
-                            <h2 id="dashboard-title" class="display-5 fw-bold mb-3">
-                                Globale Fundorte und Analysen auf einen Blick.
-                            </h2>
-                            <p class="lead hero-copy mb-0">
-                                Die Webapp verbindet Kartenpunkte, spätere Plots und Projektinformationen in einer kompakten Arbeitsansicht.
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4">
+<!--                    <div class="col-lg-8">-->
+<!--                        <div class="hero-panel h-100">-->
+<!--                            <p class="eyebrow">Urban Virom Project</p>-->
+<!--                            <h2 id="dashboard-title" class="display-5 fw-bold mb-3">-->
+<!--                                Globale Fundorte und Analysen auf einen Blick.-->
+<!--                            </h2>-->
+<!--                            <p class="lead hero-copy mb-0">-->
+<!--                                Die Webapp verbindet Kartenpunkte, spätere Plots und Projektinformationen in einer kompakten Arbeitsansicht.-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                    <div class="row-lg-12">
                         <div class="row g-3 h-100">
-                            <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="col-3">
                                 <div class="metric-card h-100">
                                     <p class="metric-label">Viren</p>
                                     <p id="stat-virus-count" class="metric-value">-</p>
                                     <p class="text-secondary mb-0">Unterschiedliche Viren in der Datenbank.</p>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="col-3">
                                 <div class="metric-card h-100">
-                                    <p class="metric-label">Runs</p>
+                                    <p class="metric-label">Samples</p>
                                     <p id="stat-run-count" class="metric-value">-</p>
-                                    <p class="text-secondary mb-0">Ausgewertete Runs über alle Städte.</p>
+                                    <p class="text-secondary mb-0">Ausgewertete Abwasser-Proben insgesamt.</p>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="col-3">
                                 <div class="metric-card h-100">
-                                    <p class="metric-label">Temperatur min.</p>
-                                    <p id="stat-min-temperature" class="metric-value">-</p>
-                                    <p class="text-secondary mb-0">Niedrigster Wetterwert der Runs.</p>
+                                    <p class="metric-label">Städte</p>
+                                    <p id="stat-city-count" class="metric-value">-</p>
+                                    <p class="text-secondary mb-0">Ausgewertete Orte in der Datenbank.</p>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="col-3">
                                 <div class="metric-card h-100">
-                                    <p class="metric-label">Temperatur max.</p>
-                                    <p id="stat-max-temperature" class="metric-value">-</p>
-                                    <p class="text-secondary mb-0">Höchster Wetterwert der Runs.</p>
+                                    <p class="metric-label">Zeitraum</p>
+                                    <p id="stat-time-frame" class="metric-value">-</p>
+                                    <p class="text-secondary mb-0"></p>
                                 </div>
                             </div>
                         </div>
@@ -139,6 +141,7 @@
                                         <p class="text-secondary mb-0">Klicke auf einen Marker, um das Balkendiagramm zu laden.</p>
                                     </div>
                                 </div>
+                                <div id="virus-aggregation-chart" style="width: 100%; height: 400px;"></div>
                             </section>
                         </article>
 

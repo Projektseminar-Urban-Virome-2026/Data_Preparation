@@ -1,5 +1,6 @@
 import pandas as pd
 import sqlite3
+from datetime import datetime, timedelta
 
 def runs_table(df, db_connection):
     """
@@ -70,7 +71,7 @@ def city_table(df, db_connection):
     print(f"✓ {len(cities_df)} Einträge in Cities-Tabelle eingefügt")
 
     
-def virus_table(df, df_antributes, db_connection):
+def virus_table(df, df_taxonomy, db_connection):
     """
     Liest Virusnamen aus TSV ein, entfernt Duplikate und fügt sie in Virus-Tabelle ein.
     """
@@ -80,18 +81,22 @@ def virus_table(df, df_antributes, db_connection):
     virus_df = virus_df.drop_duplicates()
     
 
-    Attribute_df = df_antributes[['taxid', 'realm', 'kingdom', 'phylum', 'class', 'order', 'family', 'baltimore_class']].drop_duplicates().copy()
+    taxonomy_df = df_taxonomy[['Realm', 'Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Genome']].drop_duplicates().copy()
 
-    virus_df = virus_df.merge(Attribute_df, on='taxid', how='left')
+    virus_df = virus_df.merge(taxonomy_df, left_on='name', right_on='Genus', how='left')
+    virus_df = virus_df.drop_duplicates()
     
     cursor = db_connection.cursor()
     for _, row in virus_df.iterrows():
-        #virus tax id,host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
-        cursor.execute("""
-            insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, baltimore_class)
-            values (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (row['name'], row['taxid'], row['realm'], row['kingdom'], row['phylum'], row['class'], row['order'], row['family'], row['baltimore_class']))
-    
+        try:
+            #virus tax id,host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
+            cursor.execute("""
+                insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, genus, baltimore_class)
+                values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (row['name'], row['taxid'], row['Realm'], row['Kingdom'], row['Phylum'], row['Class'], row['Order'], row['Family'], row['Genus'], row['Genome']))
+        except sqlite3.IntegrityError as e:
+            print(f"IntegrityError for tax_id {row['taxid']}: {e}")
+
     db_connection.commit()
     
   
@@ -211,15 +216,25 @@ def weather_table(db_connection):
     for run_accession, collection_date, city in runs:
         city_name = city.replace(" ", "")
         weather = pd.read_csv(f"cities/{city_name}/smk_output/{city_name}_weather.csv")
-        row = weather[weather["time"] == collection_date].iloc[0]
+        weather['time'] = pd.to_datetime(weather['time'])
+
+        # Calculate the mean weather values of 4 days before collection
+        collection_date = datetime.strptime(collection_date, "%Y-%m-%d")
+        start_date = collection_date - timedelta(days=4)
+        filtered_data = weather[(weather["time"] >= start_date) & (weather["time"] < collection_date)]
+
+        temperature_mean = filtered_data["temperature_2m_mean (°C)"].mean()
+        humidity_mean = filtered_data["relative_humidity_2m_mean (%)"].mean()
+        rainfall_mean = filtered_data["rain_sum (mm)"].mean()
+
         cursor.execute("""
             INSERT INTO Weather (run_accession, temperature, humidity, rainfall, wind_speed)
             VALUES (?, ?, ?, ?, ?)
         """, (
             run_accession,
-            row["temperature_2m_mean (°C)"],
-            row["relative_humidity_2m_mean (%)"],
-            row["rain_sum (mm)"],
+            temperature_mean,
+            humidity_mean,
+            rainfall_mean,
             None,
         ))
 
@@ -238,6 +253,8 @@ if __name__ == "__main__":
 
     global_merge = pd.read_csv('cities/global_merge.csv', sep=',')
 
+    taxonomy = pd.read_csv("cities/MSL-Tabelle1.tsv", sep='\t')
+
     attributes = pd.read_csv('cities/viruses/viruses_contained_with_hostid.csv', sep=',')
 
     # Virus- und Host-Einträge werden nicht neu aus dem DataFrame eingefügt.
@@ -253,7 +270,7 @@ if __name__ == "__main__":
     
     virus_in_runs_table(global_merge, conn)
 
-    virus_table(global_merge, attributes, conn)
+    virus_table(global_merge, taxonomy, conn)
 
     host_table(attributes, conn)
 
