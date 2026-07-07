@@ -81,7 +81,7 @@ def virus_table(df, df_taxonomy, db_connection):
     virus_df = virus_df.drop_duplicates()
     
 
-    taxonomy_df = df_taxonomy[['Realm', 'Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Genome']].drop_duplicates().copy()
+    taxonomy_df = df_taxonomy[['Realm', 'Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Genome', 'genus_with_human_host']].drop_duplicates().copy()
 
     virus_df = virus_df.merge(taxonomy_df, left_on='name', right_on='Genus', how='left')
     virus_df = virus_df.drop_duplicates()
@@ -91,9 +91,9 @@ def virus_table(df, df_taxonomy, db_connection):
         try:
             #virus tax id,host tax id,host name,realm,kingdom,phylum,class,order,family,genus,species,baltimore_class
             cursor.execute("""
-                insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, genus, baltimore_class)
-                values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (row['name'], row['taxid'], row['Realm'], row['Kingdom'], row['Phylum'], row['Class'], row['Order'], row['Family'], row['Genus'], row['Genome']))
+                insert into Virus (name, tax_id, realm, kingdom, phylum, class, taxonomic_order, family, genus, baltimore_class, human_host)
+                values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (row['name'], row['taxid'], row['Realm'], row['Kingdom'], row['Phylum'], row['Class'], row['Order'], row['Family'], row['Genus'], row['Genome'], row['genus_with_human_host']))
         except sqlite3.IntegrityError as e:
             print(f"IntegrityError for tax_id {row['taxid']}: {e}")
 
@@ -254,6 +254,8 @@ if __name__ == "__main__":
     global_merge = pd.read_csv('cities/global_merge.csv', sep=',')
 
     taxonomy = pd.read_csv("cities/MSL-Tabelle1.tsv", sep='\t')
+    human_host_genera = pd.read_csv("cities/human_host_genera.csv")
+    taxonomy["genus_with_human_host"] = taxonomy["Genus"].isin(human_host_genera["name"]).astype(int)
 
     attributes = pd.read_csv('cities/viruses/viruses_contained_with_hostid.csv', sep=',')
 

@@ -17,7 +17,7 @@ const selectedViruses = new Map();
 const statVirusCount = document.getElementById("stat-virus-count");
 const statRunCount = document.getElementById("stat-run-count");
 const statCityCount = document.getElementById("stat-city-count");
-const statTimeframe = document.getElementById("stat-time-frame");
+const statHostCount = document.getElementById("stat-host-count");
 let virusCityMap;
 let virusCityLayer;
 
@@ -37,6 +37,37 @@ function escapeHtml(value) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
+function renderRealmsBarchart(data) {
+    const runs = data.aggregated_virus_data;
+
+    // Group data by realm
+    const realmData = runs.reduce((acc, curr) => {
+        if (!acc[curr.realm]) {
+            acc[curr.realm] = { x: [], y: [], name: curr.realm, type: 'bar' };
+            }
+        acc[curr.realm].x.push(curr.collection_date);
+        acc[curr.realm].y.push(curr.total_percentage);
+        return acc;
+    }, {});
+
+    // Prepare traces for Plotly
+    const traces = Object.values(realmData);
+
+    // Define plotly layout
+    const layout = {
+        template: 'ggplot2',        //TODO: template takes no effect
+        title: 'Aggregated Virus Data by Realm Across Samples',
+        barmode: 'stack',
+        xaxis: { title: 'Date' },
+        yaxis: { title: 'Percentage of classified Virome' },
+        };
+
+    // Render the plot
+    Plotly.newPlot('virus-aggregation-chart', traces, layout);
+
+}
+
 
 function renderVirusChart(data) {
     const viruses = data.viruses || [];
@@ -229,7 +260,7 @@ async function loadStats() {
         statVirusCount.textContent = stats.virus_count;
         statRunCount.textContent = stats.run_count;
         statCityCount.textContent = stats.city_count;
-        statTimeframe.textContent = stats.min_date + " bis " + stats.max_date;
+        statHostCount.textContent = stats.host_count;
     } catch (error) {
         console.error("Fehler beim Laden der Statistiken...", error.message);
     }
@@ -242,10 +273,10 @@ virusChart.addEventListener("click", (event) => {
     }
 });
 
-async function loadCityViruses(city) {
-/*    setDetailState({
+async function loadCityViruses(city) {      // called on-click
+    setDetailState({
         title: `${city.name}, ${city.country}`,
-        subtitle: "Virus-Häufigkeiten werden geladen...",
+        subtitle: "Virus-Daten werden geladen...",
         countLabel: "Lädt",
         isEmpty: true,
         content: `
@@ -255,45 +286,46 @@ async function loadCityViruses(city) {
             </div>
         `,
     });
-*/
+
+    count = "-";
     try {
-            const response = await fetch(`${API_BASE_URL}/cities/${city.id}/aggregate_realms`);
+            const response = await fetch(`${API_BASE_URL}/cities/${city.id}/sampleCount`);
             if (!response.ok) {
-                throw new Error(`Failed to fetch virus aggregate data: ${response.status}`);
+                throw new Error(`Failed to fetch sample data: ${response.status}`);
             }
 
-            const data = await response.json();
+            const sampleCount = await response.json();
+            count = sampleCount.count;
 
-            // Assuming your API response contains an array of runs with genus-level aggregation
-            const runs = data.aggregated_virus_data;
-
-                // Group data by realm
-                const realmData = runs.reduce((acc, curr) => {
-                    if (!acc[curr.realm]) {
-                        acc[curr.realm] = { x: [], y: [], name: curr.realm, type: 'bar' };
-                    }
-                    acc[curr.realm].x.push(curr.collection_date);
-                    acc[curr.realm].y.push(curr.total_percentage);
-                    return acc;
-                }, {});
-
-                // Prepare traces for Plotly
-                const traces = Object.values(realmData);
-
-                // Define plotly layout
-                const layout = {
-                    title: 'Aggregated Virus Data by Realm Across Runs',
-                    barmode: 'stack',
-                    xaxis: { title: 'Date' },
-                    yaxis: { title: 'Percentage of Total' },
-                };
-
-
-            // Render the plot
-            Plotly.newPlot('virus-aggregation-chart', traces, layout);
         } catch (error) {
-            console.error("Error rendering virus aggregation chart", error.message);
+            console.error("Error fetching sample-count from database", error.message);
         }
+
+    setDetailState({
+        title: `${city.name}, ${city.country}`,
+        subtitle: `Auswertung der Virenproben`,
+        countLabel: `${count} Samples`,
+        // add more <div>s for new plots here:
+        content: `<div id="virus-aggregation-chart"></div>`,
+        });
+
+    // Calling the different plot-functions
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/cities/${city.id}/aggregate_realms`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch virus aggregate data: ${response.status}`);
+        }
+
+        const result = await response.json();
+        renderRealmsBarchart(result);
+
+    } catch (error) {
+        console.error("Error rendering virus aggregation chart", error.message);
+    }
+
+
+
 }
 
 async function getCities() {
@@ -310,7 +342,19 @@ async function getCities() {
             marker.on("click", () => loadCityViruses(city));
         });
     } catch (error) {
-        console.error("Fehler beim Laden der Städte...", error.message);
+        console.error("Fehler beim Laden der Virusdaten...", error.message);
+            setDetailState({
+                title: `${city.name}, ${city.country}`,
+                subtitle: "Die Virusdaten konnten nicht geladen werden.",
+                countLabel: "Fehler",
+                isEmpty: true,
+                content: `
+                    <div class="empty-state compact">
+                    <h5 class="fw-bold mb-1">API nicht erreichbar</h5>
+                    <p class="text-secondary mb-0">Prüfe, ob die DB-API auf ${API_BASE_URL} läuft.</p>
+                    </div>
+                    `,
+                });
     }
 }
 

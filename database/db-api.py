@@ -32,6 +32,13 @@ def get_cities(city_id):
         return jsonify({"error": "not found"}), 404
     return jsonify(dict(cities))
 
+@app.route("/cities/<int:city_id>/sampleCount", methods=["GET"])
+def get_sample_count(city_id):
+    conn = get_db()
+    count = conn.execute("SELECT COUNT(*) as count FROM runs WHERE city_id = ?", (city_id,)).fetchone()
+    conn.close()
+    return jsonify(dict(count))
+
 @app.route("/stats", methods=["GET"])
 def get_stats():
     conn = get_db()
@@ -43,7 +50,8 @@ def get_stats():
             (SELECT MIN(collection_date) FROM runs) as min_date,
             (SELECT MAX(collection_date) FROM runs) as max_date,
             (SELECT MIN(temperature) FROM Weather) AS min_temperature,
-            (SELECT MAX(temperature) FROM Weather) AS max_temperature
+            (SELECT MAX(temperature) FROM Weather) AS max_temperature,
+            (SELECT COUNT(*) FROM Virus WHERE human_host=1) AS host_count
     """).fetchone()
     conn.close()
     return jsonify(dict(stats))
