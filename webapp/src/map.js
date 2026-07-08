@@ -41,7 +41,6 @@ function escapeHtml(value) {
 function renderRealmsBarchart(data, weather) {
     const runs = data.aggregated_virus_data;
     const weather_data = weather;
-    const max_temp = Math.max(weather_data.map(entry => entry.temperature))
 
     // Group data by realm
     const realmData = runs.reduce((acc, curr) => {
@@ -145,11 +144,10 @@ function renderRealmsBarchart(data, weather) {
 
 }
 
-async function renderShannonIndex(data) {
-
-
+async function renderShannonIndex(data, weather) {
     const xDates = data.map(entry => entry.collection_date);
     const yShannonIndex = data.map(entry => entry.shannon_index);
+    const weather_data = weather;
 
     const trace = {
         x: xDates,
@@ -160,14 +158,88 @@ async function renderShannonIndex(data) {
         name: 'Shannon Index'
     };
 
+    const temperatureTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.temperature),
+        name: 'Temperature',
+        yaxis: 'y2',
+        mode: 'lines',
+        line: { color: 'red', shape: 'spline' },
+        smoothing: 1.1,
+        opacity: 0.4,
+        visible: 'legendonly'
+    };
+
+    const rainTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.rainfall),
+        name: 'Rainfall (mm)',
+        yaxis: 'y3',
+        mode: 'lines',
+        line: { color: 'blue', shape: 'spline'},
+        smoothing: 1.5,
+        opacity: 0.2,
+        fill: 'tozeroy',
+        //visible: 'legendonly',
+        fillcolor: 'rgba(0, 0, 255, 0.2)'
+    };
+
+    const humidityTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.humidity),
+        name: 'Humidity (%)',
+        yaxis: 'y4',
+        mode: 'lines',
+        line: { color: 'green', shape: 'spline' },
+        smoothing: 1.1,
+        opacity: 0.4,
+        visible: 'legendonly'
+    };
+
+    const traces = [trace, temperatureTrace, rainTrace, humidityTrace];
+
     const layout = {
         title: 'Shannon Index Over Time',
         xaxis: { title: 'Collection Date' },
         yaxis: { title: 'Shannon Index' },
+        yaxis2: {
+            title: 'Temperature (°C)',
+            overlaying: 'y',
+            side: 'right',
+            range: [0, 36],
+            showgrid: false
+        },
+        yaxis3: {
+            title: 'Rainfall (mm)',
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 0.7, // Adjust as needed for visibility
+            range: [0, 100],
+            showgrid: false,
+            visible: false
+        },
+        yaxis4: {
+            title: 'Humidity (%)',
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 1.3, // Adjust for visual spacing
+            range: [0, 100],
+            showgrid: false,
+            visible: false
+        },
+        legend: {
+            x: 0.5,
+            y: -0.2,
+            xanchor: 'center',
+            yanchor: 'top',
+            orientation: 'h'  // Set the orientation to horizontal
+        },
         template: 'ggplot2'
     };
 
-    Plotly.newPlot('shannon-index-chart', [trace], layout);
+    Plotly.newPlot('shannon-index-chart', traces, layout);
 
 }
 
@@ -476,9 +548,14 @@ async function loadCityViruses(city) {      // called on-click
         if (!response.ok) {
             throw new Error(`Failed to fetch human host data: ${response.status}`);
         }
+        const weather_response = await fetch(`${API_BASE_URL}/cities/${city.id}/weather_data`);
+        if (!weather_response.ok) {
+            throw new Error(`Failed to fetch weather data: ${weather_response.status}`);
+        }
 
         const result = await response.json();
-        renderShannonIndex(result);
+        const weather = await weather_response.json();
+        renderShannonIndex(result, weather);
 
     } catch (error) {
         console.error("Error rendering human host viruses", error.message);
