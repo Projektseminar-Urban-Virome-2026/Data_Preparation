@@ -38,13 +38,15 @@ function escapeHtml(value) {
         .replace(/'/g, "&#039;");
 }
 
-function renderRealmsBarchart(data) {
+function renderRealmsBarchart(data, weather) {
     const runs = data.aggregated_virus_data;
+    const weather_data = weather;
+    const max_temp = Math.max(weather_data.map(entry => entry.temperature))
 
     // Group data by realm
     const realmData = runs.reduce((acc, curr) => {
         if (!acc[curr.realm]) {
-            acc[curr.realm] = { x: [], y: [], name: curr.realm, type: 'bar' };
+            acc[curr.realm] = { x: [], y: [], name: curr.realm, type: 'bar', opacity: 0.9};
             }
         acc[curr.realm].x.push(curr.collection_date);
         acc[curr.realm].y.push(curr.total_percentage);
@@ -54,18 +56,132 @@ function renderRealmsBarchart(data) {
     // Prepare traces for Plotly
     const traces = Object.values(realmData);
 
-    // Define plotly layout
+    const temperatureTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.temperature),
+        name: 'Temperature',
+        yaxis: 'y2',
+        mode: 'lines',
+        line: { color: 'red', shape: 'spline' },
+        smoothing: 1.1,
+        opacity: 0.4,
+        visible: 'legendonly'
+    };
+
+    const rainTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.rainfall),
+        name: 'Rainfall (mm)',
+        yaxis: 'y3',
+        mode: 'lines',
+        line: { color: 'blue', shape: 'spline'},
+        smoothing: 1.5,
+        opacity: 0.2,
+        fill: 'tozeroy',
+        //visible: 'legendonly',
+        fillcolor: 'rgba(0, 0, 255, 0.2)'
+    };
+
+    const humidityTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.humidity),
+        name: 'Humidity (%)',
+        yaxis: 'y4',
+        mode: 'lines',
+        line: { color: 'green', shape: 'spline' },
+        smoothing: 1.1,
+        opacity: 0.4,
+        visible: 'legendonly'
+    };
+
+    traces.push(temperatureTrace, rainTrace, humidityTrace);
+
     const layout = {
-        template: 'ggplot2',        //TODO: template takes no effect
+        template: 'ggplot2',
         title: 'Aggregated Virus Data by Realm Across Samples',
-        barmode: 'stack',
+        barmode: 'relative',
         xaxis: { title: 'Date' },
-        yaxis: { title: 'Percentage of classified Virome' },
-        };
+        yaxis: { title: 'Percentage of classified Virome', side: 'left' },
+        yaxis2: {
+            title: 'Temperature (°C)',
+            overlaying: 'y',
+            side: 'right',
+            range: [0, 36],
+            showgrid: false
+        },
+        yaxis3: {
+            title: 'Rainfall (mm)',
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 0.7, // Adjust as needed for visibility
+            range: [0, 100],
+            showgrid: false,
+            visible: false
+        },
+        yaxis4: {
+            title: 'Humidity (%)',
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 1.3, // Adjust for visual spacing
+            range: [0, 100],
+            showgrid: false,
+            visible: false
+        },
+        legend: {
+            x: 0.5,
+            y: -0.2,
+            xanchor: 'center',
+            yanchor: 'top',
+            orientation: 'h'  // Set the orientation to horizontal
+        }
+    };
+
+
 
     // Render the plot
     Plotly.newPlot('virus-aggregation-chart', traces, layout);
 
+}
+
+function renderHumanHostVirus(data) {
+    const viruses = data.viruses || [];
+    selectedViruses.clear();
+
+    if (viruses.length === 0) {
+        return;
+    }
+
+    const totalRunHits = viruses.reduce((sum, virus) => sum + virus.run_count, 0);
+    const chartRows = viruses.map((virus, index) => {
+        const detailId = `${data.city.id}-${virus.virus_id}`;
+        const virusName = escapeHtml(virus.name);
+        const percentage = virus.percentage / virus.run_count;
+        const width = Math.max(percentage, 2);
+        selectedViruses.set(detailId, { ...virus, city: data.city });
+
+        return `
+            <button class="virus-bar-row" type="button" data-virus-detail="${detailId}">
+                <div class="virus-rank">${index + 1}</div>
+                <div class="virus-bar-content">
+                    <div class="virus-bar-label">
+                        <span>${virusName}</span>
+                        <strong>${percentage.toFixed(1)}%</strong>
+                    </div>
+                    <div class="virus-bar-track" aria-label="${virusName}: ${virus.run_count} Samples">
+                        <div class="virus-bar-fill" style="width: ${width}%"></div>
+                    </div>
+                    <div class="virus-bar-meta">${virus.run_count} Samples</div>
+                </div>
+            </button>
+        `;
+    }).join("");
+
+    var div = document.getElementById("human-host-virus");
+    div.innerHTML = '<h4 class="h4 fw-bold mb-1">Klassifizierte Viren mit potentiellem menschlichen Host</h4>';
+    div.innerHTML += '<p class="text-secondary mb-3">Prozentwerte geben die durchschnittliche Häufigkeit des Vorkommens in den jeweiligen Samples an.</p>'
+    div.innerHTML += chartRows;
 }
 
 
@@ -130,10 +246,6 @@ function showVirusDetail(detail) {
             <strong>${detail.virus_id}</strong>
         </div>
         <div class="detail-card">
-            <span>name</span>
-            <strong>${escapeHtml(detail.name)}</strong>
-        </div>
-        <div class="detail-card">
             <span>realm</span>
             <strong>${escapeHtml(detail.realm || "-")}</strong>
         </div>
@@ -162,12 +274,12 @@ function showVirusDetail(detail) {
             <strong>${escapeHtml(detail.genus || "-")}</strong>
         </div>
         <div class="detail-card">
-            <span>species</span>
-            <strong>${escapeHtml(detail.species || "-")}</strong>
-        </div>
-        <div class="detail-card">
             <span>baltimore_class</span>
             <strong>${escapeHtml(detail.baltimore_class || "-")}</strong>
+        </div>
+        <div class="detail-card">
+            <span>human host</span>
+            <strong>${escapeHtml(detail.human_host === 1 ? "Yes" : "No" || "-")}</strong>
         </div>
     `;
     showPage("virus-detail");
@@ -230,7 +342,7 @@ async function loadVirusCityMap(virusId) {
 
             marker.bindPopup(`
                 <b>${escapeHtml(city.city_name)}, ${escapeHtml(city.country)}</b><br>
-                Durchschnitt: ${Number(city.average_amount).toFixed(2)}<br>
+                Durchschnitt: ${Number(city.average_amount).toFixed(2)} %<br>
                 Temperatur: ${formatTemperature(city.average_temperature)}<br>
                 Runs mit Treffer: ${city.run_count}
             `);
@@ -306,7 +418,10 @@ async function loadCityViruses(city) {      // called on-click
         subtitle: `Auswertung der Virenproben`,
         countLabel: `${count} Samples`,
         // add more <div>s for new plots here:
-        content: `<div id="virus-aggregation-chart"></div>`,
+        content: `
+            <div id="virus-aggregation-chart"></div>
+            <div id="human-host-virus"></div>
+        `,
         });
 
     // Calling the different plot-functions
@@ -316,13 +431,31 @@ async function loadCityViruses(city) {      // called on-click
         if (!response.ok) {
             throw new Error(`Failed to fetch virus aggregate data: ${response.status}`);
         }
+        const weather_response = await fetch(`${API_BASE_URL}/cities/${city.id}/weather_data`);
+        if (!weather_response.ok) {
+            throw new Error(`Failed to fetch weather data: ${weather_response.status}`);
+        }
 
         const result = await response.json();
-        renderRealmsBarchart(result);
+        const weather = await weather_response.json();
+        renderRealmsBarchart(result, weather);
 
     } catch (error) {
         console.error("Error rendering virus aggregation chart", error.message);
     }
+
+    try {
+            const response = await fetch(`${API_BASE_URL}/cities/${city.id}/human_host_virus`);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch human host data: ${response.status}`);
+            }
+
+            const result = await response.json();
+            renderHumanHostVirus(result);
+
+        } catch (error) {
+            console.error("Error rendering human host viruses", error.message);
+        }
 
 
 

@@ -1,4 +1,5 @@
 import sqlite3
+import pandas as pd
 from flask import Flask, jsonify
 from flask_cors import CORS
 
@@ -94,6 +95,46 @@ def get_city_viruses(city_id):
         "viruses": [dict(row) for row in rows],
     })
 
+@app.route("/cities/<int:city_id>/human_host_virus", methods=["GET"])
+def get_human_host_viruses(city_id):
+    conn = get_db()
+    city = conn.execute("SELECT * FROM Cities WHERE id = ?", (city_id,)).fetchone()
+    rows = conn.execute("""
+        SELECT
+            v.tax_id AS virus_id,
+            v.name AS name,
+            v.realm AS realm,
+            v.kingdom AS kingdom,
+            v.phylum AS phylum,
+            v.class AS class,
+            v.taxonomic_order AS taxonomic_order,
+            v.family AS family,
+            v.genus AS genus,
+            v.baltimore_class AS baltimore_class,
+            v.human_host AS human_host,
+            SUM(vir.amount_in_sample_as_percentage) AS percentage,
+            COUNT(DISTINCT vir.run_accession) AS run_count,
+            COUNT(*) AS hit_count
+        FROM runs r
+        JOIN Virus_in_Runs vir ON vir.run_accession = r.run_accession
+        JOIN Virus v ON v.tax_id = vir.virus_tax_id
+        WHERE r.city_id = ? AND human_host=1
+        GROUP BY v.tax_id, v.name
+        ORDER BY run_count DESC, hit_count DESC, v.name ASC
+    """, (city_id,)).fetchall()
+
+    run_count = conn.execute(
+        "SELECT COUNT(*) AS count FROM runs WHERE city_id = ?",
+        (city_id,),
+    ).fetchone()["count"]
+
+    conn.close()
+    return jsonify({
+        "city": dict(city),
+        "run_count": run_count,
+        "viruses": [dict(row) for row in rows],
+    })
+
 @app.route("/viruses/<int:virus_id>/cities", methods=["GET"])
 def get_virus_cities(virus_id):
     conn = get_db()
@@ -133,16 +174,12 @@ def get_aggregated_realms_for_city(city_id):
             r.collection_date,
             vi.realm,
             SUM(vir.amount_in_sample_as_percentage) AS total_percentage
-        FROM 
-            runs r
-        JOIN 
-            Virus_in_Runs vir ON r.run_accession = vir.run_accession
-        JOIN 
-            Virus vi ON vir.virus_tax_id = vi.tax_id
-        WHERE 
-            r.city_id = ?
-        GROUP BY 
-            r.run_accession, vi.realm
+        FROM runs r
+        JOIN Virus_in_Runs vir ON r.run_accession = vir.run_accession
+        JOIN Virus vi ON vir.virus_tax_id = vi.tax_id
+        WHERE r.city_id = ? AND vi.realm IS NOT NULL
+        GROUP BY r.run_accession, vi.realm
+        ORDER BY vi.realm ASC, r.collection_date ASC
     """, (city_id,)).fetchall()
 
     conn.close()
@@ -153,6 +190,45 @@ def get_aggregated_realms_for_city(city_id):
         "city": dict(city),
         "aggregated_virus_data": virus_data
     })
+
+@app.route("/cities/<int:city_id>/collection_weather_data", methods=["GET"])
+def get_collection_weather_data_for_city(city_id):
+    conn = get_db()
+    city = conn.execute("SELECT * FROM Cities WHERE id = ?", (city_id,)).fetchone()
+
+    rows = conn.execute("""
+        SELECT 
+            r.run_accession,
+            r.collection_date,
+            w.temperature,
+            w.humidity,
+            w.rainfall,
+            w.wind_speed
+        FROM runs r
+        JOIN Weather w ON r.run_accession = w.run_accession
+        WHERE r.city_id = ?
+        ORDER BY r.collection_date ASC
+    """, (city_id,)).fetchall()
+
+    weather_data = [dict(row) for row in rows]
+    conn.close()
+
+    return jsonify({
+        "city": dict(city),
+        "weather_data": weather_data
+    })
+
+@app.route("/cities/<int:city_id>/weather_data", methods=["GET"])
+def get_weather_data_for_city(city_id):
+    conn = get_db()
+    city = conn.execute("SELECT name FROM Cities WHERE id = ?", (city_id,)).fetchone()
+    conn.close()
+
+    city = city['name'].replace(" ","")
+
+    weather_data = pd.read_csv(f"/cities/{city}/smk_output/{city}_weather.csv")
+    weather_data.rename(columns={'temperature_2m_mean (°C)': 'temperature', 'rain_sum (mm)': 'rainfall', 'relative_humidity_2m_mean (%)': 'humidity'}, inplace=True)
+    return jsonify(weather_data.to_dict(orient='records'))
 
 
 if __name__ == "__main__":
