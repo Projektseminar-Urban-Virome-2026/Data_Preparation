@@ -57,6 +57,30 @@ def get_stats():
     conn.close()
     return jsonify(dict(stats))
 
+@app.route("/cities/<int:city_id>/runs", methods=["GET"])
+def get_runs_for_city(city_id):
+    conn = get_db()
+    runs = conn.execute("""
+        SELECT 
+            r.run_accession,
+            r.run_alias,
+            r.collection_date,
+            r.city_id,
+            r.SampleID,
+            r.shannon_index
+        FROM 
+            runs r
+        WHERE 
+            r.city_id = ?
+        ORDER BY 
+            r.collection_date ASC
+    """, (city_id,))
+
+    runs_data = [dict(row) for row in runs.fetchall()]
+
+    conn.close()
+    return jsonify(runs_data)
+
 @app.route("/cities/<int:city_id>/viruses", methods=["GET"])
 def get_city_viruses(city_id):
     conn = get_db()

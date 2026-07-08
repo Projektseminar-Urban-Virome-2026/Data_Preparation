@@ -145,6 +145,32 @@ function renderRealmsBarchart(data, weather) {
 
 }
 
+async function renderShannonIndex(data) {
+
+
+    const xDates = data.map(entry => entry.collection_date);
+    const yShannonIndex = data.map(entry => entry.shannon_index);
+
+    const trace = {
+        x: xDates,
+        y: yShannonIndex,
+        mode: 'lines+markers',
+        type: 'scatter',
+        marker: { color: 'blue' },
+        name: 'Shannon Index'
+    };
+
+    const layout = {
+        title: 'Shannon Index Over Time',
+        xaxis: { title: 'Collection Date' },
+        yaxis: { title: 'Shannon Index' },
+        template: 'ggplot2'
+    };
+
+    Plotly.newPlot('shannon-index-chart', [trace], layout);
+
+}
+
 function renderHumanHostVirus(data) {
     const viruses = data.viruses || [];
     selectedViruses.clear();
@@ -420,6 +446,7 @@ async function loadCityViruses(city) {      // called on-click
         // add more <div>s for new plots here:
         content: `
             <div id="virus-aggregation-chart"></div>
+            <div id="shannon-index-chart"></div>
             <div id="human-host-virus"></div>
         `,
         });
@@ -442,6 +469,19 @@ async function loadCityViruses(city) {      // called on-click
 
     } catch (error) {
         console.error("Error rendering virus aggregation chart", error.message);
+    }
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/cities/${city.id}/runs`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch human host data: ${response.status}`);
+        }
+
+        const result = await response.json();
+        renderShannonIndex(result);
+
+    } catch (error) {
+        console.error("Error rendering human host viruses", error.message);
     }
 
     try {

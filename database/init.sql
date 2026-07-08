@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS runs (
     collection_date DATE NOT NULL,
     city_id INTEGER NOT NULL,
     SampleID VARCHAR(255),
+    shannon_index FLOAT,
     FOREIGN KEY (city_id) REFERENCES Cities(id)
 );
 

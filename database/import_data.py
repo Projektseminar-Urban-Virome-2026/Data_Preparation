@@ -8,7 +8,7 @@ def runs_table(df, db_connection):
     """
     
     # Nur relevante Spalten auswählen
-    runs_df = df[['run_accession', 'sample_alias', 'collection_date', 'city']].copy()
+    runs_df = df[['run_accession', 'sample_alias', 'collection_date', 'city', 'shannon_index']].copy()
     
     city_to_id = db_connection.execute("SELECT id, name FROM Cities").fetchall()
     city_to_id_dict = {name: id for id, name in city_to_id}
@@ -16,9 +16,9 @@ def runs_table(df, db_connection):
     cursor = db_connection.cursor()
     for _, row in runs_df.iterrows():
         cursor.execute("""
-            INSERT INTO runs (run_accession, run_alias, collection_date, city_id)
-            VALUES (?, ?, ?, ?)
-        """, (row['run_accession'], row['sample_alias'], row['collection_date'], city_to_id_dict.get(row['city'], None)))  # city_id placeholder
+            INSERT INTO runs (run_accession, run_alias, collection_date, city_id, shannon_index)
+            VALUES (?, ?, ?, ?, ?)
+        """, (row['run_accession'], row['sample_alias'], row['collection_date'], city_to_id_dict.get(row['city'], None), row['shannon_index']))  # city_id placeholder
     
     db_connection.commit()
     print(f"✓ {len(runs_df)} Einträge in runs_table eingefügt")
@@ -250,6 +250,9 @@ if __name__ == "__main__":
     conn = sqlite3.connect('data/db/database.db')
     
     data = pd.read_csv('cities/filtered_non_capture_samples.tsv', sep='\t')
+    shannon = pd.read_csv('cities/shannon.csv')
+
+    data_with_shannon = data.merge(shannon, on="run_accession", how="left")
 
     global_merge = pd.read_csv('cities/global_merge.csv', sep=',')
 
@@ -266,7 +269,7 @@ if __name__ == "__main__":
     city_table(data, conn)
     
     # Dann Runs einfügen
-    runs_table(data, conn)
+    runs_table(data_with_shannon, conn)
 
     weather_table(conn)
     
