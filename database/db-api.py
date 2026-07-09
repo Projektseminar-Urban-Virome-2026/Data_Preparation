@@ -1,4 +1,7 @@
 import sqlite3
+from pathlib import Path
+
+import joblib
 import pandas as pd
 from flask import Flask, jsonify
 from flask_cors import CORS
@@ -6,6 +9,28 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 DB_PATH = "/db/database.db"
+MODEL_DIR = Path("/models")
+
+STAEDTE_NACH_KLIMA = {
+    "Gemäßigt": ["Copenhagen", "Regina", "Seattle", "Melbourne"],
+    "Subtropisch": ["Guangzhou"],
+    "Tropisch": ["Kuala Lumpur", "Quito", "Yaounde"],
+}
+
+KLIMAZONE_PRO_STADT = {
+    stadt: klimazone
+    for klimazone, staedte in STAEDTE_NACH_KLIMA.items()
+    for stadt in staedte
+}
+
+MODEL_FILES = {
+    "shannon_model": "shannon_mixed_modell.pkl",
+    "shannon_baseline": "shannon_baseline_mediane.pkl",
+    "tobamo_model": "tobamo_mixed_modell.pkl",
+    "tobamo_baseline": "tobamo_baseline_mediane.pkl",
+}
+
+MODELS = None
 
 def get_db():
     """Create a database connection with WAL mode enabled."""
@@ -16,6 +41,35 @@ def get_db():
     # Enable foreign key enforcement
     conn.execute("PRAGMA foreign_keys=ON")
     return conn
+
+def load_models():
+    global MODELS
+    if MODELS is not None:
+        return MODELS, []
+
+    missing = [
+        str(MODEL_DIR / filename)
+        for filename in MODEL_FILES.values()
+        if not (MODEL_DIR / filename).exists()
+    ]
+    if missing:
+        return None, missing
+
+    MODELS = {
+        name: joblib.load(MODEL_DIR / filename)
+        for name, filename in MODEL_FILES.items()
+    }
+    return MODELS, []
+
+def value_or_none(value):
+    if pd.isna(value):
+        return None
+    return float(value)
+
+def first_prediction_value(prediction):
+    if hasattr(prediction, "iloc"):
+        return prediction.iloc[0]
+    return prediction[0]
 
 @app.route("/cities", methods=["GET"])
 def list_cities():
@@ -80,6 +134,79 @@ def get_runs_for_city(city_id):
 
     conn.close()
     return jsonify(runs_data)
+
+@app.route("/runs/<run_accession>/model_values", methods=["GET"])
+def get_model_values_for_run(run_accession):
+    conn = get_db()
+    row = conn.execute("""
+        SELECT
+            r.run_accession,
+            r.collection_date,
+            r.city_id,
+            r.shannon_index,
+            c.name AS city,
+            c.country AS country,
+            w.temperature,
+            w.humidity,
+            w.rainfall,
+            w.wind_speed
+        FROM runs r
+        JOIN Cities c ON c.id = r.city_id
+        LEFT JOIN Weather w ON w.run_accession = r.run_accession
+        WHERE r.run_accession = ?
+    """, (run_accession,)).fetchone()
+    conn.close()
+
+    if row is None:
+        return jsonify({"error": "run not found"}), 404
+
+    run_data = dict(row)
+    klimazone = KLIMAZONE_PRO_STADT.get(run_data["city"])
+    if klimazone is None:
+        return jsonify({"error": "climate zone not configured for city", "run": run_data}), 500
+
+    features = {
+        "Temp": run_data["temperature"],
+        "Regen": run_data["rainfall"],
+        "Luftfeuchtigkeit": run_data["humidity"],
+    }
+    model_input = pd.DataFrame([{
+        "Stadt": run_data["city"],
+        "Klimazone": klimazone,
+        **features,
+    }])
+
+    models, missing = load_models()
+    response = {
+        "run": run_data,
+        "features": {
+            "Stadt": run_data["city"],
+            "Klimazone": klimazone,
+            **{key: value_or_none(value) for key, value in features.items()},
+        },
+    }
+
+    missing_inputs = [name for name, value in features.items() if value is None]
+    if missing_inputs:
+        response["model_status"] = "missing_input"
+        response["missing_inputs"] = missing_inputs
+        return jsonify(response), 422
+
+    if models is None:
+        response["model_status"] = "missing"
+        response["missing_models"] = missing
+        return jsonify(response), 503
+
+    shannon_prediction = first_prediction_value(models["shannon_model"].predict(model_input))
+    tobamo_prediction = first_prediction_value(models["tobamo_model"].predict(model_input))
+    response["model_status"] = "ok"
+    response["predictions"] = {
+        "shannon_mixed_model": value_or_none(shannon_prediction),
+        "shannon_baseline": value_or_none(models["shannon_baseline"].get(run_data["city"])),
+        "tobamo_mixed_model": value_or_none(tobamo_prediction),
+        "tobamo_baseline": value_or_none(models["tobamo_baseline"].get(run_data["city"])),
+    }
+    return jsonify(response)
 
 @app.route("/cities/<int:city_id>/viruses", methods=["GET"])
 def get_city_viruses(city_id):

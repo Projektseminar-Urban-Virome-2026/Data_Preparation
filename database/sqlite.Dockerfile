@@ -10,6 +10,8 @@ RUN apk add --no-cache py3-flask
 
 RUN apk add --no-cache py3-flask-cors
 
+RUN apk add --no-cache py3-joblib py3-scipy py3-statsmodels
+
 WORKDIR /app
 
 COPY /database/db-api.py /app/
