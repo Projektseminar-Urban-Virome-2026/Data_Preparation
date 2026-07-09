@@ -103,7 +103,7 @@ function renderRealmsBarchart(data, weather) {
         title: {text: 'Aggregated Virus Data by Realm Across Samples'},
         barmode: 'relative',
         //xaxis: { title: {text: 'Date' }},
-        yaxis: { title: {text: 'Percentage of classified Virome'}, side: 'left', range: [0, 101]},
+        yaxis: { title: {text: 'Share of classified Virome (%); Humidity (%); Rainfall (mm)'}, side: 'left', range: [0, 101]},
         yaxis2: {
             title: {text: 'Temperature (°C)'},
             overlaying: 'y',
@@ -132,7 +132,7 @@ function renderRealmsBarchart(data, weather) {
             showgrid: false,
             tickcolor: 'rgba(0, 255, 0, 0.5)',
             tickfont: {color: 'rgba(0, 255, 0, 0.5)'},
-            //visible: false
+            visible: false
         },
         legend: {
             x: 0.5,
@@ -455,9 +455,9 @@ async function loadVirusCityMap(virusId) {
 
         cities.forEach((city) => {
             const radius = maxAverage > 0 ? 8 + (city.average_amount / maxAverage) * 24 : 10;
-            const color = markerColor(city.average_temperature, minTemperature, maxTemperature);
+            const color = "blue";
             const marker = L.circleMarker([city.latitude, city.longitude], {
-                radius,
+                //radius,
                 color,
                 weight: 2,
                 fillColor: color,
@@ -485,15 +485,21 @@ async function loadVirusCityMap(virusId) {
 async function loadVirusDetail(virusId, city) {
     virusDetailChart.innerHTML = `<div id="virus-abundance-chart"></div>
                                  `;
-    plotVirusAbundance(city.city_id, virusId);
+    renderVirusAbundance(city.city_id, virusId);
 }
 
-async function plotVirusAbundance(cityId, virusId) {
+async function renderVirusAbundance(cityId, virusId) {
     try {
         const response = await fetch(`${API_BASE_URL}/cities/${cityId}/virus/${virusId}/abundance`);
         if (!response.ok) {
             throw new Error('Unable to fetch virus abundance data');
         }
+        const weather_response = await fetch(`${API_BASE_URL}/cities/${cityId}/weather_data`);
+        if (!weather_response.ok) {
+            throw new Error(`Failed to fetch weather data: ${weather_response.status}`);
+        }
+
+        const weather_data = await weather_response.json();
 
         const data = await response.json();
         const xDates = data.abundance_data.map(entry => entry.collection_date);
@@ -502,21 +508,93 @@ async function plotVirusAbundance(cityId, virusId) {
         const trace = {
             x: xDates,
             y: yAbundances,
-            mode: 'lines+markers',
-            type: 'scatter',
-            marker: { color: 'blue' },
-            line: { color: 'blue' },
+            type: 'bar',
+            marker: { color: 'blue', opacity: 0.5 },
             name: 'Abundance'
         };
+
+        const temperatureTrace = {
+            x: weather_data.map(entry => entry.time),
+            y: weather_data.map(entry => entry.temperature),
+            name: 'Temperature',
+            yaxis: 'y2',
+            mode: 'lines',
+            line: { color: 'red', shape: 'spline' },
+            smoothing: 1.1,
+            opacity: 0.4,
+            visible: 'legendonly'
+        };
+
+        const rainTrace = {
+            x: weather_data.map(entry => entry.time),
+            y: weather_data.map(entry => entry.rainfall),
+            name: 'Rainfall (mm)',
+            yaxis: 'y3',
+            mode: 'none',
+            line: { color: 'blue', shape: 'spline'},
+            smoothing: 1.5,
+            opacity: 0.5,
+            fill: 'tozeroy',
+            //visible: 'legendonly',
+            fillcolor: 'rgba(0, 0, 255, 0.5)'
+        };
+
+        const humidityTrace = {
+            x: weather_data.map(entry => entry.time),
+            y: weather_data.map(entry => entry.humidity),
+            name: 'Humidity (%)',
+            yaxis: 'y4',
+            mode: 'lines',
+            line: { color: 'green', shape: 'spline' },
+            smoothing: 1.1,
+            opacity: 0.4,
+            visible: 'legendonly'
+        };
+
+        const traces = [trace, temperatureTrace, rainTrace, humidityTrace];
 
         const layout = {
             title: {text: `${data.virus_name} Abundance Over Time in ${data.city.name}`},
             xaxis: { title: {text: 'Collection Date' }},
             yaxis: { title: {text: 'Abundance (%)' }},
+            yaxis2: {
+                title: {text: 'Temperature (°C)'},
+                overlaying: 'y',
+                side: 'right',
+                range: [0, 36],
+                showgrid: false
+            },
+            yaxis3: {
+                title: {text: 'Rainfall (mm)'},
+                overlaying: 'y',
+                side: 'right',
+                anchor: 'free',
+                position: 0.7, // Adjust as needed for visibility
+                range: [0, 100],
+                showgrid: false,
+                visible: false
+            },
+            yaxis4: {
+                title: {text: 'Humidity (%)'},
+                overlaying: 'y',
+                side: 'right',
+                anchor: 'free',
+                position: 1.3, // Adjust for visual spacing
+                range: [0, 100],
+                showgrid: false,
+                visible: false
+            },
+            legend: {
+                x: 0.5,
+                y: -0.2,
+                xanchor: 'center',
+                yanchor: 'top',
+                orientation: 'h'  // Set the orientation to horizontal
+            },
             template: 'ggplot2'
         };
 
-        Plotly.newPlot('virus-abundance-chart', [trace], layout);
+        Plotly.newPlot('virus-abundance-chart', traces, layout);
     } catch (error) {
         console.error('Error plotting virus abundance:', error);
     }
