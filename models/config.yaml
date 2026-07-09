@@ -1,0 +1,9 @@
+data_dir: /work/cities
+ena_file: /work/PRJEB87273_runs_samples.tsv
+model_dir: /model_artifacts
+
+required_models:
+  - shannon_mixed_modell.pkl
+  - shannon_baseline_mediane.pkl
+  - tobamo_mixed_modell.pkl
+  - tobamo_baseline_mediane.pkl

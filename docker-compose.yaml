@@ -38,7 +38,32 @@ services:
       - type: bind
         source: ./cities
         target: /cities
+      - type: bind
+        read_only: true
+        source: ./models/modelle_api
+        target: /models
     restart: unless-stopped
+
+  model-training:
+    image: model-training
+    build:
+      dockerfile: ./models/Dockerfile
+    volumes:
+      - type: bind
+        read_only: true
+        source: ./cities
+        target: /work/cities
+      - type: bind
+        read_only: true
+        source: ./PRJEB87273_runs_samples.tsv
+        target: /work/PRJEB87273_runs_samples.tsv
+      - type: bind
+        read_only: true
+        source: ./models
+        target: /work/models
+      - type: bind
+        source: ./models/modelle_api
+        target: /model_artifacts
 
   webapp:
     image: python:3.12-alpine
