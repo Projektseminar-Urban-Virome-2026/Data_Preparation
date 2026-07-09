@@ -24,7 +24,8 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""
     ></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>  -->
+    <script src="https://cdn.plot.ly/plotly-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="app-shell">
@@ -215,6 +216,12 @@
                         <h3 class="h4 fw-bold mb-1">Vorkommen nach Stadt</h3>
                         <p class="text-secondary mb-3">Größere Marker zeigen einen höheren Durchschnittswert in den Runs mit Treffer.</p>
                         <div id="virus-city-map"></div>
+                    </div>
+                    <div id="virus-detail-chart" class="virus-chart empty">
+                        <div class="empty-state compact">
+                            <h5 class="fw-bold mb-1">Noch keine Stadt ausgewählt</h5>
+                            <p class="text-secondary mb-0">Klicke auf einen Marker, um das Balkendiagramm zu laden.</p>
+                        </div>
                     </div>
                 </div>
             </section>

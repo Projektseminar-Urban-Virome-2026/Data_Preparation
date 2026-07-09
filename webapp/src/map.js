@@ -13,6 +13,7 @@ const cityDetailCount = document.getElementById("city-detail-count");
 const virusChart = document.getElementById("virus-chart");
 const virusDetailTitle = document.getElementById("virus-detail-title");
 const virusDetailGrid = document.getElementById("virus-detail-grid");
+const virusDetailChart = document.getElementById("virus-detail-chart");
 const selectedViruses = new Map();
 const statVirusCount = document.getElementById("stat-virus-count");
 const statRunCount = document.getElementById("stat-run-count");
@@ -72,13 +73,13 @@ function renderRealmsBarchart(data, weather) {
         y: weather_data.map(entry => entry.rainfall),
         name: 'Rainfall (mm)',
         yaxis: 'y3',
-        mode: 'lines',
+        mode: 'none',
         line: { color: 'blue', shape: 'spline'},
         smoothing: 1.5,
-        opacity: 0.2,
+        opacity: 0.5,
         fill: 'tozeroy',
         //visible: 'legendonly',
-        fillcolor: 'rgba(0, 0, 255, 0.2)'
+        fillcolor: 'rgba(0, 0, 255, 0.5)'
     };
 
     const humidityTrace = {
@@ -97,36 +98,41 @@ function renderRealmsBarchart(data, weather) {
 
     const layout = {
         template: 'ggplot2',
-        title: 'Aggregated Virus Data by Realm Across Samples',
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        title: {text: 'Aggregated Virus Data by Realm Across Samples'},
         barmode: 'relative',
-        xaxis: { title: 'Date' },
-        yaxis: { title: 'Percentage of classified Virome', side: 'left' },
+        //xaxis: { title: {text: 'Date' }},
+        yaxis: { title: {text: 'Percentage of classified Virome'}, side: 'left', range: [0, 101]},
         yaxis2: {
-            title: 'Temperature (°C)',
+            title: {text: 'Temperature (°C)'},
             overlaying: 'y',
             side: 'right',
             range: [0, 36],
             showgrid: false
         },
         yaxis3: {
-            title: 'Rainfall (mm)',
+            title: {text: 'Rainfall (mm)'},
             overlaying: 'y',
             side: 'right',
             anchor: 'free',
             position: 0.7, // Adjust as needed for visibility
-            range: [0, 100],
+            range: [0, 101],
             showgrid: false,
             visible: false
         },
         yaxis4: {
-            title: 'Humidity (%)',
+            title: {text: 'Humidity (%)', font: {color: 'rgba(0, 255, 0, 0.5)'}},
             overlaying: 'y',
             side: 'right',
-            anchor: 'free',
-            position: 1.3, // Adjust for visual spacing
-            range: [0, 100],
+            //anchor: 'free',
+            position: 1, // Adjust for visual spacing
+            autoshift: true,
+            range: [0, 101],
             showgrid: false,
-            visible: false
+            tickcolor: 'rgba(0, 255, 0, 0.5)',
+            tickfont: {color: 'rgba(0, 255, 0, 0.5)'},
+            //visible: false
         },
         legend: {
             x: 0.5,
@@ -148,13 +154,15 @@ async function renderShannonIndex(data, weather) {
     const xDates = data.map(entry => entry.collection_date);
     const yShannonIndex = data.map(entry => entry.shannon_index);
     const weather_data = weather;
+    const averageShannonIndex = yShannonIndex.reduce((sum, value) => sum + value, 0) / yShannonIndex.length;
 
     const trace = {
         x: xDates,
         y: yShannonIndex,
         mode: 'lines+markers',
         type: 'scatter',
-        marker: { color: 'blue' },
+        marker: { color: 'black' },
+        line: { color: 'black' },
         name: 'Shannon Index'
     };
 
@@ -175,13 +183,13 @@ async function renderShannonIndex(data, weather) {
         y: weather_data.map(entry => entry.rainfall),
         name: 'Rainfall (mm)',
         yaxis: 'y3',
-        mode: 'lines',
+        mode: 'none',
         line: { color: 'blue', shape: 'spline'},
         smoothing: 1.5,
-        opacity: 0.2,
+        opacity: 0.5,
         fill: 'tozeroy',
         //visible: 'legendonly',
-        fillcolor: 'rgba(0, 0, 255, 0.2)'
+        fillcolor: 'rgba(0, 0, 255, 0.5)'
     };
 
     const humidityTrace = {
@@ -199,18 +207,20 @@ async function renderShannonIndex(data, weather) {
     const traces = [trace, temperatureTrace, rainTrace, humidityTrace];
 
     const layout = {
-        title: 'Shannon Index Over Time',
-        xaxis: { title: 'Collection Date' },
-        yaxis: { title: 'Shannon Index' },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        title: {text: 'Alpha-Diversität (Shannon Index)'},
+        //xaxis: { title: {text: 'Collection Date'} },
+        yaxis: { title: {text: 'Shannon Index'} },
         yaxis2: {
-            title: 'Temperature (°C)',
+            title: {text: 'Temperature (°C)'},
             overlaying: 'y',
             side: 'right',
             range: [0, 36],
             showgrid: false
         },
         yaxis3: {
-            title: 'Rainfall (mm)',
+            title: {text: 'Rainfall (mm)'},
             overlaying: 'y',
             side: 'right',
             anchor: 'free',
@@ -220,7 +230,7 @@ async function renderShannonIndex(data, weather) {
             visible: false
         },
         yaxis4: {
-            title: 'Humidity (%)',
+            title: {text: 'Humidity (%)'},
             overlaying: 'y',
             side: 'right',
             anchor: 'free',
@@ -236,7 +246,22 @@ async function renderShannonIndex(data, weather) {
             yanchor: 'top',
             orientation: 'h'  // Set the orientation to horizontal
         },
-        template: 'ggplot2'
+        template: 'ggplot2',
+        shapes: [
+            {
+                type: 'line',
+                x0: xDates[0],
+                x1: xDates[xDates.length - 1],
+                y0: averageShannonIndex,
+                y1: averageShannonIndex,
+                line: {
+                    color: 'gray',
+                    width: 2,
+                    dash: 'dashdot',
+                    opacity: 0.5
+                }
+            }
+        ]
     };
 
     Plotly.newPlot('shannon-index-chart', traces, layout);
@@ -411,6 +436,7 @@ function markerColor(temperature, minTemperature, maxTemperature) {
 async function loadVirusCityMap(virusId) {
     ensureVirusCityMap();
     virusCityLayer.clearLayers();
+    virusDetailChart.innerHTML = `<div class='h4'>Stadt auswählen für weitere Infos</div>`
 
     try {
         const response = await fetch(`${API_BASE_URL}/viruses/${virusId}/cities`);
@@ -444,6 +470,7 @@ async function loadVirusCityMap(virusId) {
                 Temperatur: ${formatTemperature(city.average_temperature)}<br>
                 Runs mit Treffer: ${city.run_count}
             `);
+            marker.on("click", () => loadVirusDetail(virusId, city));
             bounds.push([city.latitude, city.longitude]);
         });
 
@@ -452,6 +479,46 @@ async function loadVirusCityMap(virusId) {
         }
     } catch (error) {
         console.error("Fehler beim Laden der Virus-Stadtkarte...", error.message);
+    }
+}
+
+async function loadVirusDetail(virusId, city) {
+    virusDetailChart.innerHTML = `<div id="virus-abundance-chart"></div>
+                                 `;
+    plotVirusAbundance(city.city_id, virusId);
+}
+
+async function plotVirusAbundance(cityId, virusId) {
+    try {
+        const response = await fetch(`${API_BASE_URL}/cities/${cityId}/virus/${virusId}/abundance`);
+        if (!response.ok) {
+            throw new Error('Unable to fetch virus abundance data');
+        }
+
+        const data = await response.json();
+        const xDates = data.abundance_data.map(entry => entry.collection_date);
+        const yAbundances = data.abundance_data.map(entry => entry.amount_in_sample_as_percentage);
+
+        const trace = {
+            x: xDates,
+            y: yAbundances,
+            mode: 'lines+markers',
+            type: 'scatter',
+            marker: { color: 'blue' },
+            line: { color: 'blue' },
+            name: 'Abundance'
+        };
+
+        const layout = {
+            title: {text: `${data.virus_name} Abundance Over Time in ${data.city.name}`},
+            xaxis: { title: {text: 'Collection Date' }},
+            yaxis: { title: {text: 'Abundance (%)' }},
+            template: 'ggplot2'
+        };
+
+        Plotly.newPlot('virus-abundance-chart', [trace], layout);
+    } catch (error) {
+        console.error('Error plotting virus abundance:', error);
     }
 }
 

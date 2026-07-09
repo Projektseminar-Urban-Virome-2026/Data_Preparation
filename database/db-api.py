@@ -215,6 +215,42 @@ def get_aggregated_realms_for_city(city_id):
         "aggregated_virus_data": virus_data
     })
 
+@app.route("/cities/<int:city_id>/virus/<int:virus_id>/abundance", methods=["GET"])
+def get_virus_abundance(city_id, virus_id):
+    conn = get_db()
+    city = conn.execute("SELECT * FROM Cities WHERE id = ?", (city_id,)).fetchone()
+    virus = conn.execute("SELECT name FROM Virus WHERE tax_id = ?", (virus_id,)).fetchone()
+    if virus is None:
+        return jsonify({"error": "Virus not found"}), 404
+
+    virus_name = virus["name"]
+
+    rows = conn.execute("""
+         SELECT
+                r.collection_date,
+                COALESCE(vir.amount_in_sample_as_percentage, 0) AS amount_in_sample_as_percentage
+            FROM runs r
+            LEFT JOIN Virus_in_Runs vir 
+            ON r.run_accession = vir.run_accession AND vir.virus_tax_id = ?
+            WHERE r.city_id = ?
+            ORDER BY r.collection_date
+    """, (virus_id, city_id)).fetchall()
+
+    conn.close()
+    if not rows:
+        return jsonify({"error": "No data found"}), 404
+
+    abundance_data = [dict(row) for row in rows]
+
+    return jsonify({
+        "city": dict(city),
+        "virus_id": virus_id,
+        "virus_name": virus_name,
+        "abundance_data": abundance_data,
+    })
+
+
+
 @app.route("/cities/<int:city_id>/collection_weather_data", methods=["GET"])
 def get_collection_weather_data_for_city(city_id):
     conn = get_db()
