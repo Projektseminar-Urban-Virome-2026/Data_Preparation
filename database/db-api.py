@@ -2,6 +2,7 @@ import sqlite3
 from pathlib import Path
 
 import joblib
+import requests
 import pandas as pd
 from flask import Flask, jsonify
 from flask_cors import CORS
@@ -10,6 +11,7 @@ app = Flask(__name__)
 CORS(app)
 DB_PATH = "/db/database.db"
 MODEL_DIR = Path("/models")
+WEATHERAPIURL = "https://api.open-meteo.com/v1/forecast"
 
 STAEDTE_NACH_KLIMA = {
     "Gemäßigt": ["Copenhagen", "Regina", "Seattle", "Melbourne"],
@@ -208,6 +210,92 @@ def get_model_values_for_run(run_accession):
     }
     return jsonify(response)
 
+@app.route("/cities/<int:city_id>/shannon_model", methods=["GET"])
+def get_shannon_model_for_city(city_id):
+    conn = get_db()
+    row = conn.execute("""
+        SELECT
+            name AS city,
+            country AS country,
+            latitude AS latitude,
+            longitude AS longitude
+        FROM Cities
+        WHERE id = ?
+    """, (city_id,)).fetchone()
+    conn.close()
+
+    if row is None:
+        return jsonify({"error": "run not found"}), 404
+
+    city_data = dict(row)
+    klimazone = KLIMAZONE_PRO_STADT.get(city_data["city"])
+    if klimazone is None:
+        return jsonify({"error": "climate zone not configured for city", "city": city_data}), 500
+
+    WEATHERAPIPARAMS = {
+        "latitude": city_data["latitude"],
+        "longitude": city_data["longitude"],
+        "daily": "temperature_2m_mean,relative_humidity_2m_mean,rain_sum",
+        "timezone": "Europe/Berlin",
+        "past_days": 2,
+        "forecast_days": 3
+    }
+
+    try:
+        response = requests.get(WEATHERAPIURL, params=WEATHERAPIPARAMS)
+        weather_data = response.json()
+        daily_data = weather_data.get('daily')
+        temperature = sum(daily_data['temperature_2m_mean']) / len(daily_data['temperature_2m_mean'])
+        humidity = sum(daily_data['relative_humidity_2m_mean']) / len(daily_data['relative_humidity_2m_mean'])
+        rainfall = sum(daily_data['rain_sum']) / len(daily_data['rain_sum'])
+
+    except requests.RequestException as e:
+        return jsonify({"error": "Failed to fetch weather data", "details": str(e)}), 500
+
+    features = {
+        "Temp": temperature,
+        "Regen": rainfall,
+        "Luftfeuchtigkeit": humidity,
+    }
+    model_input = pd.DataFrame([{
+        "Stadt": city_data["city"],
+        "Klimazone": klimazone,
+        **features,
+    }])
+
+    models, missing = load_models()
+    response = {
+        "city": city_data,
+        "forecast_date": weather_data['daily']['time'][-1],
+        "features": {
+            "Stadt": city_data["city"],
+            "Klimazone": klimazone,
+            **{key: value_or_none(value) for key, value in features.items()},
+        },
+    }
+
+    missing_inputs = [name for name, value in features.items() if value is None]
+    if missing_inputs:
+        response["model_status"] = "missing_input"
+        response["missing_inputs"] = missing_inputs
+        return jsonify(response), 422
+
+    if models is None:
+        response["model_status"] = "missing"
+        response["missing_models"] = missing
+        return jsonify(response), 503
+
+    shannon_prediction = first_prediction_value(models["shannon_model"].predict(model_input))
+    tobamo_prediction = first_prediction_value(models["tobamo_model"].predict(model_input))
+    response["model_status"] = "ok"
+    response["predictions"] = {
+        "shannon_mixed_model": value_or_none(shannon_prediction),
+        "shannon_baseline": value_or_none(models["shannon_baseline"].get(city_data["city"])),
+        "tobamo_mixed_model": value_or_none(tobamo_prediction),
+        "tobamo_baseline": value_or_none(models["tobamo_baseline"].get(city_data["city"])),
+    }
+    return jsonify(response)
+
 @app.route("/cities/<int:city_id>/viruses", methods=["GET"])
 def get_city_viruses(city_id):
     conn = get_db()
@@ -284,6 +372,56 @@ def get_human_host_viruses(city_id):
         "city": dict(city),
         "run_count": run_count,
         "viruses": [dict(row) for row in rows],
+    })
+
+@app.route("/cities/<int:city_id>/human_host_virus_summary", methods=["GET"])
+def get_human_host_virus_summary(city_id):
+    conn = get_db()
+
+    # Fetch city information
+    city = conn.execute("SELECT * FROM Cities WHERE id = ?", (city_id,)).fetchone()
+    if city is None:
+        return jsonify({"error": "City not found"}), 404
+
+    # Query to get collection date details, virus values, and compute sum
+    rows = conn.execute("""
+        SELECT 
+            r.collection_date,
+            vir.amount_in_sample_as_percentage,
+            v.name AS virus_name
+        FROM runs r
+        JOIN Virus_in_Runs vir ON vir.run_accession = r.run_accession
+        JOIN Virus v ON v.tax_id = vir.virus_tax_id
+        WHERE r.city_id = ? AND v.human_host = 1
+    """, (city_id,)).fetchall()
+
+    # Process the data
+    virus_info_by_date = {}
+    for row in rows:
+        date = row['collection_date']
+        virus_name = row['virus_name']
+        value = row['amount_in_sample_as_percentage']
+
+        # Initialize the date dictionary if it doesn't exist
+        if date not in virus_info_by_date:
+            virus_info_by_date[date] = {
+                'total': 0,
+                'viruses': {}
+            }
+
+        # Add details to each date
+        virus_info_by_date[date]['viruses'][virus_name] = value
+        virus_info_by_date[date]['total'] += value
+
+    run_count = conn.execute(
+        "SELECT COUNT(*) AS count FROM runs WHERE city_id = ?",
+        (city_id,),
+    ).fetchone()["count"]
+
+    return jsonify({
+        "city": dict(city),
+        "run_count": run_count,
+        "virus_summary_by_date": virus_info_by_date
     })
 
 @app.route("/viruses/<int:virus_id>/cities", methods=["GET"])

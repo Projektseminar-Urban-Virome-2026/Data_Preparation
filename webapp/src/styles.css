@@ -233,6 +233,26 @@ body {
     background: var(--app-brand);
 }
 
+.status-pill.experimental {
+    background: #F8EDEDFF;
+    color: #511818FF;
+}
+
+.model-render.experimental {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    background:
+            linear-gradient(var(--app-surface-muted) 1px, transparent 1px),
+            linear-gradient(90deg, var(--app-surface-muted) 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+.shannon-display {
+    margin: 20px auto 20px 40px;
+}
+
 .virus-chart {
     display: grid;
     gap: 14px;

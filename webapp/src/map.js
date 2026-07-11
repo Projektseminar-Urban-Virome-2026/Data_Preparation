@@ -102,6 +102,8 @@ function renderRealmsBarchart(data, weather) {
         plot_bgcolor: 'rgba(0, 0, 0, 0)',
         title: {text: 'Aggregated Virus Data by Realm Across Samples'},
         barmode: 'relative',
+        hovermode: 'x unified',
+        hoversubplots: 'axis',
         //xaxis: { title: {text: 'Date' }},
         yaxis: { title: {text: 'Share of classified Virome (%); Humidity (%); Rainfall (mm)'}, side: 'left', range: [0, 101]},
         yaxis2: {
@@ -213,21 +215,25 @@ async function renderShannonIndex(data, weather) {
         //xaxis: { title: {text: 'Collection Date'} },
         yaxis: { title: {text: 'Shannon Index'} },
         yaxis2: {
-            title: {text: 'Temperature (°C)'},
+            title: {text: 'Temperature (°C)', standoff: 0},
             overlaying: 'y',
             side: 'right',
+            anchor: 'free',
+            position: 0.99,
+            autoshift: true,
             range: [0, 36],
             showgrid: false
         },
         yaxis3: {
-            title: {text: 'Rainfall (mm)'},
+            title: {text: 'Rainfall (mm); Humidity (%)', standoff: 0},
             overlaying: 'y',
             side: 'right',
             anchor: 'free',
-            position: 0.7, // Adjust as needed for visibility
+            position: 1, // Adjust as needed for visibility
+            autoshift: true,
             range: [0, 100],
             showgrid: false,
-            visible: false
+            visible: true
         },
         yaxis4: {
             title: {text: 'Humidity (%)'},
@@ -266,6 +272,148 @@ async function renderShannonIndex(data, weather) {
 
     Plotly.newPlot('shannon-index-chart', traces, layout);
 
+}
+
+function renderShannonModel(data) {
+    const shannon_prediction = data.predictions.shannon_mixed_model.toFixed(2);
+    const prediction_date_raw = data.forecast_date;
+    let prediction_date;
+    try {
+        const dateObject = new Date(prediction_date_raw);
+        prediction_date = dateObject.toLocaleDateString('de-DE', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    } catch {
+        prediction_date = "Invalid date";
+    }
+
+    var div = document.getElementById("shannon-index-model");
+    div.innerHTML = `
+                    <div class="model-render experimental">
+                    <div>
+                        <h4 class="h5 fw-bold mb-1">Prognostizierter Shannon Index für den ${prediction_date}</h4>
+                        <p class="h5 shannon-display">${shannon_prediction}</p>
+                        <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der letzten drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
+                    </div>
+                    <span class="status-pill experimental muted">Experimentelles Feature</span>
+                    </div>
+                    `
+}
+
+function renderHumanHostVirusChart(data, weather) {
+    const virusData = data.virus_summary_by_date;
+    const weather_data = weather;
+
+    // Group virus data by collection date and create a stacked bar chart data structure
+    const virusNames = new Set();
+    const dateTraces = {};
+
+    for (const date in virusData) {
+        const details = virusData[date];
+        for (const virusName in details.viruses) {
+            virusNames.add(virusName);
+            if (!dateTraces[virusName]) {
+                dateTraces[virusName] = { x: [], y: [], name: virusName, type: 'bar', opacity: 0.9 };
+            }
+            dateTraces[virusName].x.push(date);
+            dateTraces[virusName].y.push(details.viruses[virusName]);
+        }
+    }
+
+    const traces = Object.values(dateTraces);
+
+    // Create weather data traces
+    const temperatureTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.temperature),
+        name: 'Temperature',
+        yaxis: 'y2',
+        mode: 'lines',
+        line: { color: 'red', shape: 'spline' },
+        smoothing: 1.1,
+        opacity: 0.4,
+        visible: 'legendonly'
+    };
+
+    const rainTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.rainfall),
+        name: 'Rainfall (mm)',
+        yaxis: 'y3',
+        mode: 'none',
+        line: { color: 'blue', shape: 'spline' },
+        smoothing: 1.5,
+        opacity: 0.5,
+        fill: 'tozeroy',
+        fillcolor: 'rgba(0, 0, 255, 0.5)'
+    };
+
+    const humidityTrace = {
+        x: weather_data.map(entry => entry.time),
+        y: weather_data.map(entry => entry.humidity),
+        name: 'Humidity (%)',
+        yaxis: 'y4',
+        mode: 'lines',
+        line: { color: 'green', shape: 'spline' },
+        smoothing: 1.1,
+        opacity: 0.4,
+        visible: 'legendonly'
+    };
+
+    traces.push(temperatureTrace, rainTrace, humidityTrace);
+
+    const layout = {
+        template: 'ggplot2',
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        title: { text: 'Aggregated Human Host Virus Abundance' },
+        barmode: 'stack', // Switch to stacked mode for bars
+        hovermode: 'x unified',
+        hoversubplots: 'axis',
+        yaxis: { title: { text: 'Virus Abundance (%)' }, side: 'left'},
+        yaxis2: {
+            title: {text: 'Temperature (°C)', standoff: 0},
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 0.99,
+            autoshift: true,
+            range: [0, 36],
+            showgrid: false
+        },
+        yaxis3: {
+            title: {text: 'Rainfall (mm); Humidity (%)', standoff: 0},
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 1, // Adjust as needed for visibility
+            autoshift: true,
+            range: [0, 100],
+            showgrid: false,
+            visible: true
+        },
+        yaxis4: {
+            title: {text: 'Humidity (%)'},
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 1.3, // Adjust for visual spacing
+            range: [0, 100],
+            showgrid: false,
+            visible: false
+        },
+        legend: {
+            x: 0.5,
+            y: -0.2,
+            xanchor: 'center',
+            yanchor: 'top',
+            orientation: 'h'
+        }
+    };
+
+    Plotly.newPlot('human-host-virus-chart', traces, layout);
 }
 
 function renderHumanHostVirus(data) {
@@ -509,7 +657,7 @@ async function renderVirusAbundance(cityId, virusId) {
             x: xDates,
             y: yAbundances,
             type: 'bar',
-            marker: { color: 'blue', opacity: 0.5 },
+            marker: { color: 'orange', opacity: 0.8 },
             name: 'Abundance'
         };
 
@@ -554,7 +702,7 @@ async function renderVirusAbundance(cityId, virusId) {
         const traces = [trace, temperatureTrace, rainTrace, humidityTrace];
 
         const layout = {
-            title: {text: `${data.virus_name} Abundance Over Time in ${data.city.name}`},
+            title: {text: `${data.virus_name} Abundance in ${data.city.name}`},
             xaxis: { title: {text: 'Collection Date' }},
             yaxis: { title: {text: 'Abundance (%)' }},
             yaxis2: {
@@ -664,7 +812,9 @@ async function loadCityViruses(city) {      // called on-click
         content: `
             <div id="virus-aggregation-chart"></div>
             <div id="shannon-index-chart"></div>
+            <div id="shannon-index-model"></div>
             <div id="human-host-virus"></div>
+            <div id="human-host-virus-chart"></div>
         `,
         });
 
@@ -703,21 +853,52 @@ async function loadCityViruses(city) {      // called on-click
         renderShannonIndex(result, weather);
 
     } catch (error) {
-        console.error("Error rendering human host viruses", error.message);
+        console.error("Error rendering shannon index chart", error.message);
     }
 
     try {
-            const response = await fetch(`${API_BASE_URL}/cities/${city.id}/human_host_virus`);
-            if (!response.ok) {
-                throw new Error(`Failed to fetch human host data: ${response.status}`);
-            }
-
-            const result = await response.json();
-            renderHumanHostVirus(result);
-
-        } catch (error) {
-            console.error("Error rendering human host viruses", error.message);
+        const response = await fetch(`${API_BASE_URL}/cities/${city.id}/shannon_model`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch model data: ${response.status}`);
         }
+
+        const result = await response.json();
+        renderShannonModel(result);
+
+    } catch (error) {
+        console.error("Error rendering shannon model", error.message);
+    }
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/cities/${city.id}/human_host_virus_summary`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch human host data: ${response.status}`);
+        }
+        const weather_response = await fetch(`${API_BASE_URL}/cities/${city.id}/weather_data`);
+        if (!weather_response.ok) {
+            throw new Error(`Failed to fetch weather data: ${weather_response.status}`);
+        }
+
+        const result = await response.json();
+        const weather = await weather_response.json();
+        renderHumanHostVirusChart(result, weather);
+
+    } catch (error) {
+        console.error("Error rendering human host virus chart", error.message);
+    }
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/cities/${city.id}/human_host_virus`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch human host data: ${response.status}`);
+        }
+
+        const result = await response.json();
+        renderHumanHostVirus(result);
+
+    } catch (error) {
+        console.error("Error rendering human host viruses", error.message);
+    }
 
 
 

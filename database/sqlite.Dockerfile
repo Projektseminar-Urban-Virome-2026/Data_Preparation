@@ -6,6 +6,8 @@ RUN apk add --no-cache python3
 
 RUN apk add --no-cache py3-pandas
 
+RUN apk add --no-cache py3-requests
+
 RUN apk add --no-cache py3-flask
 
 RUN apk add --no-cache py3-flask-cors
