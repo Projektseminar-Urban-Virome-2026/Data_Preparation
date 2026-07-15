@@ -564,9 +564,67 @@ function showVirusDetail(detail) {
             <span>human host</span>
             <strong>${escapeHtml(detail.human_host === 1 ? "Yes" : "No" || "-")}</strong>
         </div>
+        <div class="detail-card">
+            <span>externe Links für mehr Infos</span>
+            <div class="external-link-group" id="external-link-group"></div>
+        </div>
     `;
     showPage("virus-detail");
     loadVirusCityMap(detail.virus_id);
+    externalLinks(detail).then((linksHtml) => {
+        const group = virusDetailGrid.querySelector("#external-link-group");
+        if (group) {
+            group.innerHTML = linksHtml;
+        }
+    });
+}
+
+const apiBase = "http://localhost:5001";
+
+async function testUrl(url) {
+    try {
+        const response = await fetch(
+            `${apiBase}/check-url?url=${encodeURIComponent(url)}`
+        );
+        if (!response.ok) return false;      
+        const data = await response.json();
+        return data.ok === true;             
+    } catch (e) {
+        return false;
+    }
+}
+
+async function externalLinks(detail) {
+    const taxId = encodeURIComponent(detail.virus_id);
+    const family = encodeURIComponent(detail.family).toLowerCase();
+    const genus = encodeURIComponent(detail.genus).toLowerCase();
+
+    const links = [
+        {
+            label: "NCBI - National Library of Medicine",
+            href: `https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${taxId}/`,
+        },
+    ];
+
+    const Label = "ICTV - International Committee on Taxonomy of Viruses ";
+    const genusLevel  = `https://ictv.global/report/chapter/${family}/${family}/${genus}`;
+    const familyLevel = `https://ictv.global/report/chapter/${family}/${family}`;
+
+    if (await testUrl(genusLevel)){
+        links.push({ label: Label, href: genusLevel });
+    } else if (await testUrl(familyLevel)) {
+        links.push({ label: Label, href: familyLevel });
+    }
+
+    return links
+        .map(
+            (link) => `
+        <a class="external-link" href="${link.href}"
+           target="_blank" rel="noopener noreferrer">
+            ${link.label} ↗
+        </a>`
+        )
+        .join("");
 }
 
 function ensureVirusCityMap() {

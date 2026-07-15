@@ -416,6 +416,12 @@ body {
     overflow-wrap: anywhere;
 }
 
+.external-link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;  
+}
+
 .virus-map-section {
     margin-top: 28px;
 }

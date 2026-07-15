@@ -6,6 +6,9 @@ import requests
 import pandas as pd
 from flask import Flask, jsonify
 from flask_cors import CORS
+from flask import request
+from urllib.parse import urlparse
+
 
 app = Flask(__name__)
 CORS(app)
@@ -664,6 +667,22 @@ def get_weather_data_for_city(city_id):
     weather_data.rename(columns={'temperature_2m_mean (°C)': 'temperature', 'rain_sum (mm)': 'rainfall', 'relative_humidity_2m_mean (%)': 'humidity'}, inplace=True)
     return jsonify(weather_data.to_dict(orient='records'))
 
+# nicht alle taxonomien existieren auf ictv, daher wird die Abfrage vorher auf 200 geprüft und nur dann der Link angezeigt
+@app.route("/check-url", methods=["GET"])
+def check_url():
+    url = request.args.get("url", "")
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or parsed.hostname != "ictv.global":
+        return jsonify({"error": "url not allowed"}), 400
+
+    try:
+        response = requests.head(url, allow_redirects=True, timeout=5)
+        # falls HEAD nicht ordentlich beantwortet wird -> auf GET ausweichen
+        if response.status_code == 405:
+            response = requests.get(url, allow_redirects=True, timeout=5)
+        return jsonify({"ok": response.ok, "status": response.status_code})
+    except requests.RequestException as e:
+        return jsonify({"ok": False, "status": None, "details": str(e)})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
