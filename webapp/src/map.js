@@ -274,8 +274,9 @@ async function renderShannonIndex(data, weather) {
 
 }
 
-function renderShannonModel(data) {
+function renderShannonAndHostModel(data) {
     const shannon_prediction = data.predictions.shannon_mixed_model.toFixed(2);
+    const host_prediction = data.predictions.human_host_model.toFixed(2);
     const prediction_date_raw = data.forecast_date;
     let prediction_date;
     try {
@@ -291,15 +292,26 @@ function renderShannonModel(data) {
 
     var div = document.getElementById("shannon-index-model");
     div.innerHTML = `
-                    <div class="model-render experimental">
+                    <div class="model-render experimental mt-4 mb-4">
                     <div>
                         <h4 class="h5 fw-bold mb-1">Prognostizierter Shannon Index für den ${prediction_date}</h4>
                         <p class="h5 shannon-display">${shannon_prediction}</p>
-                        <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der letzten drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
+                        <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
                     </div>
                     <span class="status-pill experimental muted">Experimentelles Feature</span>
                     </div>
                     `
+    var div = document.getElementById("human-host-model");
+        div.innerHTML = `
+                        <div class="model-render experimental mt-4 mb-4">
+                        <div>
+                            <h4 class="h5 fw-bold mb-1">Prognostizierte Human Host Virus Abundance für den ${prediction_date}</h4>
+                            <p class="h5 shannon-display">${host_prediction} %</p>
+                            <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
+                        </div>
+                        <span class="status-pill experimental muted">Experimentelles Feature</span>
+                        </div>
+                        `
 }
 
 function renderHumanHostVirusChart(data, weather) {
@@ -632,8 +644,10 @@ async function loadVirusCityMap(virusId) {
 
 async function loadVirusDetail(virusId, city) {
     virusDetailChart.innerHTML = `<div id="virus-abundance-chart"></div>
+                                  <div id="virus-model"></div>
                                  `;
     renderVirusAbundance(city.city_id, virusId);
+    renderVirusModel(city.city_id, virusId);
 }
 
 async function renderVirusAbundance(cityId, virusId) {
@@ -748,6 +762,57 @@ async function renderVirusAbundance(cityId, virusId) {
     }
 }
 
+async function renderVirusModel(cityId, virusId) {
+    try {
+        const response = await fetch(`${API_BASE_URL}/cities/${cityId}/virus/${virusId}/model`);
+        if (!response.ok) {
+            throw new Error('Unable to fetch virus prediction data');
+        }
+
+        const data = await response.json();
+        const virus_name = data.virus_name;
+        let raw_prediction = data.predictions[`${virus_name}_model`];
+        if (typeof raw_prediction === 'number') {
+            if (raw_prediction < 0) {
+                virus_prediction = 0.00;
+            } else {
+                virus_prediction = raw_prediction;
+            }
+        } else {
+            virus_prediction = 0.00;
+        }
+        virus_prediction = virus_prediction.toFixed(2);
+        const host_prediction = data.predictions.human_host_model.toFixed(2);
+        const prediction_date_raw = data.forecast_date;
+        let prediction_date;
+        try {
+            const dateObject = new Date(prediction_date_raw);
+            prediction_date = dateObject.toLocaleDateString('de-DE', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        } catch {
+            prediction_date = "Invalid date";
+        }
+
+        var div = document.getElementById("virus-model");
+        div.innerHTML = `
+                        <div class="model-render experimental mt-4 mb-4">
+                        <div>
+                            <h4 class="h5 fw-bold mb-1">Prognostizierter Anteil von ${virus_name} für den ${prediction_date}</h4>
+                            <p class="h5 shannon-display">${virus_prediction} %</p>
+                            <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
+                        </div>
+                        <span class="status-pill experimental muted">Experimentelles Feature</span>
+                        </div>
+                        `
+
+    } catch (error) {
+        console.error('Error showing virus model:', error);
+    }
+}
+
 function formatTemperature(value) {
     return value === null || value === undefined ? "-" : `${Number(value).toFixed(1)} °C`;
 }
@@ -815,6 +880,7 @@ async function loadCityViruses(city) {      // called on-click
             <div id="shannon-index-model"></div>
             <div id="human-host-virus"></div>
             <div id="human-host-virus-chart"></div>
+            <div id="human-host-model"></div>
         `,
         });
 
@@ -857,13 +923,13 @@ async function loadCityViruses(city) {      // called on-click
     }
 
     try {
-        const response = await fetch(`${API_BASE_URL}/cities/${city.id}/shannon_model`);
+        const response = await fetch(`${API_BASE_URL}/cities/${city.id}/shannon_and_host_model`);
         if (!response.ok) {
             throw new Error(`Failed to fetch model data: ${response.status}`);
         }
 
         const result = await response.json();
-        renderShannonModel(result);
+        renderShannonAndHostModel(result);
 
     } catch (error) {
         console.error("Error rendering shannon model", error.message);

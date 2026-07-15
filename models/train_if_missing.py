@@ -105,6 +105,10 @@ def trainiere_modelle(config):
     ena_data = pd.read_csv(config["ena_file"], sep="\t")
     print(f"ENA-Daten: {len(ena_data)} Einträge")
 
+    # Read the human_host_genera.csv file
+    human_host_genera = pd.read_csv(config["human_host_file"])
+    human_viruses = set(human_host_genera['name'])
+
     alle_daten = {}
     alle_virus = {}
 
@@ -130,53 +134,76 @@ def trainiere_modelle(config):
     modell_df = pd.concat(teile_dfs, ignore_index=True)
     print(modell_df.shape)
 
-    # Baseline: Median-Shannon-Index pro Stadt
-    median_pro_stadt = {}
-    for stadt, daten in alle_daten.items():
-        median_pro_stadt[stadt] = daten["shannon_index"].median()
+    modelle_ordner = Path(config["model_dir"])
+    os.makedirs(modelle_ordner, exist_ok=True)
 
+    # Baseline: Median-Shannon-Index pro Stadt
+    median_pro_stadt = {
+        stadt: daten["shannon_index"].median() for stadt, daten in alle_daten.items()
+    }
     modell_df["Baseline"] = modell_df["Stadt"].map(median_pro_stadt)
 
-    # Mixed Model: Shannon-Index
+    # Create a model for each Virus in human_host_genera
+    for virus_name in virus_df.columns:
+        if virus_name not in human_viruses:
+            continue
+
+        print(f"Training model for {virus_name}")
+
+        # Merge virus data into modell_df
+        virus_anteil = {}
+        for stadt, virus_df in alle_virus.items():
+            if virus_name in virus_df.columns:
+                anteil = virus_df.get(virus_name, 0)
+                virus_anteil.update(anteil.to_dict())
+
+        modell_df["Virus_Anteil"] = modell_df["run_accession"].map(virus_anteil)
+        modell_df_virus = modell_df.dropna(subset=["Virus_Anteil"]).reset_index(drop=True)
+
+        # Train Mixed Model for the Virus ~ Wetter
+        virus_modell = smf.mixedlm(
+            f"Virus_Anteil ~ Klimazone * Temp + Regen + Luftfeuchtigkeit",
+            data=modell_df_virus,
+            groups="Stadt",
+        )
+        ergebnis_virus = virus_modell.fit()
+
+        # Save the model
+        model_path = modelle_ordner / f"{virus_name}_mixed_modell.pkl"
+        joblib.dump(ergebnis_virus, model_path)
+
+    # Aggregate abundance of human-host viruses
+    aggregated_abundance = {}
+    for stadt, virus_df in alle_virus.items():
+        # Filter virus_df for human-host viruses and sum their abundance
+        relevant_viruses = list(human_viruses.intersection(virus_df.columns))
+        human_virus_abundance = virus_df[relevant_viruses].sum(axis=1)
+        aggregated_abundance.update(human_virus_abundance.to_dict())
+
+    modell_df["Aggregated_Abundance"] = modell_df["run_accession"].map(aggregated_abundance)
+    modell_df_aggregated = modell_df.dropna(subset=["Aggregated_Abundance"]).reset_index(drop=True)
+
+    # Train Mixed Model on Aggregated Abundance ~ Wetter
+    abundance_modell = smf.mixedlm(
+        "Aggregated_Abundance ~ Klimazone * Temp + Regen + Luftfeuchtigkeit",
+        data=modell_df_aggregated,
+        groups="Stadt",
+    )
+    ergebnis_abundance = abundance_modell.fit()
+
+    # Save the model
+    joblib.dump(ergebnis_abundance, modelle_ordner / "aggregated_abundance_mixed_modell.pkl")
+
+    # Save Shannon Index models
     mixed_modell = smf.mixedlm(
         "shannon_index ~ Klimazone * Temp + Regen + Luftfeuchtigkeit",
         data=modell_df,
         groups="Stadt",
     )
     ergebnis = mixed_modell.fit()
-
-    # Tobamovirus-Anteil pro Probe
-    tobamo_anteil = {}
-    for stadt, virus_df in alle_virus.items():
-        anteil = virus_df["Tobamovirus"]
-        tobamo_anteil.update(anteil.to_dict())
-
-    modell_df["Tobamo_Anteil"] = modell_df["run_accession"].map(tobamo_anteil)
-    modell_df_tobamo = modell_df.dropna(subset=["Tobamo_Anteil"]).reset_index(drop=True)
-
-    # Mixed Model: Tobamovirus-Anteil ~ Wetter
-    tobamo_modell = smf.mixedlm(
-        "Tobamo_Anteil ~ Klimazone * Temp + Regen + Luftfeuchtigkeit",
-        data=modell_df_tobamo,
-        groups="Stadt",
-    )
-    ergebnis_tobamo = tobamo_modell.fit()
-
-    modelle_ordner = Path(config["model_dir"])
-    os.makedirs(modelle_ordner, exist_ok=True)
-
     joblib.dump(ergebnis, modelle_ordner / "shannon_mixed_modell.pkl")
     joblib.dump(median_pro_stadt, modelle_ordner / "shannon_baseline_mediane.pkl")
-    joblib.dump(ergebnis_tobamo, modelle_ordner / "tobamo_mixed_modell.pkl")
-
-    tobamo_baseline_mediane = {}
-    for stadt in modell_df_tobamo["Stadt"].unique():
-        tobamo_baseline_mediane[stadt] = modell_df_tobamo[
-            modell_df_tobamo["Stadt"] == stadt
-        ]["Tobamo_Anteil"].median()
-
-    joblib.dump(tobamo_baseline_mediane, modelle_ordner / "tobamo_baseline_mediane.pkl")
-    print(f"Alle 4 Modelle in '{modelle_ordner}/' gespeichert")
+    print(f"Modelle in '{modelle_ordner}/' gespeichert")
 
 
 def main():

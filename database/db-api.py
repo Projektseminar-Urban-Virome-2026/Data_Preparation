@@ -30,6 +30,24 @@ MODEL_FILES = {
     "shannon_baseline": "shannon_baseline_mediane.pkl",
     "tobamo_model": "tobamo_mixed_modell.pkl",
     "tobamo_baseline": "tobamo_baseline_mediane.pkl",
+    "human_host_model": "aggregated_abundance_mixed_modell.pkl",
+    "Betacoronavirus": "Betacoronavirus_mixed_modell.pkl",
+    "Bocaparvovirus": "Bocaparvovirus_mixed_modell.pkl",
+    "Cyclovirus": "Cyclovirus_mixed_modell.pkl",
+    "Cytomegalovirus": "Cytomegalovirus_mixed_modell.pkl",
+    "Dependoparvovirus": "Dependoparvovirus_mixed_modell.pkl",
+    "Enterovirus": "Enterovirus_mixed_modell.pkl",
+    "Gemycircularvirus": "Gemycircularvirus_mixed_modell.pkl",
+    "Gemykibivirus": "Gemykibivirus_mixed_modell.pkl",
+    "Kobuvirus": "Kobuvirus_mixed_modell.pkl",
+    "Mamastrovirus": "Mamastrovirus_mixed_modell.pkl",
+    "Mammarenavirus" : "Mammarenavirus_mixed_modell.pkl",
+    "Mastadenovirus": "Mastadenovirus_mixed_modell.pkl",
+    "Morbillivirus": "Morbillivirus_mixed_modell.pkl",
+    "Norovirus": "Norovirus_mixed_modell.pkl",
+    "Orthobunyavirus": "Orthobunyavirus_mixed_modell.pkl",
+    "Salivirus": "Salivirus_mixed_modell.pkl",
+    "Varicellovirus": "Varicellovirus_mixed_modell.pkl",
 }
 
 MODELS = None
@@ -210,8 +228,8 @@ def get_model_values_for_run(run_accession):
     }
     return jsonify(response)
 
-@app.route("/cities/<int:city_id>/shannon_model", methods=["GET"])
-def get_shannon_model_for_city(city_id):
+@app.route("/cities/<int:city_id>/shannon_and_host_model", methods=["GET"])
+def get_shannon_and_host_model_for_city(city_id):
     conn = get_db()
     row = conn.execute("""
         SELECT
@@ -286,13 +304,12 @@ def get_shannon_model_for_city(city_id):
         return jsonify(response), 503
 
     shannon_prediction = first_prediction_value(models["shannon_model"].predict(model_input))
-    tobamo_prediction = first_prediction_value(models["tobamo_model"].predict(model_input))
+    human_host_prediction = first_prediction_value(models["human_host_model"].predict(model_input))
     response["model_status"] = "ok"
     response["predictions"] = {
         "shannon_mixed_model": value_or_none(shannon_prediction),
         "shannon_baseline": value_or_none(models["shannon_baseline"].get(city_data["city"])),
-        "tobamo_mixed_model": value_or_none(tobamo_prediction),
-        "tobamo_baseline": value_or_none(models["tobamo_baseline"].get(city_data["city"])),
+        "human_host_model": value_or_none(human_host_prediction),
     }
     return jsonify(response)
 
@@ -514,6 +531,98 @@ def get_virus_abundance(city_id, virus_id):
         "abundance_data": abundance_data,
     })
 
+
+@app.route("/cities/<int:city_id>/virus/<int:virus_id>/model", methods=["GET"])
+def get_virus_model(city_id, virus_id):
+    conn = get_db()
+    city_row = conn.execute("""
+        SELECT
+            name AS city,
+            country AS country,
+            latitude AS latitude,
+            longitude AS longitude
+        FROM Cities
+        WHERE id = ?
+    """, (city_id,)).fetchone()
+
+    if city_row is None:
+        return jsonify({"error": "run not found"}), 404
+
+    city_data = dict(city_row)
+    virus = conn.execute("SELECT name FROM Virus WHERE tax_id = ?", (virus_id,)).fetchone()
+    if virus is None:
+        return jsonify({"error": "Virus not found"}), 404
+
+    conn.close()
+
+    virus_name = virus["name"]
+
+    klimazone = KLIMAZONE_PRO_STADT.get(city_data["city"])
+    if klimazone is None:
+        return jsonify({"error": "climate zone not configured for city", "city": city_data}), 500
+
+    WEATHERAPIPARAMS = {
+        "latitude": city_data["latitude"],
+        "longitude": city_data["longitude"],
+        "daily": "temperature_2m_mean,relative_humidity_2m_mean,rain_sum",
+        "timezone": "Europe/Berlin",
+        "past_days": 2,
+        "forecast_days": 3
+    }
+
+    try:
+        response = requests.get(WEATHERAPIURL, params=WEATHERAPIPARAMS)
+        weather_data = response.json()
+        daily_data = weather_data.get('daily')
+        temperature = sum(daily_data['temperature_2m_mean']) / len(daily_data['temperature_2m_mean'])
+        humidity = sum(daily_data['relative_humidity_2m_mean']) / len(daily_data['relative_humidity_2m_mean'])
+        rainfall = sum(daily_data['rain_sum']) / len(daily_data['rain_sum'])
+
+    except requests.RequestException as e:
+        return jsonify({"error": "Failed to fetch weather data", "details": str(e)}), 500
+
+    features = {
+        "Temp": temperature,
+        "Regen": rainfall,
+        "Luftfeuchtigkeit": humidity,
+    }
+    model_input = pd.DataFrame([{
+        "Stadt": city_data["city"],
+        "Klimazone": klimazone,
+        **features,
+    }])
+
+    models, missing = load_models()
+    response = {
+        "city": city_data,
+        "virus_name": virus_name,
+        "forecast_date": weather_data['daily']['time'][-1],
+        "features": {
+            "Stadt": city_data["city"],
+            "Klimazone": klimazone,
+            **{key: value_or_none(value) for key, value in features.items()},
+        },
+    }
+
+    missing_inputs = [name for name, value in features.items() if value is None]
+    if missing_inputs:
+        response["model_status"] = "missing_input"
+        response["missing_inputs"] = missing_inputs
+        return jsonify(response), 422
+
+    if models is None:
+        response["model_status"] = "missing"
+        response["missing_models"] = missing
+        return jsonify(response), 503
+
+    virus_prediction = first_prediction_value(models[virus_name].predict(model_input))
+    human_host_prediction = first_prediction_value(models["human_host_model"].predict(model_input))
+    response["model_status"] = "ok"
+    response["predictions"] = {
+        f"{virus_name}_model": value_or_none(virus_prediction),
+        "human_host_model": value_or_none(human_host_prediction),
+    }
+    return jsonify(response)
 
 
 @app.route("/cities/<int:city_id>/collection_weather_data", methods=["GET"])

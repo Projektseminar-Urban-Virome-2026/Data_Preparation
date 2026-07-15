@@ -1,9 +1,25 @@
 data_dir: /work/cities
+human_host_file: /work/cities/human_host_genera.csv
 ena_file: /work/PRJEB87273_runs_samples.tsv
 model_dir: /model_artifacts
 
 required_models:
   - shannon_mixed_modell.pkl
   - shannon_baseline_mediane.pkl
-  - tobamo_mixed_modell.pkl
-  - tobamo_baseline_mediane.pkl
+  - Betacoronavirus_mixed_modell.pkl
+  - Bocaparvovirus_mixed_modell.pkl
+  - Cyclovirus_mixed_modell.pkl
+  - Cytomegalovirus_mixed_modell.pkl
+  - Dependoparvovirus_mixed_modell.pkl
+  - Enterovirus_mixed_modell.pkl
+  - Gemycircularvirus_mixed_modell.pkl
+  - Gemykibivirus_mixed_modell.pkl
+  - Kobuvirus_mixed_modell.pkl
+  - Mamastrovirus_mixed_modell.pkl
+  - Mammarenavirus_mixed_modell.pkl
+  - Mastadenovirus_mixed_modell.pkl
+  - Morbillivirus_mixed_modell.pkl
+  - Norovirus_mixed_modell.pkl
+  - Orthobunyavirus_mixed_modell.pkl
+  - Salivirus_mixed_modell.pkl
+  - aggregated_abundance_mixed_modell.pkl
