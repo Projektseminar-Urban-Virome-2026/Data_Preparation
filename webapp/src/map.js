@@ -22,6 +22,45 @@ const statHostCount = document.getElementById("stat-host-count");
 let virusCityMap;
 let virusCityLayer;
 
+const yaxis2conf = {
+            title: {text: 'Temperatur (°C)', standoff: 0},
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 0.99,
+            autoshift: true,
+            range: [0, 36],
+            showgrid: false
+            };
+const yaxis3conf = {
+            title: {text: 'Regen (mm); Luftfeuchtigkeit (%)', standoff: 0},
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 1, // Adjust as needed for visibility
+            autoshift: true,
+            range: [0, 100],
+            showgrid: false,
+            visible: true
+            };
+const yaxis4conf = {
+            title: {text: 'Luftfeuchtigkeit (%)'},
+            overlaying: 'y',
+            side: 'right',
+            anchor: 'free',
+            position: 1.3, // Adjust for visual spacing
+            range: [0, 100],
+            showgrid: false,
+            visible: false
+            };
+const legendConf = {
+            x: 0.5,
+            y: -0.2,
+            xanchor: 'center',
+            yanchor: 'top',
+            orientation: 'h'
+        };
+
 function setDetailState({ title, subtitle, countLabel, content, isEmpty = false }) {
     cityDetailTitle.textContent = title;
     cityDetailSubtitle.textContent = subtitle;
@@ -59,7 +98,7 @@ function renderRealmsBarchart(data, weather) {
     const temperatureTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.temperature),
-        name: 'Temperature',
+        name: 'Temperatur (°C)',
         yaxis: 'y2',
         mode: 'lines',
         line: { color: 'red', shape: 'spline' },
@@ -71,7 +110,7 @@ function renderRealmsBarchart(data, weather) {
     const rainTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.rainfall),
-        name: 'Rainfall (mm)',
+        name: 'Regen (mm)',
         yaxis: 'y3',
         mode: 'none',
         line: { color: 'blue', shape: 'spline'},
@@ -85,7 +124,7 @@ function renderRealmsBarchart(data, weather) {
     const humidityTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.humidity),
-        name: 'Humidity (%)',
+        name: 'Luftfeuchtigkeit (%)',
         yaxis: 'y4',
         mode: 'lines',
         line: { color: 'green', shape: 'spline' },
@@ -100,49 +139,16 @@ function renderRealmsBarchart(data, weather) {
         template: 'ggplot2',
         paper_bgcolor: 'rgba(0, 0, 0, 0)',
         plot_bgcolor: 'rgba(0, 0, 0, 0)',
-        title: {text: 'Aggregated Virus Data by Realm Across Samples'},
+        title: {text: 'Zusammensetzung des klassifizierten Viroms nach Realm'},
         barmode: 'relative',
         hovermode: 'x unified',
         hoversubplots: 'axis',
         //xaxis: { title: {text: 'Date' }},
-        yaxis: { title: {text: 'Share of classified Virome (%); Humidity (%); Rainfall (mm)'}, side: 'left', range: [0, 101]},
-        yaxis2: {
-            title: {text: 'Temperature (°C)'},
-            overlaying: 'y',
-            side: 'right',
-            range: [0, 36],
-            showgrid: false
-        },
-        yaxis3: {
-            title: {text: 'Rainfall (mm)'},
-            overlaying: 'y',
-            side: 'right',
-            anchor: 'free',
-            position: 0.7, // Adjust as needed for visibility
-            range: [0, 101],
-            showgrid: false,
-            visible: false
-        },
-        yaxis4: {
-            title: {text: 'Humidity (%)', font: {color: 'rgba(0, 255, 0, 0.5)'}},
-            overlaying: 'y',
-            side: 'right',
-            //anchor: 'free',
-            position: 1, // Adjust for visual spacing
-            autoshift: true,
-            range: [0, 101],
-            showgrid: false,
-            tickcolor: 'rgba(0, 255, 0, 0.5)',
-            tickfont: {color: 'rgba(0, 255, 0, 0.5)'},
-            visible: false
-        },
-        legend: {
-            x: 0.5,
-            y: -0.2,
-            xanchor: 'center',
-            yanchor: 'top',
-            orientation: 'h'  // Set the orientation to horizontal
-        }
+        yaxis: { title: {text: 'Anteil am Virom (%)'}, side: 'left', range: [0, 101]},
+        yaxis2: yaxis2conf,
+        yaxis3: yaxis3conf,
+        yaxis4: yaxis4conf,
+        legend: legendConf,
     };
 
 
@@ -171,7 +177,7 @@ async function renderShannonIndex(data, weather) {
     const temperatureTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.temperature),
-        name: 'Temperature',
+        name: 'Temperatur (°C)',
         yaxis: 'y2',
         mode: 'lines',
         line: { color: 'red', shape: 'spline' },
@@ -183,7 +189,7 @@ async function renderShannonIndex(data, weather) {
     const rainTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.rainfall),
-        name: 'Rainfall (mm)',
+        name: 'Regen (mm)',
         yaxis: 'y3',
         mode: 'none',
         line: { color: 'blue', shape: 'spline'},
@@ -197,7 +203,7 @@ async function renderShannonIndex(data, weather) {
     const humidityTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.humidity),
-        name: 'Humidity (%)',
+        name: 'Luftfeuchtigkeit (%)',
         yaxis: 'y4',
         mode: 'lines',
         line: { color: 'green', shape: 'spline' },
@@ -214,44 +220,10 @@ async function renderShannonIndex(data, weather) {
         title: {text: 'Alpha-Diversität (Shannon Index)'},
         //xaxis: { title: {text: 'Collection Date'} },
         yaxis: { title: {text: 'Shannon Index'} },
-        yaxis2: {
-            title: {text: 'Temperature (°C)', standoff: 0},
-            overlaying: 'y',
-            side: 'right',
-            anchor: 'free',
-            position: 0.99,
-            autoshift: true,
-            range: [0, 36],
-            showgrid: false
-        },
-        yaxis3: {
-            title: {text: 'Rainfall (mm); Humidity (%)', standoff: 0},
-            overlaying: 'y',
-            side: 'right',
-            anchor: 'free',
-            position: 1, // Adjust as needed for visibility
-            autoshift: true,
-            range: [0, 100],
-            showgrid: false,
-            visible: true
-        },
-        yaxis4: {
-            title: {text: 'Humidity (%)'},
-            overlaying: 'y',
-            side: 'right',
-            anchor: 'free',
-            position: 1.3, // Adjust for visual spacing
-            range: [0, 100],
-            showgrid: false,
-            visible: false
-        },
-        legend: {
-            x: 0.5,
-            y: -0.2,
-            xanchor: 'center',
-            yanchor: 'top',
-            orientation: 'h'  // Set the orientation to horizontal
-        },
+        yaxis2: yaxis2conf,
+        yaxis3: yaxis3conf,
+        yaxis4: yaxis4conf,
+        legend: legendConf,
         template: 'ggplot2',
         shapes: [
             {
@@ -290,27 +262,19 @@ function renderShannonAndHostModel(data) {
         prediction_date = "Invalid date";
     }
 
+    var div = document.getElementById("model-heading");
+        div.innerHTML = `
+                        <h4 class="h5 fw-bold mb-4">Prognose für den ${prediction_date}</h4>
+                        `
+
     var div = document.getElementById("shannon-index-model");
-    div.innerHTML = `
-                    <div class="model-render experimental mt-4 mb-4">
-                    <div>
-                        <h4 class="h5 fw-bold mb-1">Prognostizierter Shannon Index für den ${prediction_date}</h4>
-                        <p class="h5 shannon-display">${shannon_prediction}</p>
-                        <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
-                    </div>
-                    <span class="status-pill experimental muted">Experimentelles Feature</span>
-                    </div>
-                    `
+        div.innerHTML = `
+                        <p class="h5 model-value-display">${shannon_prediction}</p>
+                        `
+
     var div = document.getElementById("human-host-model");
         div.innerHTML = `
-                        <div class="model-render experimental mt-4 mb-4">
-                        <div>
-                            <h4 class="h5 fw-bold mb-1">Prognostizierte Human Host Virus Abundance für den ${prediction_date}</h4>
-                            <p class="h5 shannon-display">${host_prediction} %</p>
-                            <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
-                        </div>
-                        <span class="status-pill experimental muted">Experimentelles Feature</span>
-                        </div>
+                        <p class="h5 model-value-display">${host_prediction} %</p>
                         `
 }
 
@@ -340,7 +304,7 @@ function renderHumanHostVirusChart(data, weather) {
     const temperatureTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.temperature),
-        name: 'Temperature',
+        name: 'Temperatur (°C)',
         yaxis: 'y2',
         mode: 'lines',
         line: { color: 'red', shape: 'spline' },
@@ -352,7 +316,7 @@ function renderHumanHostVirusChart(data, weather) {
     const rainTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.rainfall),
-        name: 'Rainfall (mm)',
+        name: 'Regen (mm)',
         yaxis: 'y3',
         mode: 'none',
         line: { color: 'blue', shape: 'spline' },
@@ -365,7 +329,7 @@ function renderHumanHostVirusChart(data, weather) {
     const humidityTrace = {
         x: weather_data.map(entry => entry.time),
         y: weather_data.map(entry => entry.humidity),
-        name: 'Humidity (%)',
+        name: 'Luftfeuchtigkeit (%)',
         yaxis: 'y4',
         mode: 'lines',
         line: { color: 'green', shape: 'spline' },
@@ -380,49 +344,15 @@ function renderHumanHostVirusChart(data, weather) {
         template: 'ggplot2',
         paper_bgcolor: 'rgba(0, 0, 0, 0)',
         plot_bgcolor: 'rgba(0, 0, 0, 0)',
-        title: { text: 'Aggregated Human Host Virus Abundance' },
-        barmode: 'stack', // Switch to stacked mode for bars
+        title: { text: 'Anteil der Human-Host Viren am klassifizierten Virom' },
+        barmode: 'stack',
         hovermode: 'x unified',
         hoversubplots: 'axis',
-        yaxis: { title: { text: 'Virus Abundance (%)' }, side: 'left'},
-        yaxis2: {
-            title: {text: 'Temperature (°C)', standoff: 0},
-            overlaying: 'y',
-            side: 'right',
-            anchor: 'free',
-            position: 0.99,
-            autoshift: true,
-            range: [0, 36],
-            showgrid: false
-        },
-        yaxis3: {
-            title: {text: 'Rainfall (mm); Humidity (%)', standoff: 0},
-            overlaying: 'y',
-            side: 'right',
-            anchor: 'free',
-            position: 1, // Adjust as needed for visibility
-            autoshift: true,
-            range: [0, 100],
-            showgrid: false,
-            visible: true
-        },
-        yaxis4: {
-            title: {text: 'Humidity (%)'},
-            overlaying: 'y',
-            side: 'right',
-            anchor: 'free',
-            position: 1.3, // Adjust for visual spacing
-            range: [0, 100],
-            showgrid: false,
-            visible: false
-        },
-        legend: {
-            x: 0.5,
-            y: -0.2,
-            xanchor: 'center',
-            yanchor: 'top',
-            orientation: 'h'
-        }
+        yaxis: { title: { text: 'Anteil (%)' }, side: 'left'},
+        yaxis2: yaxis2conf,
+        yaxis3: yaxis3conf,
+        yaxis4: yaxis4conf,
+        legend: legendConf,
     };
 
     Plotly.newPlot('human-host-virus-chart', traces, layout);
@@ -455,7 +385,7 @@ function renderHumanHostVirus(data) {
                     <div class="virus-bar-track" aria-label="${virusName}: ${virus.run_count} Samples">
                         <div class="virus-bar-fill" style="width: ${width}%"></div>
                     </div>
-                    <div class="virus-bar-meta">${virus.run_count} Samples</div>
+                    <div class="virus-bar-meta">${virus.run_count} Proben</div>
                 </div>
             </button>
         `;
@@ -463,7 +393,7 @@ function renderHumanHostVirus(data) {
 
     var div = document.getElementById("human-host-virus");
     div.innerHTML = '<h4 class="h4 fw-bold mb-1">Klassifizierte Viren mit potentiellem menschlichen Host</h4>';
-    div.innerHTML += '<p class="text-secondary mb-3">Prozentwerte geben die durchschnittliche Häufigkeit des Vorkommens in den jeweiligen Samples an.</p>'
+    div.innerHTML += '<p class="text-secondary mb-3">Prozentwerte geben die durchschnittliche Häufigkeit des Vorkommens in den jeweiligen Proben an.</p>'
     div.innerHTML += chartRows;
 }
 
@@ -545,7 +475,7 @@ function showVirusDetail(detail) {
             <strong>${escapeHtml(detail.class || "-")}</strong>
         </div>
         <div class="detail-card">
-            <span>taxonomic_order</span>
+            <span>order</span>
             <strong>${escapeHtml(detail.taxonomic_order || "-")}</strong>
         </div>
         <div class="detail-card">
@@ -557,7 +487,7 @@ function showVirusDetail(detail) {
             <strong>${escapeHtml(detail.genus || "-")}</strong>
         </div>
         <div class="detail-card">
-            <span>baltimore_class</span>
+            <span>baltimore class</span>
             <strong>${escapeHtml(detail.baltimore_class || "-")}</strong>
         </div>
         <div class="detail-card">
@@ -684,9 +614,8 @@ async function loadVirusCityMap(virusId) {
 
             marker.bindPopup(`
                 <b>${escapeHtml(city.city_name)}, ${escapeHtml(city.country)}</b><br>
-                Durchschnitt: ${Number(city.average_amount).toFixed(2)} %<br>
-                Temperatur: ${formatTemperature(city.average_temperature)}<br>
-                Runs mit Treffer: ${city.run_count}
+                <br>
+                Proben mit Treffer: ${city.run_count}
             `);
             marker.on("click", () => loadVirusDetail(virusId, city));
             bounds.push([city.latitude, city.longitude]);
@@ -730,13 +659,13 @@ async function renderVirusAbundance(cityId, virusId) {
             y: yAbundances,
             type: 'bar',
             marker: { color: 'orange', opacity: 0.8 },
-            name: 'Abundance'
+            name: 'Anteil'
         };
 
         const temperatureTrace = {
             x: weather_data.map(entry => entry.time),
             y: weather_data.map(entry => entry.temperature),
-            name: 'Temperature',
+            name: 'Temperatur (°C)',
             yaxis: 'y2',
             mode: 'lines',
             line: { color: 'red', shape: 'spline' },
@@ -748,7 +677,7 @@ async function renderVirusAbundance(cityId, virusId) {
         const rainTrace = {
             x: weather_data.map(entry => entry.time),
             y: weather_data.map(entry => entry.rainfall),
-            name: 'Rainfall (mm)',
+            name: 'Regen (mm)',
             yaxis: 'y3',
             mode: 'none',
             line: { color: 'blue', shape: 'spline'},
@@ -762,7 +691,7 @@ async function renderVirusAbundance(cityId, virusId) {
         const humidityTrace = {
             x: weather_data.map(entry => entry.time),
             y: weather_data.map(entry => entry.humidity),
-            name: 'Humidity (%)',
+            name: 'Luftfeuchtigkeit (%)',
             yaxis: 'y4',
             mode: 'lines',
             line: { color: 'green', shape: 'spline' },
@@ -774,43 +703,12 @@ async function renderVirusAbundance(cityId, virusId) {
         const traces = [trace, temperatureTrace, rainTrace, humidityTrace];
 
         const layout = {
-            title: {text: `${data.virus_name} Abundance in ${data.city.name}`},
-            xaxis: { title: {text: 'Collection Date' }},
-            yaxis: { title: {text: 'Abundance (%)' }},
-            yaxis2: {
-                title: {text: 'Temperature (°C)'},
-                overlaying: 'y',
-                side: 'right',
-                range: [0, 36],
-                showgrid: false
-            },
-            yaxis3: {
-                title: {text: 'Rainfall (mm)'},
-                overlaying: 'y',
-                side: 'right',
-                anchor: 'free',
-                position: 0.7, // Adjust as needed for visibility
-                range: [0, 100],
-                showgrid: false,
-                visible: false
-            },
-            yaxis4: {
-                title: {text: 'Humidity (%)'},
-                overlaying: 'y',
-                side: 'right',
-                anchor: 'free',
-                position: 1.3, // Adjust for visual spacing
-                range: [0, 100],
-                showgrid: false,
-                visible: false
-            },
-            legend: {
-                x: 0.5,
-                y: -0.2,
-                xanchor: 'center',
-                yanchor: 'top',
-                orientation: 'h'  // Set the orientation to horizontal
-            },
+            title: {text: `${data.virus_name} Anteil in Proben aus ${data.city.name}`},
+            yaxis: { title: {text: 'Anteil (%)' }},
+            yaxis2: yaxis2conf,
+            yaxis3: yaxis3conf,
+            yaxis4: yaxis4conf,
+            legend: legendConf,
             template: 'ggplot2'
         };
 
@@ -859,8 +757,8 @@ async function renderVirusModel(cityId, virusId) {
                         <div class="model-render experimental mt-4 mb-4">
                         <div>
                             <h4 class="h5 fw-bold mb-1">Prognostizierter Anteil von ${virus_name} für den ${prediction_date}</h4>
-                            <p class="h5 shannon-display">${virus_prediction} %</p>
-                            <p class="text-secondary">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
+                            <p class="h5 model-value-display detail-card mt-4" style="text-align:center;">${virus_prediction} %</p>
+                            <p class="text-secondary mt-4">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
                         </div>
                         <span class="status-pill experimental muted">Experimentelles Feature</span>
                         </div>
@@ -930,15 +828,30 @@ async function loadCityViruses(city) {      // called on-click
     setDetailState({
         title: `${city.name}, ${city.country}`,
         subtitle: `Auswertung der Virenproben`,
-        countLabel: `${count} Samples`,
+        countLabel: `${count} Proben`,
         // add more <div>s for new plots here:
         content: `
             <div id="virus-aggregation-chart"></div>
             <div id="shannon-index-chart"></div>
-            <div id="shannon-index-model"></div>
+            <div class="model-render experimental mt-4 mb-4">
+            <div>
+                <div id="model-heading"></div>
+                <div class="model-values">
+                    <div class="model-value-container detail-card m-2">
+                        <span class="h5 fw-bold mb-1">Alpha-Diversität (Shannon Index)</span>
+                        <div id="shannon-index-model"></div>
+                    </div>
+                    <div class="model-value-container detail-card m-2">
+                        <span class="h5 fw-bold mb-1">Anteil Human-Host Viren</span>
+                        <div id="human-host-model"></div>
+                    </div>
+                </div>
+                <p class="text-secondary mt-2">Vorhersage basierend auf den (prognostizierten) Wetterdaten der vergangenen drei und nächsten zwei Tage.<br> Modell trainiert mit allen bisherigen Messungen.</p>
+            </div>
+            <span class="status-pill experimental muted">Experimentelles Feature</span>
+            </div>
             <div id="human-host-virus"></div>
             <div id="human-host-virus-chart"></div>
-            <div id="human-host-model"></div>
         `,
         });
 
