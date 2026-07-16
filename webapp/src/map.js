@@ -212,7 +212,21 @@ async function renderShannonIndex(data, weather) {
         visible: 'legendonly'
     };
 
-    const traces = [trace, temperatureTrace, rainTrace, humidityTrace];
+    const averageLineTrace = {
+        x: [xDates[0], xDates[xDates.length - 1]],
+        y: [averageShannonIndex, averageShannonIndex],
+        mode: 'lines',
+        name: `Shannon Index Mean (${averageShannonIndex.toFixed(2)})`,
+        line: {
+            color: 'gray',
+            width: 2,
+            dash: 'dashdot',
+        },
+        opacity: 0.5,
+        showlegend: true
+    };
+
+    const traces = [trace, temperatureTrace, rainTrace, humidityTrace, averageLineTrace];
 
     const layout = {
         paper_bgcolor: 'rgba(0, 0, 0, 0)',
@@ -225,21 +239,6 @@ async function renderShannonIndex(data, weather) {
         yaxis4: yaxis4conf,
         legend: legendConf,
         template: 'ggplot2',
-        shapes: [
-            {
-                type: 'line',
-                x0: xDates[0],
-                x1: xDates[xDates.length - 1],
-                y0: averageShannonIndex,
-                y1: averageShannonIndex,
-                line: {
-                    color: 'gray',
-                    width: 2,
-                    dash: 'dashdot',
-                    opacity: 0.5
-                }
-            }
-        ]
     };
 
     Plotly.newPlot('shannon-index-chart', traces, layout);
